@@ -63,13 +63,13 @@ implements Runnable
 
 				if (sessionID.equals(HttpAddRequest.NO_SESSIONID) || !handlers.containsKey(sessionID))
 				{
-					RequestHandler handler = new RequestHandler();
+					HttpAddRequestHandler handler = new HttpAddRequestHandler();
 					request.setSessionID(handler.toString());
 					handlers.put(handler.toString(), handler);
 				}
 
 				// get handler and let it create the appropriate answer (in HTML)
-				RequestHandler handler = (RequestHandler) handlers.get(request.getSessionID());
+				HttpAddRequestHandler handler = (HttpAddRequestHandler) handlers.get(request.getSessionID());
 				String response = handler.createResponse(request);
 
 				// send answer to client:
