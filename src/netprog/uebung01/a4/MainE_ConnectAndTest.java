@@ -3,13 +3,6 @@ package netprog.uebung01.a4;
 import java.net.MalformedURLException;
 import java.rmi.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sebastian Koske
- * Date: 07.11.2003
- * Time: 16:55:08
- * To change this template use Options | File Templates.
- */
 public class MainE_ConnectAndTest
 {
     public static void main(String[] args) throws NotBoundException, RemoteException, MalformedURLException

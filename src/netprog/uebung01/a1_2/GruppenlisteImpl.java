@@ -54,7 +54,6 @@ implements Gruppenliste
 
         Vector group = (Vector)groups.get(new Integer(gruppenNummer));
 
-
         group.add(entry);
     }
 

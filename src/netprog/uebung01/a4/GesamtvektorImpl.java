@@ -8,14 +8,40 @@ public class GesamtVektorImpl
 extends UnicastRemoteObject
 implements GesamtVektor
 {
-    private Vector vectors = new Vector();
-    private int sum = 0;
-    private int size = 0;
+    /************************************************
+     |  Instanzvariablen:
+     *************************************************/
+
+    private Vector  vectors = new Vector();
+    private int     sum     = 0;
+    private int     size    = 0;
+
+    /************************************************
+     |  Konstruktoren:
+     *************************************************/
 
     public GesamtVektorImpl()
     throws RemoteException
     {
     }
+
+    /************************************************
+     |  sondierende Methoden:
+     *************************************************/
+
+    public int size() throws RemoteException
+    {
+        return size;
+    }
+
+    public int sum() throws RemoteException
+    {
+        return sum;
+    }
+
+    /************************************************
+     |  Prozeduren:
+     *************************************************/
 
     public void append(TeilVektor t) throws RemoteException
     {
@@ -35,15 +61,5 @@ implements GesamtVektor
 
         sum -= t.sum();
         size -= t.size();
-    }
-
-    public int size() throws RemoteException
-    {
-        return size;
-    }
-
-    public int sum() throws RemoteException
-    {
-        return sum;
     }
 }

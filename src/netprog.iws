@@ -2,131 +2,80 @@
 <project version="3" relativePaths="false">
   <component name="FileEditorManager">
     <history>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/GruppenlisteImpl.java" line="9" column="8" vertical-scroll-proportion="-1.2677925" horizontal-scroll-proportion="0.062075656">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/GruppenlisteImpl.java" line="8" column="13" vertical-scroll-proportion="0.19777504" horizontal-scroll-proportion="0.109014675">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/MainB_RegisterRepString.java" line="8" column="13" vertical-scroll-proportion="0.19300362" horizontal-scroll-proportion="0.10009625">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/ReplicatedStringImpl.java" line="44" column="0" vertical-scroll-proportion="0.82694685" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/GesamtVektor.java" line="4" column="17" vertical-scroll-proportion="0.09888752" horizontal-scroll-proportion="0.14137214" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/GesamtVektorImpl.java" line="64" column="0" vertical-scroll-proportion="0.92583436" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/ReplicatedStringImpl.java" line="6" column="13" vertical-scroll-proportion="0.14475271" horizontal-scroll-proportion="0.10009625" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a5/TestRegistry.java" line="14" column="23" vertical-scroll-proportion="0.3461063" horizontal-scroll-proportion="0.19126819">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainA_RegisterGesamtVektor.java" line="6" column="13" vertical-scroll-proportion="0.14833127" horizontal-scroll-proportion="0.10810811">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/TeilVektor.java" line="8" column="0" vertical-scroll-proportion="0.19777504" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/TeilVektorImpl.java" line="5" column="18" vertical-scroll-proportion="0.123609394" horizontal-scroll-proportion="0.14968815">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainB_RegisterTeilvektor.java" line="6" column="0" vertical-scroll-proportion="0.14833127" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/GesamtVektor.java" line="13" column="44" vertical-scroll-proportion="0.32138443" horizontal-scroll-proportion="0.36590436" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/GesamtVektorImpl.java" line="17" column="4" vertical-scroll-proportion="0.39555007" horizontal-scroll-proportion="0.033264033">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainC_RegisterTeilvektor.java" line="6" column="0" vertical-scroll-proportion="0.14833127" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainA_RegisterGesamtVektor.java" line="8" column="87" vertical-scroll-proportion="0.19777504" horizontal-scroll-proportion="0.72349274">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainD_RegisterTeilvektor.java" line="6" column="0" vertical-scroll-proportion="0.14833127" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainB_RegisterTeilvektor.java" line="15" column="0" vertical-scroll-proportion="0.37082818" horizontal-scroll-proportion="0.0">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainE_ConnectAndTest.java" line="5" column="0" vertical-scroll-proportion="0.123609394" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainC_RegisterTeilvektor.java" line="19" column="60" vertical-scroll-proportion="0.46971568" horizontal-scroll-proportion="0.4989605">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/TeilVektor.java" line="4" column="17" vertical-scroll-proportion="0.09888752" horizontal-scroll-proportion="0.14137214" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/TeilVektorImpl.java" line="34" column="55" vertical-scroll-proportion="0.64276886" horizontal-scroll-proportion="0.45738044">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainD_RegisterTeilvektor.java" line="19" column="60" vertical-scroll-proportion="0.46971568" horizontal-scroll-proportion="0.4989605">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a5/TestRegistry.java" line="5" column="13" vertical-scroll-proportion="0.123609394" horizontal-scroll-proportion="0.10810811">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainE_ConnectAndTest.java" line="24" column="20" vertical-scroll-proportion="0.38195303" horizontal-scroll-proportion="0.16632016">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/RegistryManager.java" line="15" column="55" vertical-scroll-proportion="0.3461063" horizontal-scroll-proportion="0.45738044" />
+      <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="16" column="0" vertical-scroll-proportion="0.39555007" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Eintrag.java" line="4" column="13" vertical-scroll-proportion="-0.40047115" horizontal-scroll-proportion="0.10810811">
         <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/MainA_RegisterRepString.java" line="18" column="1" vertical-scroll-proportion="0.44499382" horizontal-scroll-proportion="0.008316008">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/MainC_ConnectAndTest.java" line="4" column="31" vertical-scroll-proportion="0.09888752" horizontal-scroll-proportion="0.25779626">
-        <folding>
-          <element signature="imports" expanded="true" />
-          <element signature="method#main#0;class#MainC_ConnectAndTest" expanded="true" />
+          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
         </folding>
       </source-position-entry>
     </history>
     <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/TeilVektorImpl.java" line="5" column="18" vertical-scroll-proportion="0.123609394" horizontal-scroll-proportion="0.14968815">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Eintrag.java" line="4" column="13" vertical-scroll-proportion="-0.40047115" horizontal-scroll-proportion="0.10810811" selected="true">
         <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/GesamtVektor.java" line="13" column="44" vertical-scroll-proportion="0.32138443" horizontal-scroll-proportion="0.36590436" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/GesamtVektorImpl.java" line="17" column="4" vertical-scroll-proportion="0.39555007" horizontal-scroll-proportion="0.033264033">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainA_RegisterGesamtVektor.java" line="8" column="87" vertical-scroll-proportion="0.19777504" horizontal-scroll-proportion="0.72349274">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainB_RegisterTeilvektor.java" line="15" column="0" vertical-scroll-proportion="0.37082818" horizontal-scroll-proportion="0.0">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainC_RegisterTeilvektor.java" line="19" column="60" vertical-scroll-proportion="0.46971568" horizontal-scroll-proportion="0.4989605">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainD_RegisterTeilvektor.java" line="19" column="60" vertical-scroll-proportion="0.46971568" horizontal-scroll-proportion="0.4989605">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainE_ConnectAndTest.java" line="24" column="20" vertical-scroll-proportion="0.38195303" horizontal-scroll-proportion="0.16632016">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/MainA_RegisterRepString.java" line="18" column="1" vertical-scroll-proportion="0.44499382" horizontal-scroll-proportion="0.008316008">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/MainC_ConnectAndTest.java" line="4" column="31" vertical-scroll-proportion="0.09888752" horizontal-scroll-proportion="0.25779626" selected="true">
-        <folding>
-          <element signature="imports" expanded="true" />
-          <element signature="method#main#0;class#MainC_ConnectAndTest" expanded="true" />
+          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
         </folding>
       </source-position-entry>
     </open-files>
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1408" height="1028" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.38648948" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.22637363" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.22637363" order="0" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.39977852" order="3" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33001107" order="1" />
@@ -332,14 +281,12 @@
   <component name="ProjectViewSettings">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
-      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a5" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a3" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/docs" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a4" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a1_2" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/docs" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
     </view>
     <view id="SourcepathPane" />
     <view id="ClasspathPane" />

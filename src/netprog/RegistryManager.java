@@ -5,7 +5,15 @@ import java.rmi.registry.*;
 
 public class RegistryManager
 {
+    /************************************************
+     |  Klassenvariablen:
+     *************************************************/
+
     private static Registry localRegistry = null;
+
+    /************************************************
+     |  sondierende Klassenmethoden:
+     *************************************************/    
 
     public static Registry getLocalRegistry()
     throws RemoteException

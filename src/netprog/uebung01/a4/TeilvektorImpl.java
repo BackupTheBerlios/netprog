@@ -7,9 +7,16 @@ public class TeilVektorImpl
 extends UnicastRemoteObject
 implements TeilVektor
 {
+    /************************************************
+     |  Instanzvariablen:
+     *************************************************/
+
     private Integer[] field;
     private int sum = 0;
 
+    /************************************************
+     |  Konstruktoren:
+     *************************************************/
 
     public TeilVektorImpl(Integer[] field)
     throws RemoteException
@@ -22,6 +29,10 @@ implements TeilVektor
             sum += field[i].intValue();
 
     }
+
+    /************************************************
+     |  sondierende Methoden:
+     *************************************************/    
 
     public int size()
     {
