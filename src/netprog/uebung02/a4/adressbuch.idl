@@ -1,0 +1,20 @@
+module adressbuch {
+	typedef struct Adresse {
+		wstring Name;
+		wstring Strasse;
+		unsigned short HausNr;
+		unsigned long PLZ;
+		wstring Stadt; 
+	} _Adresse;
+	
+	enum SearchParam {
+		NAME,
+		STRASSE,
+		STADT
+	};
+	
+	interface Adressbuch {
+		void store(in Adresse adr);
+		Adresse search(in SearchParam param, in wstring searchstr);
+	};
+};
