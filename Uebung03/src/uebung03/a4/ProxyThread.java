@@ -66,7 +66,7 @@ public class ProxyThread implements Runnable
             callType = t.nextToken();
             String s = t.nextToken();
             // Nur HTTP Anfragen "GET" und "HEAD" werden bearbeitet
-            if(!s.startsWith("http://") && !(callType.equalsIgnoreCase("GET") || callType.equalsIgnoreCase("HEAD"))){
+            if(!s.toLowerCase().startsWith("http://") || !(callType.equalsIgnoreCase("GET") || callType.equalsIgnoreCase("HEAD"))){
                 
                 error("Illegal request", new IOException("Illegal request"));
                 return;
