@@ -13,7 +13,7 @@ public class RegistryManager
 
     /************************************************
      |  sondierende Klassenmethoden:
-     *************************************************/    
+     *************************************************/
 
     public static Registry getLocalRegistry()
     throws RemoteException

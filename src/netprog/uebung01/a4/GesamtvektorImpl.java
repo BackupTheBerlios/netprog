@@ -12,9 +12,9 @@ implements GesamtVektor
      |  Instanzvariablen:
      *************************************************/
 
-    private Vector  vectors = new Vector();
-    private int     sum     = 0;
-    private int     size    = 0;
+    private Vector vectors = new Vector();
+    private int sum = 0;
+    private int size = 0;
 
     /************************************************
      |  Konstruktoren:

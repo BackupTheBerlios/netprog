@@ -58,13 +58,7 @@
         </folding>
       </source-position-entry>
     </history>
-    <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Eintrag.java" line="4" column="13" vertical-scroll-proportion="-0.40047115" horizontal-scroll-proportion="0.10810811" selected="true">
-        <folding>
-          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
-        </folding>
-      </source-position-entry>
-    </open-files>
+    <open-files />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1408" height="1028" extended-state="6" />
