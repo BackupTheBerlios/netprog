@@ -11,7 +11,7 @@ import org.omg.CosNaming.NamingContextExtHelper;
  * <p>Description:
          * --------------------------------- AUFGABE 1 ---------------------------------
  * Client starten:
- * > java netprog.uebung02.a1_2.AdderClient -ORBInitialPort 3000 -ORBInitialHost nawab.inf.fu-berlin.de
+ * > java netprog.uebung02.a1_2.Test -ORBInitialPort 3000 -ORBInitialHost nawab.inf.fu-berlin.de
  *
          * --------------------------------- AUFGABE 2 ---------------------------------
  * 1. ORB Server starten:
