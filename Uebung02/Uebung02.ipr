@@ -2,7 +2,6 @@
 <project version="3" relativePaths="false">
   <component name="ProjectRootManager" version="2">
     <jdk name="java version &quot;1.4.2&quot;" />
-    <library name="MySQLDrivers" />
     <projectPath>
       <root type="composite">
         <root type="simple" url="file://$PROJECT_DIR$" />
@@ -11,7 +10,6 @@
     <sourcePath>
       <root type="composite">
         <root type="jdk" rootType="sourcePath" name="java version &quot;1.4.2&quot;" />
-        <root type="library" rootType="sourcePath" name="MySQLDrivers" />
         <root type="simple" url="jar://D:/JBuilder9_ENT/thirdparty/jakarta-tomcat-4.1.24-LE-jdk14/common/lib/servlet.jar!/" />
         <root type="simple" url="jar://D:/JBuilder9_ENT/thirdparty/jakarta-tomcat-4.1.24-LE-jdk14/common/lib/servlet.jar!/" />
         <root type="simple" url="file://$PROJECT_DIR$/src" />
@@ -21,7 +19,6 @@
       <root type="composite">
         <root type="jdk" rootType="classPath" name="java version &quot;1.4.2&quot;" />
         <root type="output" />
-        <root type="library" rootType="classPath" name="MySQLDrivers" />
         <root type="simple" url="jar://D:/JBuilder9_ENT/thirdparty/jakarta-tomcat-4.1.24-LE-jdk14/common/lib/servlet.jar!/" />
         <root type="simple" url="jar://D:/JBuilder9_ENT/thirdparty/jakarta-tomcat-4.1.24-LE-jdk14/common/lib/servlet.jar!/" />
       </root>
@@ -34,7 +31,6 @@
     <javadocPath>
       <root type="composite">
         <root type="jdk" rootType="javadocPath" name="java version &quot;1.4.2&quot;" />
-        <root type="library" rootType="javadocPath" name="MySQLDrivers" />
       </root>
     </javadocPath>
     <assert_keyword enabled="yes" />
