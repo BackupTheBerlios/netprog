@@ -8,8 +8,16 @@ public class HttpAddServer
 implements Runnable
 {
 
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                      Fields                       |   \\
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+
 	private ServerSocket socket;
 	private HashMap handlers = new HashMap();
+
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                   Constructors                    |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
 
 	public HttpAddServer()
 	throws IOException
@@ -23,30 +31,53 @@ implements Runnable
 		socket = new ServerSocket(port);
 	}
 
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                      Methods                      |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
+	public void start()
+	{
+		new Thread(this).start();
+	}
+
+	//    --------|=|-----------|=||=|-----------|=|--------    \\
+
+	/**
+	 * Waits for a client connection, reads it's content, delegates content to
+	 * corresponding handler and prints result to clients OutputStream.
+	 */
 	public void run()
 	{
 		while (true)
 		{
 			try
 			{
+				// accept client:
 				Socket client = socket.accept();
 
-				String requestString = readRequest(client);
-				ClientRequest request = new ClientRequest(requestString);
+				// Read HTTP Request and create representation:
+				HttpAddRequest request = new HttpAddRequest(readRequest(client));
 
-				if (request.getSessionID().equals("-1") || !handlers.containsKey(request.getSessionID()))
+				// if no corresponding handler exists, create a new one:
+				String sessionID = request.getSessionID();
+
+				if (sessionID.equals(HttpAddRequest.NO_SESSIONID) || !handlers.containsKey(sessionID))
 				{
 					RequestHandler handler = new RequestHandler();
 					request.setSessionID(handler.toString());
 					handlers.put(handler.toString(), handler);
 				}
 
-				String response = ((RequestHandler) handlers.get(request.getSessionID())).createResponse(request);
+				// get handler and let it create the appropriate answer (in HTML)
+				RequestHandler handler = (RequestHandler) handlers.get(request.getSessionID());
+				String response = handler.createResponse(request);
 
-				BufferedWriter ou = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-				ou.write(response);
-				ou.flush();
+				// send answer to client:
+				BufferedWriter out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+				out.write(response);
+				out.flush();
 
+				// close client socket:
 				client.close();
 			}
 			catch (IOException e)
@@ -56,20 +87,29 @@ implements Runnable
 		}
 	}
 
+	//    --------|=|-----------|=||=|-----------|=|--------    \\
+
+	/**
+	 * Reads an HTTP Request from a client socket
+	 *
+	 * @param client the socket where to read from
+	 * @return all read lines in one String
+	 * @throws IOException
+	 */
 	private String readRequest(Socket client)
 	throws IOException
 	{
 		client.setSoTimeout(100);
 
-		BufferedReader input = new BufferedReader(new InputStreamReader(client.getInputStream()));
-
-		String request = "";
+		StringBuffer buffer = new StringBuffer();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
 
 		while (true)
 		{
 			try
 			{
-				request += input.readLine() + "\n";
+				buffer.append(reader.readLine());
+				buffer.append('\n');
 			}
 			catch (SocketTimeoutException e)
 			{
@@ -77,11 +117,8 @@ implements Runnable
 			}
 		}
 
-		return request;
-	}
+		client.setSoTimeout(0);
 
-	public void start()
-	{
-		new Thread(this).start();
+		return new String(buffer);
 	}
 }
