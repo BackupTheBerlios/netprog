@@ -1,36 +1,45 @@
-/*
- * Created on 05.01.2004
- *
- * To change the template for this generated file go to
- * Window>Preferences>Java>Code Generation>Code and Comments
- */
 package uebung03.a4;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 
 /**
- * @author Rafael & Mike
- *
- * To change the template for this generated type comment go to
- * Window>Preferences>Java>Code Generation>Code and Comments
+ *  
+ * Start des Proxys. Es wird ein ServerSocket an dem per Kommandozeilenparameter übergebenen Port bereitgestellt.
+ * Einzelne Verbindungen werden parallel durch ein ProxyThread-Objekt bearbeitet.
+ * @author Gruppe 6
  */
 public class Proxy {
     
-    private static final String ERROR_MSG = "Usage: java uebung03.a4.Proxy <portnumber>"; 
+    // Fehlermeldung bei falschen Parametern
+    private static final String ERROR_MSG = "Usage: java uebung03.a4.Proxy <portnumber>";
+    // ServerSocket für den Proxy 
     private ServerSocket listenSocket; 
+    // bisheriger Traffic
     private static long trafficCounter = 0;
     
-    protected static synchronized long getTraffic(){
+    /**
+     * @return bisheriger Traffic
+     */
+    protected static synchronized long getTraffic() {
     
         return trafficCounter;
     }
-    
-    protected static synchronized void addTraffic(long traffic){
+
+    /**
+     * Traffic aufaddieren
+     * @param traffic zusätlicher Traffic
+     */    
+    protected static synchronized void addTraffic(long traffic) {
         
         trafficCounter += traffic;
     }
     
+    /**
+     * Konstruktor
+     * Stellt den ServerSocket bereit und delegiert eingehende Anfragen an neue Threads.
+     * @param port Proxy läuft an diesem Port
+     */
     private Proxy (int port) {
 
         try{    
@@ -38,51 +47,47 @@ public class Proxy {
             // Socket reservieren:
             listenSocket = new ServerSocket(port);
             System.out.println("Proxy started on port " + port);
+            
             while (true) {
         
                 // auf Verbindungswunsch warten:
                 new Thread(new ProxyThread(listenSocket.accept())).start();
-
             }
-        }catch(IOException e){
+        } catch(IOException e) {
             
             System.err.println("ERROR: Unexpected IOException: " + e.getMessage());
             e.printStackTrace();
-            try{
-                
+            try {
+
                 listenSocket.close();
-            }catch(IOException e2){
+            } catch(IOException e2) {
                 
                 System.err.println("\n\nERROR: Could not close Socket: " + e2.getMessage());
             }
         }
-        
     }
 
     /**
-     * start des servers und fehlerbehandlung
-     * 
-     * @param args
+     * Start des Proxys und Prüfen der Parameter
      */
 	public static void main (String[] args) {
         
-        if (!(args.length == 1)){
+        if (!(args.length == 1)) {
             
             System.out.println(ERROR_MSG);
             return;
         }
+
         int port;
-        try{
+        try {
             
             port = Integer.parseInt(args[0]);
-        }catch(NumberFormatException e) {
+        } catch(NumberFormatException e) {
             
             System.out.println(ERROR_MSG);
             return;
         }
-        
-        new Proxy(port);
 
-        return;
+        new Proxy(port);
 	}
 }
