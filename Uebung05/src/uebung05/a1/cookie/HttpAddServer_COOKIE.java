@@ -21,7 +21,7 @@ extends HttpAddServer
 	//  |                     Services                      |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-	protected HttpAddRequestHandler createAddRequestHandler()
+	protected HttpAddRequestHandler createNewRequestHandler()
 	{
 		return new HttpAddRequestHandler_COOKIE();
 	}

@@ -2,7 +2,6 @@ package uebung05.a1.post;
 
 import uebung05.a1.*;
 
-
 public class HttpAddRequest_POST
 extends HttpAddRequest
 {
@@ -19,13 +18,13 @@ extends HttpAddRequest
 	//  |                     Services                      |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-	public String extractSessionID(String request)
+	public String parseSessionID(String request)
 	{
 		String result = ParamParser.parseParameter("sessionID", request, ParamParser.POST);
 		return result == null ? "-1" : result;
 	}
 
-	public int extractSummand(String request)
+	public int parseSummand(String request)
 	{
 		try
 		{

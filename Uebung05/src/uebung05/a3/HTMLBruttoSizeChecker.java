@@ -10,22 +10,34 @@ import java.util.*;
 public class HTMLBruttoSizeChecker
 extends HTMLEditorKit.ParserCallback
 {
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                     Constants                     |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
 	private static final boolean DEBUG = true;
-	private URL url;
+
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                      Fields                       |   \\
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+
+	private final URL url;
 	private long size = 0;
 	private final HashMap resources;
 	private final String message;
 	private boolean checkFlash;
 	private boolean checkActiveX;
 
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                   Constructors                    |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
 	public HTMLBruttoSizeChecker(URL url)
 	throws IOException
 	{
 		this(url, new HashMap(), "RECOURCE");
-
 	}
 
-	private HTMLBruttoSizeChecker(URL url, HashMap resources, String s)
+	private HTMLBruttoSizeChecker(URL url, HashMap resources, String message)
 	throws IOException
 	{
 		this.url = url;
@@ -38,8 +50,12 @@ extends HTMLEditorKit.ParserCallback
 		}
 
 		this.resources = resources;
-		this.message = s;
+		this.message = message;
 	}
+
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                Modifying Methods                  |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
 
 	public void handleStartTag(HTML.Tag tag, MutableAttributeSet attributeSet, int pos)
 	{
@@ -49,9 +65,9 @@ extends HTMLEditorKit.ParserCallback
 		{
 			if (tag.equals(HTML.Tag.APPLET))
 			{
-				String codebase = "";
-
 				if (DEBUG) System.out.println("READING APPLET");
+
+				String codebase = "";
 
 				if (attributeSet.getAttribute(HTML.Attribute.CODEBASE) != null)
 				{
@@ -108,8 +124,6 @@ extends HTMLEditorKit.ParserCallback
 
 				}
 			}
-
-
 		}
 		catch (IOException e)
 		{
@@ -151,6 +165,9 @@ extends HTMLEditorKit.ParserCallback
 			else if (tag.equals(HTML.Tag.FRAME))
 			{
 				URL frameURL = getURL((String) attributeSet.getAttribute(HTML.Attribute.SRC));
+
+				// just let the new HTMLBruttoSizeChecker start with my HashMap to avoid
+				// multiple countings - clever isn't it?
 				HTMLBruttoSizeChecker n = new HTMLBruttoSizeChecker(frameURL, resources, "FRAMED HTML");
 				size += n.checkSize();
 			}
@@ -188,16 +205,25 @@ extends HTMLEditorKit.ParserCallback
 		}
 	}
 
-	private void checkResource(String attribute)
+	//    --------|=|-----------|=||=|-----------|=|--------    \\
+
+	/**
+	 * Checks if the given resource has already been counted, adds it's content's length if not.
+	 * Marks the resource as checked then.
+	 *
+	 * @param resource
+	 * @throws IOException
+	 */
+	private void checkResource(String resource)
 	throws IOException
 	{
-		if (attribute == null)
+		if (resource == null)
 		{
-			if (DEBUG) System.out.println("\tMISSING ATTRIBUTE");
+			if (DEBUG) System.out.println("\tMISSING Resource");
 			return;
 		}
 
-		URL url = getURL(attribute);
+		URL url = getURL(resource);
 
 		if (DEBUG) System.out.print("\t" + url.toExternalForm());
 
@@ -217,22 +243,30 @@ extends HTMLEditorKit.ParserCallback
 		if (DEBUG) System.out.println("\n\tadded " + (contentLength > 0 ? contentLength : 0) + " bytes");
 	}
 
-	private URL getURL(String attribute)
+	/**
+	 * Normalizes the given htmlLink
+	 * @param htmlLink the original HTML-Link-String
+	 * @return
+	 * @throws MalformedURLException
+	 */
+	private URL getURL(String htmlLink)
 	throws MalformedURLException
 	{
-
-		if (attribute.startsWith("/"))
+		if (htmlLink.startsWith("/"))
 		{
-			attribute = ".." + attribute;
+			htmlLink = ".." + htmlLink;
 		}
 
 		try
 		{
-			URI uri = new URI(attribute);
+			URI uri = new URI(htmlLink);
 			if (!uri.isAbsolute())
 			{
+				// if relative: add absolute path at the front
 				uri = new URI(url.toExternalForm().substring(0, url.toExternalForm().lastIndexOf('/') + 1) + uri.toString());
 			}
+
+			//    --------|=|-----------|=| Normalize ../ - parts |=|-----------|=|--------    \\
 
 			String[] s = uri.normalize().toURL().toExternalForm().split("/");
 			Vector elems = new Vector();
@@ -250,11 +284,15 @@ extends HTMLEditorKit.ParserCallback
 
 			}
 
+			// melt elements
+
 			String r = "";
 			for (int i = 0; i < elems.size(); i++)
 			{
 				r += elems.elementAt(i) + (i == elems.size() - 1 ? "" : "/");
 			}
+
+			//    --------|=|-----------|=||=|-----------|=|--------    \\
 
 			uri = new URI(r);
 

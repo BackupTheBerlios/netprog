@@ -21,7 +21,7 @@ extends HttpAddServer
 	//  |                     Services                      |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-	public HttpAddRequestHandler createAddRequestHandler()
+	public HttpAddRequestHandler createNewRequestHandler()
 	{
 		return new HttpAddRequestHandler_GET();
 	}

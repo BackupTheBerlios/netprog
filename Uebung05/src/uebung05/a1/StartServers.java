@@ -26,6 +26,8 @@ public class StartServers
 			System.err.println(e.toString());
 		}
 
+		//    --------|=|-----------|=||=|-----------|=|--------    \\
+
 		try
 		{
 			new HttpAddServer_GET(8081).start();
@@ -35,6 +37,8 @@ public class StartServers
 			System.err.println("Der Get-Server konnte nicht gestartet werden: ");
 			System.err.println(e.toString());
 		}
+
+		//    --------|=|-----------|=||=|-----------|=|--------    \\
 
 		try
 		{

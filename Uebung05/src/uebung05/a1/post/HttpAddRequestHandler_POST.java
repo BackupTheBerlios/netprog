@@ -6,19 +6,20 @@ import uebung05.a1.*;
 public class HttpAddRequestHandler_POST
 extends HttpAddRequestHandler
 {
-	public String getMethodName()
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                  Probing Methods                  |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
+	protected String getMethodName()
 	{
 		return "POST";
 	}
 
-	protected String getAdditionalHeaders(HttpAddRequest httpAddRequest_post)
-	{
-		assert httpAddRequest_post instanceof HttpAddRequest_POST;
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                     Services                      |   \\
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-		return "";
-	}
-
-	protected String getAdditionalForms(HttpAddRequest request)
+	protected String createAdditionalInputTags(HttpAddRequest request)
 	{
 		return "<input name=\"sessionID\" value=\"" + request.getSessionID() + "\" type=\"hidden\" />";
 	}

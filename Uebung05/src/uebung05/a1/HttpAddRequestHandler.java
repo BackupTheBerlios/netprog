@@ -13,11 +13,10 @@ public abstract class HttpAddRequestHandler
 	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
 
 	/**
-	 * creates a new HTML response with the current sum. If the given request is POST
-	 * add the tramsitted value first.
+	 * creates a new HTML response with the current sum.
 	 *
-	 * @param request the source of all necessary information (POST/GET, summand, sessionID)
-	 * @return HTML Response
+	 * @param request the original HTTP-Request-String that is to be checked.
+	 * @return the answer to the request in HTML
 	 */
 	public String createResponse(HttpAddRequest request)
 	{
@@ -32,7 +31,7 @@ public abstract class HttpAddRequestHandler
 
 
 		return "HTTP /1.0 200 OK\n" +
-		       getAdditionalHeaders(request) +
+		       createAdditionalHeaders(request) +
 		       "Content-type: text/html\n\n" +
 
 		       "<HTML>\n" +
@@ -46,7 +45,7 @@ public abstract class HttpAddRequestHandler
 		       "<TR>\n" +
 		       "<TD>Neuer Summand:</TD>\n" +
 		       "<TD><input name=\"summand\" value=\"0\" type=\"text\" />" +
-		       getAdditionalForms(request) + "</TD>\n" +
+		       createAdditionalInputTags(request) + "</TD>\n" +
 		       "</TR>\n" +
 		       "<TR>\n" +
 		       "<TD colspan=\"2\" align=\"center\">\n" +
@@ -59,9 +58,23 @@ public abstract class HttpAddRequestHandler
 		       "</HTML>\n";
 	}
 
-	protected abstract String getAdditionalHeaders(HttpAddRequest request);
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                     Services                      |   \\
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
+	protected String createAdditionalHeaders(HttpAddRequest request)
+	{
+		return "";
+	}
+
+	protected String createAdditionalInputTags(HttpAddRequest request)
+	{
+		return "";
+	}
+
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |             Abstract Probing Methods              |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+    	        
 	protected abstract String getMethodName();
-
-	protected abstract String getAdditionalForms(HttpAddRequest request);
 }

@@ -14,7 +14,7 @@ implements Runnable
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
 	private final ServerSocket socket;
-	private HashMap handlers = new HashMap();
+	private final HashMap handlers = new HashMap();
 
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                   Constructors                    |   \\
@@ -48,7 +48,7 @@ implements Runnable
 				// accept client:
 				Socket client = socket.accept();
 
-				// Read HTTP Request and create representation:
+				// Read HTTP Request and create Response:
 				String response = getResponse(readRequest(client));
 
 				// send answer to client:
@@ -75,7 +75,7 @@ implements Runnable
 
 		if (sessionID.equals(HttpAddRequest_POST.NO_SESSIONID) || !handlers.containsKey(sessionID))
 		{
-			HttpAddRequestHandler handler = createAddRequestHandler();
+			HttpAddRequestHandler handler = createNewRequestHandler();
 			request.setSessionID(handler.toString());
 			handlers.put(handler.toString(), handler);
 		}
@@ -127,5 +127,5 @@ implements Runnable
 
 	protected abstract HttpAddRequest createRequest(String req);
 
-	protected abstract HttpAddRequestHandler createAddRequestHandler();
+	protected abstract HttpAddRequestHandler createNewRequestHandler();
 }

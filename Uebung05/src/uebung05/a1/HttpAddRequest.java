@@ -21,45 +21,41 @@ public abstract class HttpAddRequest
 
 	public HttpAddRequest(String request)
 	{
-		summand = extractSummand(request);
-		sessionID = extractSessionID(request);
+		summand = parseSummand(request);
+		sessionID = parseSessionID(request);
 	}
 
-	/**
-	 * simple setter
-	 *
-	 * @param sessionID
-	 */
-	public void setSessionID(String sessionID)
-	{
-		this.sessionID = sessionID;
-	}
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                  Probing Methods                  |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
 
-	/**
-	 * simple getter
-	 *
-	 * @return {@link #sessionID}
-	 */
 	public String getSessionID()
 	{
 		return sessionID;
 	}
 
-	/**
-	 * simple getter
-	 *
-	 * @return {@link #summand}
-	 */
 	public int getSummand()
 	{
 		return summand;
 	}
 
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                Modifying Methods                  |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
+	public void setSessionID(String sessionID)
+	{   // Preconditions:
+		assert sessionID != null : "PRE 1: sessionID != null returned false @ HttpAddRequest.setSessionID()";
+
+		// Implementation:
+		this.sessionID = sessionID;
+	}
+
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                 Abstract Services                 |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+            
+	public abstract String parseSessionID(String request);
 
-	public abstract String extractSessionID(String request);
-
-	public abstract int extractSummand(String request);
+	public abstract int parseSummand(String request);
 }

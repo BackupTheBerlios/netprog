@@ -10,7 +10,7 @@ public class Start
 	{
 		try
 		{
-			URL url = new URL(args[0]); //new File("libs/a3/index.html").toURL();
+			URL url = new URL(args[0]);
 
 			long size = new HTMLBruttoSizeChecker(url).checkSize();
 

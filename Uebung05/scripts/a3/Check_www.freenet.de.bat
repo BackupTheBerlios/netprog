@@ -1,0 +1,1 @@
+cmd /k java -cp ..\..\classes uebung05.a3.Start http://www.freenet.de/freenet/index.html

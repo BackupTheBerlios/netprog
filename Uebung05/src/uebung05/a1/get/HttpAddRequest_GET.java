@@ -19,13 +19,13 @@ extends HttpAddRequest
 	//  |                     Services                      |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-	public String extractSessionID(String request)
+	public String parseSessionID(String request)
 	{
 		String result = ParamParser.parseParameter("sessionID", request, ParamParser.GET);
 		return result == null ? "-1" : result;
 	}
 
-	public int extractSummand(String request)
+	public int parseSummand(String request)
 	{
 		try
 		{
@@ -33,9 +33,7 @@ extends HttpAddRequest
 		}
 		catch (Exception e)
 		{
-
+			return 0;
 		}
-
-		return 0;
 	}
 }

@@ -2,12 +2,31 @@ package uebung05.a1;
 
 public class ParamParser
 {
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                     Constants                     |   \\
+	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
 	public static final int GET = 0;
 	public static final int POST = 1;
 	public static final int COOKIE = 2;
 
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                     Services                      |   \\
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+
+	/**
+	 * @param parameter the parameter's name
+	 * @param request   the string where to search in
+	 * @param method    the search-type depending on request-type
+	 * @return the value for the given parameter in the given request.
+	 */
 	public static String parseParameter(String parameter, String request, int method)
 	{
+		// Preconditions:
+		assert parameter != null : "PRE 1: parameter != null returned false @ ParamParser.parseParameter()";
+		assert request != null : "PRE 2: request != null returned false @ ParamParser.parseParameter()";
+
+		// Implementation:
 		switch (method)
 		{
 			case GET:
@@ -16,10 +35,12 @@ public class ParamParser
 				return parseParameter_POST(parameter, request);
 			case COOKIE:
 				return parseParameter_COOKIE(parameter, request);
+			default:
+				throw new IllegalArgumentException("Unsupoported Request Type");
 		}
-
-		return null;
 	}
+
+	//    --------|=|-----------|=||=|-----------|=|--------    \\
 
 	private static String parseParameter_COOKIE(String parameter, String request)
 	{
@@ -73,8 +94,7 @@ public class ParamParser
 			// split into name and value:
 			String[] tokens = s.split("=");
 
-			// maybe there's something wrong - like parameter is called POST
-			// and there's no '=' at this point.
+			// maybe we are not yet where we want to be
 			if (tokens.length != 2) continue;
 
 			// parameter found - return value:
