@@ -1,0 +1,276 @@
+<HTML>
+<HEAD>
+	<TITLE>Verteilte Systeme und Middleware</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<LINK href="../img/stylesheet.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+	<TR>
+	  <TD class=articlehead> CORBA </TD>
+	</TR>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR>
+	  <TD><ol>
+        <li>Was ist die OMG?
+        <li>Was ist der ORB?
+        <li>Was ist IIOP?
+        <li>Was ist IDL?
+        <li>Nennen Sie drei Unterschiede zwischen Java RMI und CORBA.
+        <li>Womit muss man bei der Entwicklung von CORBA-Anwendungen beginnen?
+        <li>Welche ganzzahligen Zahlentypen sind in IDL vorgesehen?
+        <li>Welche Fliesskommatypen gibt es in IDL?         
+        <li>Was kann in einem Modul in IDL vorkommen?
+        <li>Was kann in einer Schnittstelle in IDL vorkommen?
+        <li>Welche Arten von Parameter&uuml;berhabe kennt CORBA?
+        <li>Wie werden sie in der ORB Implementierung des JDK realisiert?
+        <li>Was macht der Portable Object Adapter?
+        <li>Welche Bedeutung haben die Kommandozeilenparameter -ORBInitialHost und -ORBInitialPort bei CORBA Anwendungen?
+        <li>Wie unterscheidet sich der Namensdienst in CORBA vom Namensdienst rmiregistry in Java?        </li>
+      </ol>	    </TD>
+	</TR>
+</TABLE>	
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        1. Was ist die OMG?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top><p>Eine nicht profit-orientierte Gruppe mit &uuml;ber 800 Mitgliedern. <br>
+  Die OMG erarbeitet Spezifikationen zur Verteilung und Kommunikationen zwischen Objekten. <br>
+  <br>
+   bekannteste Spezifikationen: CORBA, UML, MDA </p></TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        2. Was ist der ORB?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> Object Request Broker ist Laufzeitsystem; transportiert Aufrufe zwischen den CORBA Objekten</TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        3. Was ist IIOP?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> Protokoll zur Kommunikation zwischen ORBs </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Was ist IDL?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD >&nbsp;</TD>
+      <TD vAlign=top> Interface Definition Language ist Sprache zur Beschreibung von Schnittstellen in OMA (Standard f&uuml;r offenes verteiltes System) </TD>
+      <TD >&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Nennen Sie drei Unterschiede zwischen Java RMI und CORBA.</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> <p>- RMI ist sprachgebundendene Plattform von Sun, CORBA ist dagegen sprach- und herstellerunabh&auml;ngig<br>
+        - bei CORA sind Mappings auf die jeweilige Sprache notwendig, bei RMI nicht<br>
+        - bei CORA sind nur Referenzen auf Objekte m&ouml;glich, bei RMI k&ouml;nnen Objekte (durch nachladen) als Argumente verwendet werden<br>
+        - RMI hat ein Laufzeitsystem, in CORBA sind unterschiedliche Laufzeitsysteme (ORBs) integriert
+        </p>        </TD>
+      <TD>&nbsp;</TD>
+    </TR>    
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Womit muss man bei der Entwicklung von CORBA-Anwendungen beginnen?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>&nbsp;</TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Welche ganzzahligen Zahlentypen sind in IDL vorgesehen?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> short, long, long long</TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Welche Fliesskommatypen gibt es in IDL? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> float, double, long double, fixed </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Was kann in einem Modul in IDL vorkommen?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> Modul ist Namensraum f&uuml;r zusammengeh&ouml;rige Schnittstellen (vergleichbar: package in java) und kann Schnittstellen und Typdefinitionen enthalten. </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 10. Was kann in einer Schnittstelle in IDL vorkommen?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> Konstanten, Attribute, Typdefinitionen , Operationen, Ausnahmedefinitionen</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 11. Welche Arten von Parameter&uuml;berhabe kennt CORBA? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top><li>in: Parameter wird vom Client zum Server geschickt (by value)</li> 
+    <li>out: Parameter wird vom Server zum Client geschickt (Ergebnis)</li>
+    <li>inout: Parameter wird in beide Richtungen geschickt (&auml;nderbar)  </li></TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 12. Wie werden sie in der ORB Implementierung des JDK realisiert?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> mit Holderklassen</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 13. Was macht der Portable Object Adapter?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 14. Welche Bedeutung haben die Kommandozeilenparameter -ORBInitialHost und -ORBInitialPort?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 15. Wie unterscheidet sich der Namensdienst in CORBA vom Namensdienst rmiregistry in Java? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<BR>
+<HR>
+<em>last modified: <!-- #BeginDate format:IS1 -->2003-12-30<!-- #EndDate --></em>
+</BODY>
+</HTML>

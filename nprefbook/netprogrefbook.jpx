@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="generalFormatting" name="blockIndent" value="4"/>
+  <property category="generalFormatting" name="continuationIndent" value="8"/>
+  <property category="javaFormatting" name="alignMultilineAssign" value="1"/>
+  <property category="javaFormatting" name="arrayInitDataOnNewLine" value="0"/>
+  <property category="javaFormatting" name="blankLinesAfterClass" value="2"/>
+  <property category="javaFormatting" name="catchOnNewLine" value="0"/>
+  <property category="javaFormatting" name="elseOnNewLine" value="0"/>
+  <property category="javaFormatting" name="extendsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="finallyOnNewLine" value="0"/>
+  <property category="javaFormatting" name="implementsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="indentCase" value="0"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;(blank line);javax;(blank line);(*)"/>
+  <property category="javaFormatting" name="packageThreshold" value="2"/>
+  <property category="javaFormatting" name="preservedBlankLinesInDecl" value="2"/>
+  <property category="javaFormatting" name="spaceBeforeLparen" value="0"/>
+  <property category="javaFormatting" name="whileOnNewLine" value="0"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime" name="ExcludeDefaultForZero" value="1"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore"/>
+  <property category="serverservices" name="single.server.name" value="Tomcat 4.0"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2004"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.2_01-b06"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value=""/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="team" name="ignorePath.0" value="bak"/>
+  <property category="team" name="ignorePath.1" value="classes"/>
+  <property category="team" name="ignorePath.2" value="doc"/>
+  <file path="content/1-VSM.html"/>
+  <file path="content/2-RPC.html"/>
+  <file path="content/3-RMI.html"/>
+  <file path="content/4-CORBA.html"/>
+  <file path="content/5-Sockets.html"/>
+  <file path="content/6-Services.html"/>
+  <file path="content/7-JavaServices.html"/>
+  <file path="content/8-Applets.html"/>
+  <file path="img/a-trans.gif"/>
+  <file path="img/bg-menu.gif"/>
+  <file path="img/bg-navi.gif"/>
+  <file path="img/fulogo_92x60.gif"/>
+  <file path="img/header_tile.gif"/>
+  <file path="index.html"/>
+  <file path="content/jser01.GIF"/>
+  <file path="img/l-fade.gif"/>
+  <file path="img/link-bg.gif"/>
+  <file path="navigation.html"/>
+  <file path="img/r-fade.gif"/>
+  <file path="content/rpc01.GIF"/>
+  <file path="img/stylesheet.css"/>
+  <file path="top.html"/>
+  <file path="content/vsm01.GIF"/>
+</project>

@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+	<TITLE>Verteilte Systeme und Middleware</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<LINK href="../img/stylesheet.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+	<TR>
+	  <TD class=articlehead> RMI</TD>
+	</TR>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR>
+	  <TD><ol>
+        <li>Wie l&auml;uft der Aufruf einer Methode an einem entfernten Objekt in RMI ab?
+        <li>Nennen Sie zwei Unterschiede eines Interfaces f&uuml;r ein RMI Objekt zu einem Interface f&uuml;r lokale Obejekt bei gleicher Funktionalit&auml;t.         
+        <li>Wovon erbt ein Objekt, das per RMI aufrufbar sein soll?
+        <li>Wie unterscheidet sich der Aufruf einer Method an einem RMI Objekt von dem an einem lokalen Objekt?
+        <li>Was macht das rmic Programm?
+        <li>Welche Komponente &uuml;bernimmt die Rolle des Brokers bei RMI?
+        <li>Wie kommt ein Client-Objekt zu einer Referenz auf ein entferntes Objekt?
+        <li>Welches URL-Schema bezeichnet RMI Objekte und wie ist es aufgebaut?
+        <li>Wie findet man eine Registry auf?
+        <li>Was ist ein Callback und was muss man in RMI daf&uuml;r tun?
+        <li>Was ist Serialisierung und warum ist sie bei RMI notwendig?
+        <li>Welches Sicherheitsproblem entsteht durch Objektserialisierung?
+        <li>Wieviele Threads k&ouml;nnen in einem RMI-Objekt aktiv sein? <br>
+        </li>
+      </ol></TD>
+	</TR>
+</TABLE>	
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        1. Wie l&auml;uft der Aufruf einer Methode an einem entfernten Objekt in RMI ab? </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>Aufruferseite wird &uuml;ber ein Interface angesprochen <br>
+        Ein Serverobjekt implementiert das Interface<br> </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        2. Nennen Sie zwei Unterschiede eines Interfaces f&uuml;r ein RMI Objekt zu einem Interface f&uuml;r lokale Obejekt bei gleicher Funktionalit&auml;t. </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>&nbsp; </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        3. Wovon erbt ein Objekt, das per RMI aufrufbar sein soll?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> UnicastRemoteObject </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Wie unterscheidet sich der Aufruf einer Method an einem RMI Objekt von dem an einem lokalen Objekt?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD >&nbsp;</TD>
+      <TD vAlign=top>&nbsp; </TD>
+      <TD >&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Was macht das rmic Programm?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> Compiler f&uuml;r Verbindungsst&uuml;cke (Stub und Skeleton)<br>
+        Verbindungsst&uuml;cke werden automatisch erzeugt </TD>
+      <TD>&nbsp;</TD>
+    </TR>    
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Welche Komponente &uuml;bernimmt die Rolle des Brokers bei RMI? </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> RMIRegistry (Verzeichnisdienst f&uuml;r Objekte) </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Wie kommt ein Client-Objekt zu einer Referenz auf ein entferntes Objekt?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>&nbsp; </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Welches URL-Schema bezeichnet RMI Objekte und wie ist es aufgebaut?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Wie findet man eine Registry auf?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 10. Was ist ein Callback und was muss man in RMI daf&uuml;r tun? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 11. Was ist Serialisierung und warum ist sie bei RMI notwendig?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 12. Welches Sicherheitsproblem entsteht durch Objektserialisierung?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 13. Wieviele Threads k&ouml;nnen in einem RMI-Objekt aktiv sein? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> Man muss immer davon ausgehen, dass Methoden nebenl&auml;ufig aufgerfen werden. </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<BR>
+<HR>
+<em>last modified: <!-- #BeginDate format:IS1 -->2003-12-30<!-- #EndDate --></em>
+</BODY>
+</HTML>

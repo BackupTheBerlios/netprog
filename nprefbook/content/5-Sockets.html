@@ -1,0 +1,249 @@
+<HTML>
+<HEAD>
+	<TITLE>Verteilte Systeme und Middleware</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<LINK href="../img/stylesheet.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+	<TR>
+	  <TD class=articlehead> Sockets </TD>
+	</TR>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR>
+	  <TD><ol>
+        <li>Was ist das Internet Protocol IP?<li>Wie sehen Internet Adressen aus und wie werden sie auf lokale Netzadressen abgebildet?
+        <li>Welcher Dienst bildet Internet Adressen auf Namen ab und umgekehrt?
+        <li>Geben Sie je zwei Beispiele aus der realen Welt - also nicht aus der Netztechnik - f&uuml;r verbindungsorientierte und -lose Protokolle an.
+        <li>Nennen Sie drei Transportprotokolle des Internet und stellen Sie Unterschiede zwischen ihnen dar.
+        <li>Was ist ein Port?
+        <li>Was ist ein Socket?
+        <li>Wie funktioniert die Kommunikation &uuml;ber TCP serverseitig?
+        <li>Wie funktioniert die Kommunikation &uuml;ber TCP clientseitig?
+        <li>Wie funktioniert die Kommunikation &uuml;ber UDP serverseitig?
+        <li>Wie funktioniert die Kommunikation &uuml;ber UDP clientseitig?
+        <li>Nennen Sie drei Unterschiede zwischen RMI- und Socket-Kommunikation </li>
+      </ol>	    </TD>
+	</TR>
+</TABLE>	
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        1. Was ist das Internet Protocol IP?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>erm&ouml;glicht das Internetworking durch Etablierung eines Datenformats und Transportprotokollen, die auf unterschiedlichen Datenverbindungen aufgesetzt werden k&ouml;nnen. </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        2. Wie sehen Internet Adressen aus und wie werden sie auf lokale Netzadressen abgebildet?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>aktuell 32 Bit <br>
+        Abbildung je nach Medium auf die MAC (Media Access Control), die physikalische Netzadresse <br>
+        <li>ARP (Adress Resolution Protokoll)</li>
+        <li>RARP (Reverse Adress Resolution Protokoll) <br>
+          Netzwerkmaske definiert was im lokalen Netz ist und was nach aussen geht
+        </li></TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        3. Welcher Dienst bildet Internet Adressen auf Namen ab und umgekehrt?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> DNS (Domain Name Service) </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Geben Sie je zwei Beispiele aus der realen Welt - also nicht aus der Netztechnik - f&uuml;r verbindungsorientierte und -lose Protokolle an. </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD >&nbsp;</TD>
+      <TD vAlign=top> <p>verbindungsorientiert: (Verbindungsaufbau &ndash; Transfer &ndash; Verbindungsabbau) Fax <br>
+        verbindungslos: (Transfer) Brief
+      </p>      </TD>
+      <TD >&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Nennen Sie drei Transportprotokolle des Internet und stellen Sie Unterschiede zwischen ihnen dar.</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> &gt; UDP: Ein Paket (Datagramm) von Rechner A nach
+        Rechner B schaffen &ndash; Verbindungslos<br>
+        &gt; TCP: Pakete werden geordnet und zuverl&auml;ssig &uuml;ber eine 
+        Verbindung transportiert &ndash; Verbindungsorientiert<br>
+        &gt; Multicast: Pakete werden an mehrere Empf&auml;nger 
+      ausgeliefert</TD>
+      <TD>&nbsp;</TD>
+    </TR>    
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Was ist ein Port?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> Ein Port ist ein logischer 
+        Netzanschlu&szlig;, 
+      benannt von 0 bis 65535</TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Was ist ein Socket?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> Socket ist Endpunkt einer Verbindung </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Wie funktioniert die Kommunikation &uuml;ber TCP serverseitig? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> Die Server Seite, verbindungsorientiert:<br>
+      &gt; Ein Proze&szlig; &bdquo;lauscht&ldquo; auf einem Rechner an einem Port auf 
+      Verbindungsw&uuml;nsche (&bdquo;listen&ldquo;)<br>
+      &gt; Bei einem Verbindungswunsch erzeugt er einen
+      Kommunikationssocket (&bdquo;accept&ldquo;)<br>
+      &gt; Der Kommunikationssocket hat eine andere Nummer als
+    der Verbindungswunschsocket!</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Wie funktioniert die Kommunikation &uuml;ber TCP clientseitig? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> Die Client Seite:<br>
+      &gt; Melden des Verbindungswunsches (&bdquo;connect&ldquo;)<br>
+    &gt; &bdquo;Einstecken&ldquo; in den Kommunikationssocket</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 10. Wie funktioniert die Kommunikation &uuml;ber UDP serverseitig? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 11. Wie funktioniert die Kommunikation &uuml;ber UDP clientseitig? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 12. Nennen Sie drei Unterschiede zwischen RMI- und Socket-Kommunikation </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> RMI:<br>
+      -
+      H&ouml;heres Abstraktionsniveau<br>
+      - &Uuml;bermittlung getypter Daten<br>
+    - Klassen&uuml;bermittlung<br>    <br>
+    Sockets:<br>
+    - Kleinster gemeinsamer Nenner des Internets<br>
+    - &Uuml;bermittlung ungetypter Bytestr&ouml;me<br>
+    - Effizienter<br></TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+
+<BR>
+<HR>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-02<!-- #EndDate --></em>
+</BODY>
+</HTML>

@@ -1,0 +1,258 @@
+<HTML>
+<HEAD>
+	<TITLE>Verteilte Systeme und Middleware</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<LINK href="../img/stylesheet.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+	<TR><TD class=articlehead> RPC </TD>
+	</TR>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR><TD><ol>
+	  <li>Was ist der Remote Procedure Call
+      <li>Was synchronisiert sich bei RPC womit?
+      <li>Nennen Sie f&uuml;nf Unterschiede zwischen lokalem und entferntem Prozeduraufruf
+      <li>Wie l&auml;uft ein RPC ab?
+      <li>Was ist ein asynchroner RPC?
+      <li>Welche Komponenten sind bei einem RPC generell beteiligt
+      <li>Was ist ein Stub?
+      <li>Was ist eine Schnittstelle?
+      <li>Nennen Sie drei Arten von Bindung zwischen Aufrufer und Aufgerufenem
+      <li>Was macht ein Trader oder Broker?
+      <li>Nennen Sie vier Fehlerquellen die spezifisch f&uuml;r RPC sind.
+      <li>Was bedeutet die at-most-once Semantic beim RPC? </li>
+	  </ol></TD></TR>
+</TABLE>	
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        1. Was ist der Remote Procedure Call?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> <p>ist ein synchroner Mechanismus, der Kontrollfluss und Daten zwischen zwei Adressr&auml;umen &uuml;ber ein schmalbandiges Netz transferiert.
+      </p>      </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        2. Was synchronisiert sich bei RPC womit?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> der Aufrufer blockiert bis Aufgerufener das Egebnis abliefert </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD height=16 noWrap background=../img/bg-menu.gif class=question>
+        3. Nennen Sie f&uuml;nf Unterschiede zwischen lokalem und entferntem Prozeduraufruf </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top><table width="600" border="1" cellSpacing=0>
+        <tr>
+          <th width="50%" scope="col">lokaler Aufruf </th>
+          <th width="50%" scope="col">entfernter Aufruf </th>
+        </tr>
+        <tr>
+          <td>Aufrufer und Prozedur im selben Prozess ausgef&uuml;hrt </td>
+          <td>Aufrufer und Prozedur in unterschiedlichen nebenl&auml;ufigen Prozessen </td>
+        </tr>
+        <tr>
+          <td>Aufrufer und Prozedur im selben Adressraum </td>
+          <td>Aufrufer und Prozedur in unterschiedlichen Adressr&auml;umen </td>
+        </tr>
+        <tr>
+          <td>Aufrufer und Prozedur haben die gleiche Lebensdauer </td>
+          <td>Aufrufer und Prozedur haben unterschiedliche Lebensdauer </td>
+        </tr>
+        <tr>
+          <td>der Aufruf ist immer fehlerfrei </td>
+          <td>Aufruf ist fehlerbehaftet (Netz, Aufgerufener) </td>
+        </tr>
+        <tr>
+          <td>nur Anwendungsfehler ber&uuml;cksichtigt </td>
+          <td>zus&auml;tzlich Aufruffehler behandeln </td>
+        </tr>
+      </table>        </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Wie l&auml;uft ein RPC ab? </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD >&nbsp;</TD>
+      <TD vAlign=top> <img src="rpc01.GIF" width="404" height="200"></TD>
+      <TD >&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Was ist ein asynchroner RPC?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> im Gegensatz zum eigentlichen RPC blockiert der Aufrufer nicht bis das Ergebnis abgeliefert wird, sondern holt es sp&auml;ter ab. </TD>
+      <TD>&nbsp;</TD>
+    </TR>    
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Welche Komponenten sind bei einem RPC generell beteiligt?</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> <li>die Anwendungsprozeduren (eigentliche Arbeit)</li> 
+        <li>Stubs (ver- und entpacken von Daten zum Transport)</li>
+      <li>Kommunikation (Transport von Daten)  </li></TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Was ist ein Stub?      </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> <p>Ein Stub dient zum ver- und entpacken von Daten zum Transport und verbirgt die komplizierten Details der Kommunikation zwischen Server und Client. </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Was ist eine Schnittstelle?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> lokal: Interaktionspunkt, definiert durch Signaturen <br>
+      entfernt:      <br></TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Nennen Sie drei Arten von Bindung zwischen Aufrufer und Aufgerufenem</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> <li>statisch: zur &Uuml;bersetzungszeit werden Klienten an feste Serveradressen gebunden</li>
+    <li>halbstatisch: zur Startzeit des Klienten werden Serveradressen konfiguriert (ermittelt aus Datenbank / Tabelle) </li>
+    <li>dynamisch: zur Aufrufzeit werden Serveradressen ermittelt </li></TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 10. Was macht ein Trader oder Broker?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> Komponente, die die Server kennt und Referenzen auf sie vermitteln kann .<br>
+    Bsp: Internet: DNS; Java: rmiregistry; CORBA: ORB</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 11. Nennen Sie vier Fehlerquellen die spezifisch f&uuml;r RPC sind. </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top><li>Server nicht erreichbar (Maschine / Netzwerk ausgefallen usw.) </li>
+      <li>Server f&auml;llt w&auml;hrend der RPC Ausf&uuml;hrung aus</li>    
+    <li> Server hat Schnittstelle ge&auml;ndert und bietet den Dienst nicht mehr an</li>
+    <li>RPC Mitteilungen gehen verloren  </li></TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 12. Was bedeutet die at-most-once Semantic beim RPC? </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top> <p>(at-least-once: Mindestens 1 Mal ausf&uuml;hrt)<br>
+      <br>
+  at-most-once: H&ouml;chstens 1 Mal ausgef&uuml;hrt, nicht teilweise<br>
+  - Ausfall vor Verarbeitung: Nicht ausgef&uuml;hrt<br>
+  - Ausfall w&auml;hrend Verarbeitung: Neustart, Konsistenz 
+      durch Transaktion<br>
+      - Ausfall nach Verarbeitung: Ergebniskopie nach Neustart
+    versandt </p>    </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<BR>
+<HR>
+<em>last modified: <!-- #BeginDate format:IS1 -->2003-12-29<!-- #EndDate --></em>
+</BODY>
+</HTML>
