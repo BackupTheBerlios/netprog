@@ -6,23 +6,26 @@
       <source-position-entry url="file://$PROJECT_DIR$/libs/a3/repstring.idl" line="3" column="8" vertical-scroll-proportion="0.072376356" horizontal-scroll-proportion="0.068817206" />
       <source-position-entry url="file://$PROJECT_DIR$/libs/a4/adressbuch.idl" line="8" column="15" vertical-scroll-proportion="0.19300362" horizontal-scroll-proportion="0.12903225" />
       <source-position-entry url="file://$PROJECT_DIR$/libs/a1_2/adder.idl" line="2" column="4" vertical-scroll-proportion="0.047114253" horizontal-scroll-proportion="0.03411514" />
-      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderClient.java" line="14" column="13" vertical-scroll-proportion="0.057714958" horizontal-scroll-proportion="0.111827955" />
-      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderService.java" line="14" column="13" vertical-scroll-proportion="0.30624264" horizontal-scroll-proportion="0.111827955" />
       <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a3/ReplicatedStringClient.java" line="22" column="43" vertical-scroll-proportion="0.19905771" horizontal-scroll-proportion="0.36989248" />
       <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a3/ReplicatedStringService.java" line="4" column="13" vertical-scroll-proportion="0.094228506" horizontal-scroll-proportion="0.111827955" />
       <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a3/ReplicatedStringServer.java" line="26" column="0" vertical-scroll-proportion="0.5182568" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderServer.java" line="34" column="7" vertical-scroll-proportion="0.78798586" horizontal-scroll-proportion="0.060215052" />
       <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a4/AdressbuchService.java" line="9" column="13" vertical-scroll-proportion="-0.48409894" horizontal-scroll-proportion="0.111827955" />
       <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a4/AdressbuchServer.java" line="8" column="13" vertical-scroll-proportion="0.094228506" horizontal-scroll-proportion="0.111827955" />
       <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a4/AdressbuchClient.java" line="10" column="13" vertical-scroll-proportion="0.16489989" horizontal-scroll-proportion="0.111827955" />
-      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/CorbaManager.java" line="37" column="66" vertical-scroll-proportion="-0.204947" horizontal-scroll-proportion="0.56774193" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderServer.java" line="17" column="13" vertical-scroll-proportion="0.3875147" horizontal-scroll-proportion="0.111827955" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderService.java" line="14" column="13" vertical-scroll-proportion="0.30624264" horizontal-scroll-proportion="0.111827955" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/CorbaManager.java" line="53" column="65" vertical-scroll-proportion="0.50530034" horizontal-scroll-proportion="0.5591398" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderClient.java" line="14" column="13" vertical-scroll-proportion="0.28268552" horizontal-scroll-proportion="0.111827955" />
     </history>
     <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/CorbaManager.java" line="37" column="66" vertical-scroll-proportion="-0.204947" horizontal-scroll-proportion="0.56774193" selected="true" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/CorbaManager.java" line="53" column="65" vertical-scroll-proportion="0.50530034" horizontal-scroll-proportion="0.5591398" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderClient.java" line="14" column="13" vertical-scroll-proportion="0.28268552" horizontal-scroll-proportion="0.111827955" selected="true" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderServer.java" line="17" column="13" vertical-scroll-proportion="0.3875147" horizontal-scroll-proportion="0.111827955" />
+      <source-position-entry url="file://$PROJECT_DIR$/src/uebung02/a1_2/AdderService.java" line="14" column="13" vertical-scroll-proportion="0.30624264" horizontal-scroll-proportion="0.111827955" />
     </open-files>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1408" height="1028" extended-state="0" />
+    <frame x="-4" y="-4" width="1408" height="1028" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
@@ -236,11 +239,12 @@
   <component name="ProjectViewSettings">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/libs" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/uebung02" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/src" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/scripts" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/uebung02" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/libs" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/libs/a1_2" />
     </view>
     <view id="SourcepathPane" />
     <view id="ClasspathPane" />
@@ -299,6 +303,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_opened_file_path" value="E:\Studium\Netzprogrammierung (WS 2004)\Übungen\Übung01\src\uebung01" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
   </component>
   <component name="SelectInManager" />

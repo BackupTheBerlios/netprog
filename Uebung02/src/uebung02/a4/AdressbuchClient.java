@@ -1,7 +1,7 @@
 package uebung02.a4;
 
-import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.CORBA.ORBPackage.InvalidName;
+import org.omg.CosNaming.NamingContextPackage.*;
 import uebung02.CorbaManager;
 import uebung02.a4.adressbuch.*;
 

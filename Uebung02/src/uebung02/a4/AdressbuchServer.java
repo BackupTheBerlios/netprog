@@ -1,9 +1,9 @@
 package uebung02.a4;
 
+import org.omg.CORBA.ORBPackage.InvalidName;
 import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.PortableServer.POAManagerPackage.AdapterInactive;
 import org.omg.PortableServer.POAPackage.*;
-import org.omg.CORBA.ORBPackage.InvalidName;
 import uebung02.CorbaManager;
 
 public class AdressbuchServer

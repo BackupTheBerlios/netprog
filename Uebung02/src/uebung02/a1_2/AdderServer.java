@@ -1,10 +1,10 @@
 package uebung02.a1_2;
 
-import uebung02.CorbaManager;
-import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.CORBA.ORBPackage.InvalidName;
-import org.omg.PortableServer.POAPackage.*;
+import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.PortableServer.POAManagerPackage.AdapterInactive;
+import org.omg.PortableServer.POAPackage.*;
+import uebung02.CorbaManager;
 
 /**
  * <p>Title: NETZPROGRAMMIERUNG UEBUNG 2 - AUFGABE 2</p>
