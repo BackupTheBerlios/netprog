@@ -1,1 +1,1 @@
-cmd /k java -cp ..\..\classes uebung04.a2.Linkchecker ..\..\libs\a2\urls.txt
+cmd /k java -cp ..\..\classes uebung04.a2.Linkchecker .\urls.txt

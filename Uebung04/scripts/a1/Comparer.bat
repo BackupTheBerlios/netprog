@@ -1,1 +1,1 @@
-cmd /k java -cp ..\..\classes uebung04.a1.RecourceComparer http://www.inf.fu-berlin.de/inst/ag-nbi/lehre/0304/V_NP/NPBlatt4.html http://www.inf.fu-berlin.de/inst/ag-nbi/lehre/0304/V_NP/folien/blatt.html
+cmd /k java -cp ..\..\classes uebung04.a1.RessourceComparer http://www.inf.fu-berlin.de/inst/ag-nbi/lehre/0304/V_NP/NPBlatt4.html http://www.inf.fu-berlin.de/inst/ag-nbi/lehre/0304/V_NP/folien/blatt.html
