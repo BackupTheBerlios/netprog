@@ -1,0 +1,1 @@
+orbd -defaultdb ..\..\orbd.tmp -ORBInitialPort 3000

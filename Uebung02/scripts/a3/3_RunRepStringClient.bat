@@ -1,0 +1,1 @@
+cmd /k java -cp ..\..\classes uebung02.a3.ReplicatedStringClient

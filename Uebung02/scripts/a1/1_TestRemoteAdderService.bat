@@ -1,0 +1,1 @@
+cmd /k java -cp ..\..\classes uebung02.a1_2.AdderClient -ORBInitialPort 3000 -ORBInitialHost nawab.inf.fu-berlin.de
