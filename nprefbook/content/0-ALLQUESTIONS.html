@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+	<TITLE>Verteilte Systeme und Middleware</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<LINK href="../img/stylesheet.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+	<TR><TD class=articlehead>Verteilte Systeme und Middleware</TD></TR>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR><TD><ol>
+      <li>Beschreiben Sie die Entwicklung verteilter Systeme von einer Zentralisierung bis zu Peer-to-Peer.
+      <li>Nennen Sie f&uuml;nf charakteristische Eigenschaften verteilter Systeme
+      <li>Nennen Sie drei Vorteile verteilter Systeme
+      <li>Nennen Sie drei Nachteile verteilter Systeme
+      <li>Was sind Transparenzen und was macht Middleware dabei?
+      <li>Was ist Ortstransparenz?
+      <li>Wieso ist das Web ein verteiltes System? </li>
+	  </ol></TD></TR>
+</TABLE>	
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead>RPC</TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Was ist der Remote Procedure Call
+        <li>Was synchronisiert sich bei RPC womit?
+        <li>Nennen Sie f&uuml;nf Unterschiede zwischen lokalem und entferntem Prozeduraufruf
+        <li>Wie l&auml;uft ein RPC ab?
+        <li>Was ist ein asynchroner RPC?
+        <li>Welche Komponenten sind bei einem RPC generell beteiligt
+        <li>Was ist ein Stub?
+        <li>Was ist eine Schnittstelle?
+        <li>Nennen Sie drei Arten von Bindung zwischen Aufrufer und Aufgerufenem
+        <li>Was macht ein Trader oder Broker?
+        <li>Nennen Sie vier Fehlerquellen die spezifisch f&uuml;r RPC sind.
+        <li>Was bedeutet die at-most-once Semantic beim RPC? </li>
+        </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead> RMI</TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Wie l&auml;uft der Aufruf einer Methode an einem entfernten Objekt in RMI ab?
+        <li>Nennen Sie zwei Unterschiede eines Interfaces f&uuml;r ein RMI Objekt zu einem Interface f&uuml;r lokale Obejekt bei gleicher Funktionalit&auml;t.         
+        <li>Wovon erbt ein Objekt, das per RMI aufrufbar sein soll?
+        <li>Wie unterscheidet sich der Aufruf einer Method an einem RMI Objekt von dem an einem lokalen Objekt?
+        <li>Was macht das rmic Programm?
+        <li>Welche Komponente &uuml;bernimmt die Rolle des Brokers bei RMI?
+        <li>Wie kommt ein Client-Objekt zu einer Referenz auf ein entferntes Objekt?
+        <li>Welches URL-Schema bezeichnet RMI Objekte und wie ist es aufgebaut?
+        <li>Wie findet man eine Registry auf?
+        <li>Was ist ein Callback und was muss man in RMI daf&uuml;r tun?
+        <li>Was ist Serialisierung und warum ist sie bei RMI notwendig?
+        <li>Welches Sicherheitsproblem entsteht durch Objektserialisierung?
+        <li>Wieviele Threads k&ouml;nnen in einem RMI-Objekt aktiv sein? <br>
+                </li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead> CORBA </TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Was ist die OMG?
+        <li>Was ist der ORB?
+        <li>Was ist IIOP?
+        <li>Was ist IDL?
+        <li>Nennen Sie drei Unterschiede zwischen Java RMI und CORBA.
+        <li>Womit muss man bei der Entwicklung von CORBA-Anwendungen beginnen?
+        <li>Welche ganzzahligen Zahlentypen sind in IDL vorgesehen?
+        <li>Welche Fliesskommatypen gibt es in IDL?         
+        <li>Was kann in einem Modul in IDL vorkommen?
+        <li>Was kann in einer Schnittstelle in IDL vorkommen?
+        <li>Welche Arten von Parameter&uuml;berhabe kennt CORBA?
+        <li>Wie werden sie in der ORB Implementierung des JDK realisiert?
+        <li>Was macht der Portable Object Adapter?
+        <li>Welche Bedeutung haben die Kommandozeilenparameter -ORBInitialHost und -ORBInitialPort bei CORBA Anwendungen?
+        <li>Wie unterscheidet sich der Namensdienst in CORBA vom Namensdienst rmiregistry in Java? </li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead> Sockets </TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Was ist das Internet Protocol IP?
+        <li>Wie sehen Internet Adressen aus und wie werden sie auf lokale Netzadressen abgebildet?
+        <li>Welcher Dienst bildet Internet Adressen auf Namen ab und umgekehrt?
+        <li>Geben Sie je zwei Beispiele aus der realen Welt - also nicht aus der Netztechnik - f&uuml;r verbindungsorientierte und -lose Protokolle an.
+        <li>Nennen Sie drei Transportprotokolle des Internet und stellen Sie Unterschiede zwischen ihnen dar.
+        <li>Was ist ein Port?
+        <li>Was ist ein Socket?
+        <li>Wie funktioniert die Kommunikation &uuml;ber TCP serverseitig?
+        <li>Wie funktioniert die Kommunikation &uuml;ber TCP clientseitig?
+        <li>Wie funktioniert die Kommunikation &uuml;ber UDP serverseitig?
+        <li>Wie funktioniert die Kommunikation &uuml;ber UDP clientseitig?
+        <li>Nennen Sie drei Unterschiede zwischen RMI- und Socket-Kommunikation </li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead> Internet Dienste </TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Wo und von wem werden Internet Protokolle definiert?
+        <li>Nennen Sie 4 Dienstprotokolle des Internet.
+        <li>Wodurch sind Internet Protokolle definiert?
+        <li>Wie ist die Interkation zwischen Dienstnutzer und -erbringer in HTTP?
+        <li>Wie ist eine HTTP Anfrage aufgebaut?
+        <li>Nennen Sie drei in HTTP definierte Methoden.
+        <li>Nennen Sie drei Header die in einer HTTP Anfrage auftreten k&ouml;nnen und ihre Bedeutung.
+        <li>Wie ist eine HTTP Antwort aufgebaut?
+        <li>Nennen Sie drei Header die in einer HTTP Antwort auftreten k&ouml;nnen und ihre Bedeutung.
+        <li>Nennen Sie drei wichtige Antwortcodes in HTTP und ihre Bedeutung.
+        <li>Nennen Sie zwei wichtige Unterschiede zwischen HTTP und FTP </li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead> Internet Dienste mit Java </TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Wie ist eine URL aufgebaut?
+        <li>Nennen Sie drei bekannte URL-Schemata.
+        <li>Wie erstellt man ein eigenes URL Schema in Java?        
+        <li>Wie l&auml;dt man im einfachsten Fall in Java den Inhalt einer mit einer URL beschriebenen Resource?
+        <li>Wie geht man vor, wenn man zus&auml;tzlich Header setzen will?
+        <li>Wie l&auml;uft Authentifizierung in HTTP ab, welche Antwortcodes und Header sind dabei relevant?
+        <li>Mit welchen zwei HTTP Nutzungsarten &uuml;bertr&auml;gt man Daten zu einem Skript?
+        <li>Wie realisiert man das jeweils in Java?
+        <li>Wie funktioniert das Cookie-Verfahren und welche HTTP-Header werden dabei benutzt? </li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead> Applets</TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><ol>
+        <li>Was sind Applets?
+        <li>Nennen und erkl&auml;ren Sie drei wichtige Attribute des &lt;applet&gt;-Tags.
+        <li>Welche zwei Methoden sind essentiell f&uuml;r die Funktionsweise eines Applets?
+        <li>Wie &uuml;bergibt man einem Applet Parameter?
+        <li>Mit welchem Mechanismus reagieren Applets auf Interaktionen?
+        <li>Wie arbeitet man in Applets mit RMI Objekten? </li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead>HTML</TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD>
+      <ol>
+        <li>Was ist HTML und woraus besteht es?</li>
+        <li>Nennen Sie drei in HTML definierte Entit&auml;ten </li>
+        <li>Was sind Links und woraus bestehen sie?</li>
+        <li>Wie sieht die Struktur von HTML-Seiten immer aus?</li>
+        <li>Nennen Sie je zwei HTML-Elemente zur Markierung von Schriftvarianten, &Uuml;berschriften und Aufz&auml;hlungen.</li>
+        <li>Wie sind HTML-Formulare aufgebaut?</li>
+        <li>Wie kann man auf einfache Weise in Java HTML Seiten verarbeiten?</li>
+        <li>Was passiert bei einem Callback-Parser, wenn er ein HTML-Element erkannt hat?</li>
+        <li>Was ist der Zusammenhang zwischen HTML und XML?</li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead>XML</TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD>
+      <ol>
+        <li>Warum XML und nicht HTML6?</li>
+        <li>Was ist der Unterschied zwischen PCDATA und CDATA in XML?</li>
+        <li>Wie wird CDATA ausgezeichnet?</li>
+        <li>Welche Fehler sind in diesem XML Dokument:<br>
+            <span style="font-family: monospace;">&lt;?xml standalone="yes"&gt;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel&gt;0233/2938293&lt;tel&gt;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel&gt;3003-22424&lt;/Tel&gt;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel:fax&gt;3003-2242&lt;/tel:fax&gt;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel loc=home&gt;030/99333993&lt;/tel&gt;</span> </li>
+        <li>Was ist eine DTD?</li>
+        <li>Was sind wohlgeformte und valide Dokumente?</li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT Telekontakt&nbsp; (email | fax | SMS)*&gt;</span> </li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT&nbsp; Vorname (name)+&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT name (#PCDATA)&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT Beschreibung ANY&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT hr EMPTY&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ATTLIST fax standard CDATA #IMPLIED "G3"&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ATTLIST Anschrift PLZ CDATA #REQUIRED&gt;</span></li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD class=articlehead>andere Programmiermodelle </TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD>
+      <ol>
+        <li>Beschreiben Sie drei konzeptionelle Probleme des RPC Konzepts
+        <li>Nennen Sie drei Unterschiede zwischen der RPC Konzeption und dem Konzept von Koordinationssprachen
+        <li>Beschreiben Sie drei Operationen der Koordinationssprache Linda
+        <li>Wie kann man einen RPC in Linda "nachbauen"?
+        <li>Beschreiben Sie zwei Unterschiede zwischen RPC-basierten und Peer-to-Peer Systemen
+        <li>Nennen Sie zwei Unterschiede zwischen RPC-basierten und Agenten-basierten Systemen
+        <li>Nennen Sie zwei Eigenschaften von Agenten nach der schwachen Definition von Agenten
+        <li>Nennen Sie zwei Eigenschaften von Agenten nach der starken Definition von Agenten
+        <li>Was ist KQML?</li>
+    </ol></TD>
+  </TR>
+</TABLE>
+<p>&nbsp;</p>
+<HR>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-02-14<!-- #EndDate --></em>
+</BODY>
+</HTML>

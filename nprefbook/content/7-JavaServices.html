@@ -36,7 +36,7 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top><img src="jser01.GIF" width="402" height="81"> </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -52,7 +52,7 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top>http, ftp, mailto ???  </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -68,7 +68,14 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top> </li></TD>
+      <TD vAlign=top> </li>Dazu m&uuml;ssen definiert werden<br>
+         - eine Klasse Handler<br>
+        - eine Klasse SchemaURLConnection<br>        <br>
+         Sie m&uuml;ssen in einem Paket stehen:
+        package de.fuberlin.inf.nbi.schema<br>        <br>
+         Durch die Property java.protocol.handler.pkgs muss
+        dem Laufzeitsystem mitgeteilt werden wo die
+      eigenen Klassen stehen</TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -83,7 +90,7 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD >&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top>URL getContent </TD>
       <TD >&nbsp;</TD>
     </TR>
 </TABLE>
@@ -98,7 +105,7 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top>openConnection liefert URLConnection und die hat Methode setRequestProperty(String key, String value);</TD>
       <TD>&nbsp;</TD>
     </TR>    
 </TABLE>
@@ -113,7 +120,13 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top><li>Normales GET</li> 
+        <li> Antwort 401 und WWW-Authenticate: 
+          Header, der
+        Nachweis in unterschiedlichen Schemata anfordert</li>
+        <li> Weiteres GET mit Authorization: Header, der je nach
+        Schema Parameter tr&auml;gt</li>
+        <li> Antwort 200 </li></TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -128,8 +141,8 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top><p><br>
-      </p>        </TD>
+      <TD vAlign=top><p>GET: Daten werden in URL kodiert<br>
+        POST: Daten werden kodiert &uuml;ber Standardeingabe geliefert</TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -144,7 +157,7 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>setRequestMethod in URLConnection </TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -159,7 +172,12 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>Server schickt Set-Cookie Header in HTTP<br>
+      Set-Cookie: Name=Wert; <br>
+      expires=Datum; <br>
+      path=Pfad;<br>
+      domain=Internet-Dom&auml;ne; secure<br>
+    Wenn der Klient will, speichert er den Cookie </TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -167,6 +185,6 @@
 
 <BR>
 <HR>
-<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-08<!-- #EndDate --></em>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-02-09<!-- #EndDate --></em>
 </BODY>
 </HTML>

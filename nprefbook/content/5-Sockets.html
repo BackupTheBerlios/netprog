@@ -56,9 +56,9 @@
     <TR>
       <TD>&nbsp;</TD>
       <TD vAlign=top>aktuell 32 Bit <br>
-        Abbildung je nach Medium auf die MAC (Media Access Control), die physikalische Netzadresse <br>
-        <li>ARP (Adress Resolution Protokoll)</li>
-        <li>RARP (Reverse Adress Resolution Protokoll) <br>
+        Abbildung je nach Medium auf die MAC (Media Access Control), der physikalischen Netzadresse <br>
+        <li>ARP (Adress Resolution Protokoll) (IP -&gt; MAC) </li>
+        <li>RARP (Reverse Adress Resolution Protokoll) (MAC -&gt; IP)<br>
           Netzwerkmaske definiert was im lokalen Netz ist und was nach aussen geht
         </li></TD>
       <TD>&nbsp;</TD>
@@ -198,7 +198,10 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>&gt; Server bindet Socket an Port (bind)<br>
+      &lt;empf&auml;ngt Packet (receive)<br>
+      &gt; sendet (send)<br>
+      &gt;schliessen </TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -213,7 +216,10 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>&gt; Server bindet Socket an Port (bind)<br>
+&lt;empf&auml;ngt Packet (receive)<br>
+&gt; sendet (send)<br>
+&gt;schliessen  </TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -244,6 +250,6 @@
 
 <BR>
 <HR>
-<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-02<!-- #EndDate --></em>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-02-09<!-- #EndDate --></em>
 </BODY>
 </HTML>

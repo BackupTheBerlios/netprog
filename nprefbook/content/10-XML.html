@@ -26,13 +26,12 @@ standalone="yes"&gt;</span><br style="font-family: monospace;">
           <span style="font-family: monospace;">&lt;tel:fax&gt;3003-2242&lt;/tel:fax&gt;</span><br
  style="font-family: monospace;">
           <span style="font-family: monospace;">&lt;tel
-loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
-        </li>
+loc=home&gt;030/99333993&lt;/tel&gt;</span>        </li>
         <li>Was ist eine DTD?</li>
         <li>Was sind wohlgeformte und valide Dokumente?</li>
         <li>Was besagt die DTD-Regel <span
  style="font-family: monospace;">&lt;!ELEMENT Telekontakt&nbsp; (email
-| fax | SMS)*&gt;</span> <br>
+| fax | SMS)*&gt;</span> 
         </li>
         <li>Was besagt die DTD-Regel <span
  style="font-family: monospace;">&lt;!ELEMENT&nbsp; Vorname (name)+&gt;</span></li>
@@ -58,14 +57,14 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
       <TD class=question noWrap background=../img/bg-menu.gif height=16>
-        1. Wie ist eine URL aufgebaut?        </TD>
+        1. Warum XML und nicht HTML6? </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top>- HTML nur f&uuml;r Auszeichnung von Webseiten, XML dagegen universell<br> </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -74,14 +73,19 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
       <TD class=question noWrap background=../img/bg-menu.gif height=16>
-        2. Nennen Sie drei bekannte URL-Schemata.</TD>
+        2. Was ist der Unterschied zwischen PCDATA und CDATA in XML?</TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top>F&uuml;r XML reservierte Symbole wie &lt; und &amp; d&uuml;rfen
+        nicht in PCDATA verwendet werden. Statt dessen &amp;lt bzw. &amp;amp verwenden. <br>
+        Text mit vielen reservierten Symbolen besser als sog. character
+        data (CDATA) darstellen.<br>
+        XML-Parser betrachtet dann den entsprechenden Text als
+        einfachen String und parst den Inhalt nicht.</TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -90,14 +94,17 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
       <TD class=question noWrap background=../img/bg-menu.gif height=16>
-        3. Wie erstellt man ein eigenes URL Schema in Java? </TD>
+        3. Wie wird CDATA ausgezeichnet?</TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top> </li></TD>
+      <TD vAlign=top> </li>
+      &lt;![CDATA[ dieser Text wird nicht analysiert ]]&gt;<br>
+      <br>
+      XML-Parser sucht ]]&gt; und analysiert die Zeichenkette bis dahin nicht.</TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -105,14 +112,26 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Wie l&auml;dt man im einfachsten Fall in Java den Inhalt einer mit einer URL beschriebenen Resource? </TD>
+      <TD height=16 colspan="2" noWrap background=../img/bg-menu.gif class=question> 4. Welche Fehler sind in diesem XML Dokument:</TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
-      <TD colspan=3>&nbsp;</TD>
+      <TD colspan=4>&nbsp;</TD>
     <TR>
       <TD >&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD width="234" vAlign=top><span style="font-family: monospace;">&lt;?xml standalone="yes"&gt;</span><br>        
+<span style="font-family: monospace;">&lt;tel&gt;0233/2938293&lt;tel&gt;</span> <br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&lt;tel&gt;3003-22424&lt;/Tel&gt;</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&lt;tel:fax&gt;3003-2242&lt;/tel:fax&gt;</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&lt;tel loc=home&gt;030/99333993&lt;/tel&gt;</span> </TD>
+      <TD width="568" vAlign=top>Regel 4 (Namenskonvention) <br>
+      Regel 1 (Anfangs- und End-Tags) und damit auch Regel 2 (&Uuml;berlappung von Elementen) <br>  
+            Regel 3 (Wurzel-Elemente); Regel 5 (Gro&szlig;- und Kleinschreibung) <br>
+      ok oder? <br>
+      Regel 4 (Namenskonvention)       <br></TD>
       <TD >&nbsp;</TD>
     </TR>
 </TABLE>
@@ -120,14 +139,19 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Wie geht man vor, wenn man zus&auml;tzlich Header setzen will? </TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Was ist eine DTD?</TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top>&bull; (Document Typ Definitions)
+        spezifiziert den Aufbau von einem
+        Dokument eines bestimmten Typs.<br>
+        &bull; DTDs wurden von SGML &uuml;bernommen.<br>
+        &bull; DTDs benutzen Syntax, die regul&auml;ren Ausdr&uuml;cken
+      &auml;hnlich ist. </TD>
       <TD>&nbsp;</TD>
     </TR>    
 </TABLE>
@@ -135,38 +159,25 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Wie l&auml;uft Authentifizierung in HTTP ab, welche Antwortcodes und Header sind dabei relevant? </TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Was sind wohlgeformte und valide Dokumente?</TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top> - Wohlgeformtheit: diese 4 Regeln<br>
+        - valid: wenn das Dokument der DTD entspricht </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
-<br>
-<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
-    <TR>
-      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Mit welchen zwei HTTP Nutzungsarten &uuml;bertr&auml;gt man Daten zu einem Skript? </TD>
-      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    </TR>
-    <TR>
-      <TD colspan=3>&nbsp;</TD>
-    <TR>
-      <TD>&nbsp;</TD>
-      <TD vAlign=top><p><br>
-      </p>        </TD>
-      <TD>&nbsp;</TD>
-    </TR>
-</TABLE>
+
 <br>
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
   <TR>
     <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Wie realisiert man das jeweils in Java?</TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT Telekontakt&nbsp; (email | fax | SMS)*&gt;</span> </TD>
     <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
   </TR>
   <TR>
@@ -181,7 +192,88 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
   <TR>
     <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Wie funktioniert das Cookie-Verfahren und welche HTTP-Header werden dabei benutzt? </TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT&nbsp; Vorname (name)+&gt;</span></TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT name (#PCDATA)&gt;</span></TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 10. Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT Beschreibung ANY&gt;</span></TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 11. Was besagt die DTD-Regel<span
+ style="font-family: monospace;"> &lt;!ELEMENT hr EMPTY&gt;</span></TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 12. Was besagt die DTD-Regel<span
+ style="font-family: monospace;"> &lt;!ATTLIST fax standard CDATA #IMPLIED "G3"&gt;</span></TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>&nbsp; </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 13. Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ATTLIST Anschrift PLZ CDATA #REQUIRED&gt;</span></TD>
     <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
   </TR>
   <TR>
@@ -196,6 +288,6 @@ loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
 
 <BR>
 <HR>
-<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-08<!-- #EndDate --></em>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-02-12<!-- #EndDate --></em>
 </BODY>
 </HTML>

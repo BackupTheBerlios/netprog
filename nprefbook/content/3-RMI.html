@@ -42,8 +42,8 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>Aufruferseite wird &uuml;ber ein Interface angesprochen <br>
-        Ein Serverobjekt implementiert das Interface<br> </TD>
+      <TD vAlign=top>- Aufruferseite benutzt Proxy, der Daten codiert und zum Serverobjekt weiterleitet <br>
+      - Serverobjekt verabeitet Daten und <br> </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -59,16 +59,8 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top><li> Objektschnittstellen
-        definieren
-        Methoden des Objekts      
-        <li> Unterschiedliche
-        Implementierungen f&uuml;r gleiche Schnittstelle S</li><br><br>        
-        <li> Modulschnittstellen des RPC werden auf
-        Objektschnittstellen abgebildet
-      <li> Aufrufweiterleitung durch Stellvertreter (Proxy)<br>
-        <br>
-      <img src="rmi01.GIF" width="528" height="100">            </TD>
+      <TD vAlign=top>- muss von Remote erben und       alle Methoden m&uuml;ssen RemoteException ausl&ouml;sen k&ouml;nnen <br>
+      - nur primitive Werte oder serialisierbare Objekte als Parameter </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -169,7 +161,7 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top> Registry-Objekt: Naming.lookup(rmi://&lt;host_name&gt;[:&lt;name_service_port&gt;]/&lt;service_name&gt;) </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -184,7 +176,7 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>rmi://&lt;host_name&gt;[:&lt;name_service_port&gt;]/&lt;service_name&gt;</TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -199,7 +191,7 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>    LocateRegistry.getRegistry()</TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -214,7 +206,10 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>Callback: wenn der Aufrufer eine Referenz auf sich selbst dem Aufgerufenen  &uuml;bergibt, damit dieser Methoden auf ihm aufrufen kann !<br>      <br> 
+      In RMI:<br>
+      - Auch Client wird ein Server-Objekt<br>
+    - &Uuml;bergibt Referenz auf sich bei Anfrage </TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -229,7 +224,8 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>- ist Umwandeln in Bytefolge <br>
+    - Objektserialisierung notwendig zum Versenden von Objektkopien</TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -244,7 +240,7 @@
     <TD colspan=3>&nbsp;</TD>
   <TR>
     <TD>&nbsp;</TD>
-    <TD vAlign=top>&nbsp; </TD>
+    <TD vAlign=top>Importieren von fremden Code beim Nachladen  </TD>
     <TD>&nbsp;</TD>
   </TR>
 </TABLE>
@@ -266,6 +262,6 @@
 <br>
 <BR>
 <HR>
-<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-21<!-- #EndDate --></em>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-02-11<!-- #EndDate --></em>
 </BODY>
 </HTML>

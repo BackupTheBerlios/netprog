@@ -1,0 +1,201 @@
+<HTML>
+<HEAD>
+	<TITLE>Verteilte Systeme und Middleware</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<LINK href="../img/stylesheet.css" type=text/css rel=stylesheet>
+</HEAD>
+
+<BODY>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+	<TR>
+	  <TD class=articlehead>andere Programmiermodelle </TD>
+	</TR>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR>
+  <TD>          <ol>
+            <li>Beschreiben Sie drei konzeptionelle Probleme des RPC Konzepts
+            <li>Nennen Sie drei Unterschiede zwischen der RPC Konzeption und dem Konzept von Koordinationssprachen
+            <li>Beschreiben Sie drei Operationen der Koordinationssprache Linda
+            <li>Wie kann man einen RPC in Linda "nachbauen"?
+            <li>Beschreiben Sie zwei Unterschiede zwischen RPC-basierten und Peer-to-Peer Systemen
+            <li>Nennen Sie zwei Unterschiede zwischen RPC-basierten und Agenten-basierten Systemen
+            <li>Nennen Sie zwei Eigenschaften von Agenten nach der schwachen Definition von Agenten
+            <li>Nennen Sie zwei Eigenschaften von Agenten nach der starken Definition von Agenten
+            <li>Was ist KQML?</li>
+          </ol>      </TD>
+	</TR>
+</TABLE>	
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        1. Beschreiben Sie drei konzeptionelle Probleme des RPC Konzepts</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top><p>1) Rollenidentifikation als Klient oder Server<br>
+        Wer liest, wer schreibt, wer betreibt die Berechnung?<br>
+        <br>
+        2) Rollenwechsel in der Interaktion<br>
+        <br>
+        3) Mehrparteieninteraktionen<br>
+        <br>
+        4) Transpranz bei Parametern <br>
+        <br>
+        5) Wenn der Server Probleme hat, blockiert der Client </p>
+      </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        2. Nennen Sie drei Unterschiede zwischen der RPC Konzeption und dem Konzept von Koordinationssprachen        </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top><p>- Entit&auml;ten kommunizieren nur indirekt &uuml;ber einen
+        gemeinsamen Datenraum (Tuplespace)<br>
+        - Kommunikationspartner sind anonym zueinander<br>
+        - Lebensdauer der Kommunikationspartner muss nicht &uuml;berlappen<br>
+        - Mehrparteienkommunikation m&ouml;glich<br>
+        - Inh&auml;rent nebenl&auml;ufig<br>
+        - Abstrahiert v&ouml;llig von Orten der Teilnehmer -&gt; verteilt<br>
+      </p>      </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16>
+        3. Beschreiben Sie drei Operationen der Koordinationssprache Linda</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top> </li> out(tuple): Ablegen eines Tupels in den Tuplespace<br>
+         in(template): Herausnehmen eines passenden Tupels
+      aus dem Tuplespace<br>
+       rd(template): Auslesen eines passenden Tupels aus
+      dem Tuplespace<br></TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+<BR>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD height=16 noWrap background=../img/bg-menu.gif class=question> 4. Wie kann man einen RPC in Linda "nachbauen"? </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD >&nbsp;</TD>
+      <TD vAlign=top>Referenzen mitschicken <br></TD>
+      <TD >&nbsp;</TD>
+    </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Beschreiben Sie zwei Unterschiede zwischen RPC-basierten und Peer-to-Peer Systemen</TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>- P2P ist kein Client/Server System <br>
+      - RPC 2 Teilnehmer, P2P beliebig viele </TD>
+      <TD>&nbsp;</TD>
+    </TR>    
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+    <TR>
+      <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Nennen Sie zwei Unterschiede zwischen RPC-basierten und Agenten-basierten Systemen      </TD>
+      <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    </TR>
+    <TR>
+      <TD colspan=3>&nbsp;</TD>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD vAlign=top>- teilweise autonom </TD>
+      <TD>&nbsp;</TD>
+    </TR>
+</TABLE>
+
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Nennen Sie zwei Eigenschaften von Agenten nach der schwachen Definition von Agenten    </TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>- Autonomie: Agent operiert ohne direkte Steuerung von
+    au&szlig;en und kontrolliert seine Aktionen selber <br>
+    - Sozial: Agent interagiert mit anderen zur Erreichung
+    eigener und deren Ziele</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Nennen Sie zwei Eigenschaften von Agenten nach der starken Definition von Agenten</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>- Mobilit&auml;t: Agenten bewegen sich in ienem elektronischen
+    Netzwerk (siehe auch: Roboter)<br>
+    - Veracity/Aufrichtigkeit: Agenten geben nicht wissentlich
+    falsche Informationen weiter </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
+  <TR>
+    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Was ist KQML?</TD>
+    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
+  </TR>
+  <TR>
+    <TD colspan=3>&nbsp;</TD>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD vAlign=top>die Sprache, mit der Agenten kommunizieren </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+<br>
+
+<BR>
+<HR>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-02-12<!-- #EndDate --></em>
+</BODY>
+</HTML>
