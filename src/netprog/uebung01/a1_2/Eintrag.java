@@ -31,9 +31,8 @@ public class Eintrag
             grouplist.trageEin(6, "Sebastian Koske", "3500729", "koske@inf.fu-berlin.de");
             grouplist.trageEin(6, "Boris Tsarev", "3668329", "tsarev@inf.fu-berlin.de");
             grouplist.trageEin(6, "Sebastian Schaepe", "3483427", "schaepe@inf.fu-berlin.de");
-
-            grouplist.trageEin(6, "Rafael Grote", "XXX", "grote@inf.fu-berlin.de");
-            grouplist.trageEin(6, "Mike Rohland", "XXX", "rohland@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Rafael Grote", "3519895", "grote@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Mike Rohland", "3514979", "rohland@inf.fu-berlin.de");
 
             String[] content = grouplist.toString(6);
 
