@@ -3,7 +3,7 @@ package netprog.uebung01.a3;
 import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
 
-import netprog.uebung01.RegistryManager;
+import netprog.uebung01.RMIManager;
 
 public class MainA_RegisterRepString
 {
@@ -14,7 +14,7 @@ public class MainA_RegisterRepString
      */
     public static void main(String[] args) throws RemoteException
     {
-        Registry registry = RegistryManager.getLocalRegistry();
+        Registry registry = RMIManager.getLocalRegistry();
 
         ReplicatedStringImpl r = new ReplicatedStringImpl();
 

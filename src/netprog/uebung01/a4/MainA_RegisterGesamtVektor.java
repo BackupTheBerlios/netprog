@@ -2,7 +2,7 @@ package netprog.uebung01.a4;
 
 import java.rmi.*;
 
-import netprog.uebung01.RegistryManager;
+import netprog.uebung01.RMIManager;
 
 public class MainA_RegisterGesamtVektor
 {
@@ -14,7 +14,7 @@ public class MainA_RegisterGesamtVektor
      */
     public static void main(String[] args) throws RemoteException, AlreadyBoundException
     {
-        RegistryManager.getLocalRegistry().bind("GesamtVektor", new GesamtVektorImpl());
+        RMIManager.getLocalRegistry().bind("GesamtVektor", new GesamtVektorImpl());
 
     }
 }

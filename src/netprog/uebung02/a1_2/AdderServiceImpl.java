@@ -12,17 +12,15 @@ import org.omg.CORBA.DoubleHolder;
  * @version 1.0
  */
 
-public class AdderServiceImpl extends floataddPOA {
-
-    public AdderServiceImpl() {
-    }
-
+public class AdderServiceImpl
+extends floataddPOA
+{
     /**
-     *
      * @param a
      * @param b
      */
-    public void sum(DoubleHolder a, double b) {
+    public void sum(DoubleHolder a, double b)
+    {
         a.value += b;
     }
 }

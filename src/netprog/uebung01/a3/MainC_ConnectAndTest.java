@@ -2,7 +2,7 @@ package netprog.uebung01.a3;
 
 import java.rmi.*;
 
-import netprog.uebung01.RegistryManager;
+import netprog.uebung01.RMIManager;
 
 public class MainC_ConnectAndTest
 {
@@ -15,8 +15,8 @@ public class MainC_ConnectAndTest
      */
     public static void main(String[] args) throws RemoteException, NotBoundException
     {
-        ReplicatedString r1 = (ReplicatedString)RegistryManager.getLocalRegistry().lookup("RepString1");
-        ReplicatedString r2 = (ReplicatedString)RegistryManager.getLocalRegistry().lookup("RepString2");
+        ReplicatedString r1 = (ReplicatedString)RMIManager.getLocalRegistry().lookup("RepString1");
+        ReplicatedString r2 = (ReplicatedString)RMIManager.getLocalRegistry().lookup("RepString2");
 
         r1.replicateAt(r2);
 

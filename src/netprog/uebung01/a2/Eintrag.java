@@ -1,6 +1,6 @@
 package netprog.uebung01.a2;
 
-import java.rmi.*;
+import java.rmi.Naming;
 
 /**
  * Diese Klasse registriert die Gruppe 6 und deren Mitglieder.

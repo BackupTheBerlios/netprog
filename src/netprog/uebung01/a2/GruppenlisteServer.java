@@ -1,9 +1,9 @@
 package netprog.uebung01.a2;
 
+import java.io.*;
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Vector;
-import java.io.*;
 
 /**
  * Diese Klasse ist ein Server, auf dem sich Gruppen eintragen bzw. herauslöschen können
