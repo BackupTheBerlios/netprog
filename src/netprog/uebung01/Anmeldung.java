@@ -9,7 +9,7 @@ public class Anmeldung
 
     public static void main(String[] args)
     {
-        //new Anmeldung();
+        new Anmeldung();
 	
     }
 
