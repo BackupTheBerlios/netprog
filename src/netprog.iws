@@ -2,25 +2,38 @@
 <project version="3" relativePaths="false">
   <component name="FileEditorManager">
     <history>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Class2.java" line="2" column="13" vertical-scroll-proportion="0.047114253" horizontal-scroll-proportion="0.111827955" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Anmeldung.java" line="10" column="0" vertical-scroll-proportion="0.18845701" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="11" column="36" vertical-scroll-proportion="0.4029304" horizontal-scroll-proportion="0.2771896" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="12" column="45" vertical-scroll-proportion="0.32967034" horizontal-scroll-proportion="0.34648702">
+        <folding>
+          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
+          <element signature="method#main#0;class#Eintrag" expanded="true" />
+        </folding>
+      </source-position-entry>
     </history>
-    <open-files />
+    <open-files>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="11" column="36" vertical-scroll-proportion="0.4029304" horizontal-scroll-proportion="0.2771896" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="12" column="45" vertical-scroll-proportion="0.32967034" horizontal-scroll-proportion="0.34648702" selected="true">
+        <folding>
+          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
+          <element signature="method#main#0;class#Eintrag" expanded="true" />
+        </folding>
+      </source-position-entry>
+    </open-files>
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1408" height="1028" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.33001107" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.24981685" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.16996337" order="0" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.4" order="3" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="sliding" type="sliding" visible="false" weight="0.33" order="-1" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33001107" order="1" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="sliding" type="sliding" visible="false" weight="0.33" order="8" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.4" order="6" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="5" />
@@ -222,9 +235,9 @@
   <component name="ProjectViewSettings">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
-      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
     </view>
     <view id="SourcepathPane" />
     <view id="ClasspathPane" />
@@ -269,6 +282,12 @@
       <Host>localhost</Host>
       <Port>5050</Port>
       <LaunchServer>false</LaunchServer>
+    </configuration>
+    <configuration name="Uebung01" type="Application" default="false" selected="true">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.Eintrag" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
   </component>
   <component name="BookmarkManager" />
