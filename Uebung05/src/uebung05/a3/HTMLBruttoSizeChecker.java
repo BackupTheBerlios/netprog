@@ -42,9 +42,7 @@ extends HTMLEditorKit.ParserCallback
 	{
 		this.url = url;
 
-		String urlString = url.toExternalForm();
-
-		if (!(urlString.toUpperCase().endsWith(".HTML") || urlString.toUpperCase().endsWith(".HTM")))
+		if (!url.openConnection().getContentType().startsWith("text/html"))
 		{
 			throw new MalformedURLException("URLSizeChecker can only be applied to html - sources");
 		}
@@ -164,7 +162,7 @@ extends HTMLEditorKit.ParserCallback
 
 			else if (tag.equals(HTML.Tag.FRAME))
 			{
-				URL frameURL = getURL((String) attributeSet.getAttribute(HTML.Attribute.SRC));
+				URL frameURL = new URL(url,(String) attributeSet.getAttribute(HTML.Attribute.SRC));
 
 				// just let the new HTMLBruttoSizeChecker start with my HashMap to avoid
 				// multiple countings - clever isn't it?
@@ -223,7 +221,7 @@ extends HTMLEditorKit.ParserCallback
 			return;
 		}
 
-		URL url = getURL(resource);
+		URL url = new URL(this.url,resource);
 
 		if (DEBUG) System.out.print("\t" + url.toExternalForm());
 
@@ -241,67 +239,6 @@ extends HTMLEditorKit.ParserCallback
 		}
 
 		if (DEBUG) System.out.println("\n\tadded " + (contentLength > 0 ? contentLength : 0) + " bytes");
-	}
-
-	/**
-	 * Normalizes the given htmlLink
-	 * @param htmlLink the original HTML-Link-String
-	 * @return
-	 * @throws MalformedURLException
-	 */
-	private URL getURL(String htmlLink)
-	throws MalformedURLException
-	{
-		if (htmlLink.startsWith("/"))
-		{
-			htmlLink = ".." + htmlLink;
-		}
-
-		try
-		{
-			URI uri = new URI(htmlLink);
-			if (!uri.isAbsolute())
-			{
-				// if relative: add absolute path at the front
-				uri = new URI(url.toExternalForm().substring(0, url.toExternalForm().lastIndexOf('/') + 1) + uri.toString());
-			}
-
-			//    --------|=|-----------|=| Normalize ../ - parts |=|-----------|=|--------    \\
-
-			String[] s = uri.normalize().toURL().toExternalForm().split("/");
-			Vector elems = new Vector();
-			for (int i = 0; i < s.length; i++)
-			{
-				String s1 = s[i];
-				if (s1.equals(".."))
-				{
-					elems.removeElement(elems.lastElement());
-				}
-				else
-				{
-					elems.add(s1);
-				}
-
-			}
-
-			// melt elements
-
-			String r = "";
-			for (int i = 0; i < elems.size(); i++)
-			{
-				r += elems.elementAt(i) + (i == elems.size() - 1 ? "" : "/");
-			}
-
-			//    --------|=|-----------|=||=|-----------|=|--------    \\
-
-			uri = new URI(r);
-
-			return uri.normalize().toURL();
-		}
-		catch (URISyntaxException e)
-		{
-			throw new MalformedURLException(e.getMessage());
-		}
 	}
 
 	public long checkSize()
