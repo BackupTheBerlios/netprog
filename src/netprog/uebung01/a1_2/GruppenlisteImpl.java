@@ -1,6 +1,6 @@
 package netprog.uebung01.a1_2;
 
-import java.rmi.*;
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
@@ -10,58 +10,52 @@ public class GruppenlisteImpl
 extends UnicastRemoteObject
 implements Gruppenliste
 {
-    /************************************************
-     |  Klassenprozeduren:
-     *************************************************/
+    //------------------------------------------------
+    //  Klassenprozeduren:
+    //------------------------------------------------
 
+    /**
+     * Installs an instance of {@link Gruppenliste} in the local {@link java.rmi.registry.Registry} with the name
+     * "liste".
+     * @param args isn't used.
+     * @throws RemoteException
+     */
     public static void main(String[] args)
-    throws RemoteException, RemoteException, RemoteException
+    throws RemoteException
     {
-        System.setSecurityManager(new RMISecurityManager());
-
         Gruppenliste liste = new GruppenlisteImpl();
-        Gruppenliste liste2 = new GruppenlisteImpl();
 
         RegistryManager.getLocalRegistry().rebind("liste", liste);
-        RegistryManager.getLocalRegistry().rebind("liste2", liste2);
     }
 
-    /************************************************
-     |  Instanzvariablen:
-     *************************************************/
+    //------------------------------------------------
+    //  Instanzvariablen:
+    //------------------------------------------------
 
+    /**
+     * Group Container
+     */
     private HashMap groups = new HashMap();
 
-    /************************************************
-     |  Konstruktoren:
-     *************************************************/
+    //------------------------------------------------
+    //  Konstruktoren:
+    //------------------------------------------------
 
     public GruppenlisteImpl()
     throws RemoteException
     {
     }
 
-    /************************************************
-     |    Prozeduren:
-     *************************************************/
+    //------------------------------------------------
+    //  sondierende Methoden:
+    //------------------------------------------------
 
-    public void trageEin(int gruppenNummer, String name, String matrikel, String email)
-    throws RemoteException
-    {
-        GroupEntry entry = new GroupEntry(name, matrikel, email);
-
-        if (!groups.containsKey(new Integer(gruppenNummer))) groups.put(new Integer(gruppenNummer), new Vector());
-
-        Vector group = (Vector)groups.get(new Integer(gruppenNummer));
-
-        group.add(entry);
-    }
-
-    public void loesche(int nr)
-    {
-        groups.remove(new Integer(nr));
-    }
-
+    /**
+     *
+     * @param gruppenNummer unique group id
+     * @return a String representation of the given group's data
+     * @throws RemoteException
+     */
     public String[] toString(int gruppenNummer)
     throws RemoteException
     {
@@ -79,12 +73,51 @@ implements Gruppenliste
         return result;
     }
 
+    //------------------------------------------------
+    //  Prozeduren:
+    //------------------------------------------------
+
+    /**
+     * Adds the student's given information to the group with the given id. If no such group exists, it is created.
+     *
+     * @param gruppenNummer unique group id
+     * @param name name of the student
+     * @param matrikel matrikelnummer of the student
+     * @param email the student's emailadress
+     * @throws RemoteException
+     */
+    public void trageEin(int gruppenNummer, String name, String matrikel, String email)
+    throws RemoteException
+    {
+        GroupEntry entry = new GroupEntry(name, matrikel, email);
+
+        if (!groups.containsKey(new Integer(gruppenNummer))) groups.put(new Integer(gruppenNummer), new Vector());
+
+        Vector group = (Vector)groups.get(new Integer(gruppenNummer));
+
+        group.add(entry);
+    }
+
+    /**
+     * Removes all of the given group's data.
+     *
+     * @param nr unique group id
+     */
+    public void loesche(int nr)
+    {
+        groups.remove(new Integer(nr));
+    }
+
     /************************************************
      |  Innere Klassen:
      *************************************************/
 
+    /**
+     * Representation of a single group entry.
+     */
     private class GroupEntry
     {
+
         private String name;
         private String matrikel;
         private String email;
@@ -96,6 +129,9 @@ implements Gruppenliste
             this.email = email;
         }
 
+        /**
+         * @return a String representation of this student's data.
+         */
         public String toString()
         {
             return name + " (" + matrikel + ") - " + email;

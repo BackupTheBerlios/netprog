@@ -6,6 +6,13 @@ import netprog.RegistryManager;
 
 public class MainC_ConnectAndTest
 {
+    /**
+     * Connects ttwo registered {@link ReplicatedString} objects and runs tests.
+     * The objects must be registered first by starting {@link MainA_RegisterRepString} and
+     * {@link MainB_RegisterRepString}
+     * @param args isn't used
+     * @throws RemoteException
+     */
     public static void main(String[] args) throws RemoteException, NotBoundException
     {
         ReplicatedString r1 = (ReplicatedString)RegistryManager.getLocalRegistry().lookup("RepString1");

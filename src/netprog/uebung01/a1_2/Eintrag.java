@@ -4,26 +4,22 @@ import java.rmi.*;
 
 public class Eintrag
 {
-    /************************************************
-     |  Konstanten:
-     *************************************************/
+    //------------------------------------------------
+    //  Klassenkonstanten:
+    //------------------------------------------------
 
     private static final boolean LOCAL_RMI = false;
 
-    /************************************************
-     |  Klassenprozeduren:
-     *************************************************/
+    //------------------------------------------------
+    //  Klassenprozeduren:
+    //------------------------------------------------
 
+    /**
+     * Connects to an instance of {@link Gruppenliste} running in a different JVM and registers this group.
+     Prints group infomation afterwards.
+     * @param args isn't used.
+     */
     public static void main(String[] args)
-    {
-        new Eintrag();
-    }
-
-    /************************************************
-     |  Konstruktoren:
-     *************************************************/
-
-    public Eintrag()
     {
         try
         {
@@ -43,9 +39,6 @@ public class Eintrag
 
             for (int i = 0; i < content.length; i++)
                 System.out.println(content[i].toString());
-
-            grouplist.loesche(6);
-
         }
         catch (NotBoundException e)
         {

@@ -7,6 +7,11 @@ import netprog.RegistryManager;
 
 public class MainA_RegisterRepString
 {
+    /**
+     * Registers an instance of {@link ReplicatedStringImpl} with the name "RepString1".
+     * @param args isn't used
+     * @throws RemoteException
+     */
     public static void main(String[] args) throws RemoteException
     {
         Registry registry = RegistryManager.getLocalRegistry();

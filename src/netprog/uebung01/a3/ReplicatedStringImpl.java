@@ -40,8 +40,8 @@ implements ReplicatedString
 
     /**
      * Stores the given String and replicates it if another ReplicateString has been set
-       by using {@link netprog.uebung01.a3.ReplicatedStringImpl#replicateAt(ReplicatedString)
-       replicateAt(ReplicatedString s)}.
+     by using {@link netprog.uebung01.a3.ReplicatedStringImpl#replicateAt(ReplicatedString)
+     replicateAt(ReplicatedString s)}.
      * The given String may be null.
      * Note that calling this method may cause a StackOverflow when a cycle has been created.
      *
@@ -58,7 +58,7 @@ implements ReplicatedString
     /**
      * Sets the {@link ReplicatedString} where any String given as parameter for {@link set(String)} should be replicated.
      * The Object may be null causing no replication.
-     * 
+     *
      * @param rs the Object where the String should be replicated.
      */
     public void replicateAt(ReplicatedString rs)

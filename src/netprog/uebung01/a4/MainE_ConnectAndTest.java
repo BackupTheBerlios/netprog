@@ -5,6 +5,14 @@ import java.rmi.*;
 
 public class MainE_ConnectAndTest
 {
+    /**
+     * Loads previously registered instances of {@link TeilVektor} and {@link GesamtVektor} and runs tests.
+     Objects must be installed by starting {@link MainA_RegisterGesamtVektor}, {@link MainB_RegisterTeilvektor},
+     {@link MainC_RegisterTeilvektor} and {@link MainD_RegisterTeilvektor}
+     * @param args isn't used
+     * @throws RemoteException
+     * @throws AlreadyBoundException
+     */
     public static void main(String[] args) throws NotBoundException, RemoteException, MalformedURLException
     {
         GesamtVektor g = (GesamtVektor)Naming.lookup("GesamtVektor");
