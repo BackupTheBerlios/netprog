@@ -2,6 +2,7 @@ package uebung01.a4;
 
 import java.net.MalformedURLException;
 import java.rmi.*;
+import uebung01.*;
 
 public class MainE_ConnectAndTest
 {
@@ -15,10 +16,10 @@ public class MainE_ConnectAndTest
      */
     public static void main(String[] args) throws NotBoundException, RemoteException, MalformedURLException
     {
-        GesamtVektor g = (GesamtVektor)Naming.lookup("GesamtVektor");
-        TeilVektor t1 = (TeilVektor)Naming.lookup("TeilVektor1");
-        TeilVektor t2 = (TeilVektor)Naming.lookup("TeilVektor2");
-        TeilVektor t3 = (TeilVektor)Naming.lookup("TeilVektor3");
+        GesamtVektor g = (GesamtVektor)RMIManager.getLocalRegistry().lookup("GesamtVektor");
+        TeilVektor t1 = (TeilVektor)RMIManager.getLocalRegistry().lookup("TeilVektor1");
+        TeilVektor t2 = (TeilVektor)RMIManager.getLocalRegistry().lookup("TeilVektor2");
+        TeilVektor t3 = (TeilVektor)RMIManager.getLocalRegistry().lookup("TeilVektor3");
 
         System.out.println("Größe: " + g.size() + " - Summe: " + g.sum());
 

@@ -1,0 +1,1 @@
+cmd /K java -cp ..\..\classes uebung01.a3.MainB_RegisterRepString

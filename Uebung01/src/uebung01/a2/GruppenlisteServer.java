@@ -4,6 +4,7 @@ import java.io.*;
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Vector;
+import uebung01.*;
 
 /**
  * Diese Klasse ist ein Server, auf dem sich Gruppen eintragen bzw. herauslöschen können
@@ -17,11 +18,11 @@ public class GruppenlisteServer extends UnicastRemoteObject implements Gruppenli
 
     public static void main(String[] args)
     {
-        System.setSecurityManager(new RMISecurityManager());
+        
         try
         {
             GruppenlisteServer objServer = new GruppenlisteServer();
-            Naming.rebind("rmi://localhost/Gruppenliste", objServer);
+			RMIManager.getLocalRegistry().rebind("rmi://localhost/Gruppenliste", objServer);
             System.out.println("Server ist unter rmi://localhost/Gruppenliste gestartet.");
         }
         catch (IOException e)
