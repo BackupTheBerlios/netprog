@@ -4,7 +4,7 @@ public class Anmeldung
 {
     public Anmeldung()
     {
-        System.out.println("Will be implemented when project work starts on 3/11/2003.");
+        System.out.println("When you read this, everything worked fine :-)");
     }
 
     public static void main(String[] args)
