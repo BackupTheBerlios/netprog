@@ -1,6 +1,7 @@
 package netprog.uebung01;
 
 import java.rmi.*;
+import java.util.*;
 
 public class GruppenlisteImpl
 extends java.rmi.server.UnicastRemoteObject
@@ -20,6 +21,12 @@ implements Gruppenliste
     }
 
     /************************************************
+     |  Instanzvariablen:
+     *************************************************/
+
+    private HashMap groups = new HashMap();
+
+    /************************************************
      |  Konstruktoren:
      *************************************************/
 
@@ -34,21 +41,59 @@ implements Gruppenliste
 
     public void trageEin(int gruppenNummer, String name, String matrikel, String email)
     throws RemoteException
-    {   //todo: implement this method;
+    {
+        GroupEntry entry = new GroupEntry(name, matrikel, email);
 
-        // Dummy - Implementation:
-        System.out.println(name);
+        if (!groups.containsKey(new Integer(gruppenNummer))) groups.put(new Integer(gruppenNummer), new Vector());
+
+        Vector group = (Vector)groups.get(new Integer(gruppenNummer));
+
+
+        group.add(entry);
     }
 
     public void loesche(int nr)
-    {   //todo: implement this method;
+    {
+        groups.remove(new Integer(nr));
     }
 
     public String[] toString(int gruppenNummer)
     throws RemoteException
-    {   //todo: implement this method;
+    {
+        Vector group = (Vector)groups.get(new Integer(gruppenNummer));
 
-        // Dummy - Implementation:
-        return new String[0];
+        Iterator it = group.iterator();
+
+        String[] result = new String[group.size()];
+
+        int i = 0;
+
+        while (it.hasNext())
+            result[i++] = it.next().toString();
+
+        return result;
+    }
+
+    /************************************************
+     |  Innere Klassen:
+     *************************************************/
+
+    private class GroupEntry
+    {
+        private String name;
+        private String matrikel;
+        private String email;
+
+        private GroupEntry(String name, String matrikel, String email)
+        {
+            this.name = name;
+            this.matrikel = matrikel;
+            this.email = email;
+        }
+
+        public String toString()
+        {
+            return name + " (" + matrikel + ") - " + email;
+        }
     }
 }

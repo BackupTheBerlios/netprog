@@ -31,10 +31,16 @@ public class Eintrag
 
             Gruppenliste grouplist = (Gruppenliste)java.rmi.Naming.lookup("rmi://" + hostname + "/liste");
             grouplist.loesche(6);
-            grouplist.trageEin(6, "Sebastian Koske", "3500729", "koske@inf.fu-berlin.de");
 
-            for (int i = 0; i < grouplist.toString(6).length; i++)
-                System.out.println(grouplist.toString(6)[i].toString());
+            grouplist.trageEin(6, "Sebastian Koske", "3500729", "koske@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Rafael Grote", "3500729", "grote@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Sebastian Schaepe", "3500729", "schaepe@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Mike Rohland", "3500729", "rohland@inf.fu-berlin.de");
+
+            String[] content = grouplist.toString(6);
+
+            for (int i = 0; i < content.length; i++)
+                System.out.println(content[i].toString());
 
             grouplist.loesche(6);
 
