@@ -218,13 +218,13 @@ public class ProxyThread implements Runnable
         System.err.println(id + " | ERROR: " + str + ": \n" + e.getMessage());
         e.printStackTrace();
         // Alles Schliessen
-        serverOut.close();
+        if (serverOut != null) serverOut.close();
         try{
-            clientIn.close();
-            serverIn.close();
-            clientOut.close();
-            client.close();
-            server.close();
+            if (clientIn != null) clientIn.close();
+            if (serverIn != null) serverIn.close();
+            if (clientOut != null) clientOut.close();
+            if (client != null) client.close();
+            if (server != null) server.close();
         }catch(IOException ex){
             
             System.err.println(id + " | Could not close all streams");
