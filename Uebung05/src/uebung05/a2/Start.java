@@ -37,10 +37,13 @@ public class Start {
                 Set keySet = d.getCodes();
                 Iterator iter = keySet.iterator();
 
+
+                System.out.println("CODE\tORT");
                 while (iter.hasNext()) {
                     String key = (String) iter.next();
-                    String name = (String) d.get(key);
-                    System.out.println(key + " : " + name);
+                    String name = d.get(key);
+
+                    System.out.println(key + "\t" + name);
                 }
             } else System.out.println(connection.getContentType());
         } catch (Exception e) {
