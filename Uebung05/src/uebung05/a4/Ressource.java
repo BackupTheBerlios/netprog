@@ -12,9 +12,9 @@ import javax.swing.text.html.parser.*;
  */
 public class Ressource
 {
-    private URL url;
+    private final URL url;
     private final boolean crawlable;
-    
+
     /**
      * Konstruktor
      * Zugreifbarkeit und Typ der Ressource checken
@@ -25,10 +25,14 @@ public class Ressource
         try
         {
 			this.url = new URL(context,normalize(link));
+            
+            // "mailto" kann nicht geprüft werden
+            if (url.getProtocol().equalsIgnoreCase("mailto"))
+                throw new NotAccessibleException(link,"Dies ist eine email-Adresse."); 
 
             // Verbindung erstellen
             URLConnection connection = url.openConnection();
-    
+
             // HTTP-Verbindungen
             if (connection instanceof HttpURLConnection)
             {
@@ -38,9 +42,9 @@ public class Ressource
             else
             {
                 crawlable = false;
-                connection.connect();
                 try
                 {
+                    connection.connect();
                     connection.getContent();
                 }
                 catch (IOException e)
@@ -65,7 +69,7 @@ public class Ressource
         catch (IOException e) // Fehlgeschlagener Verbindungsaufbau
         {
             throw new NotAccessibleException(link,e,"Keine Verbindung zum Server");
-        }      
+        }
     }
 
     /**
@@ -151,16 +155,33 @@ public class Ressource
     
     /**
      * Pfadangaben mit '/' abschliessen.
-     * Falls kein Punkt nachdem letzten '/' in path vorkommt, ist kein Dateiname angegeben.
-     * So eine Pfadangabe muss unbedingt durch ein '/' abgeschlossen werden,
-     * da sonst der Konstruktor URL(URL,String) nicht korrekt arbeitet.
+     * Falls nicht genau ein Punkt nachdem letzten '/' in path vorkommt, ist kein 
+     * Dateiname angegeben. So eine Pfadangabe muss unbedingt durch ein '/'abgeschlossen 
+     * werden, da sonst der Konstruktor URL(URL,String) nicht korrekt arbeitet.
      */    
     public static String normalize(String path)
     {
-        if (path.indexOf('.',path.lastIndexOf('/')) < 0 && !path.endsWith("/") && path.length() > 0)
-            return path + "/";
-        else
-            return path;        
+        // Links die '?' enthalten werden nicht verändert
+        if (path.indexOf('?') >= 0) return path;
+
+        // Position des letzten '/'
+        int pos = path.lastIndexOf('/');
+        
+        // Kommt kein '/' vor, dann kompletten String betrachten
+        if (pos < 0) pos = 0;
+        
+        // Ist path leer oder endet bereits mit '/',
+        // dann wird keine Änderung vorgenommen.
+        if (path.length()==0 || path.endsWith("/")) return path;
+        
+        // Ist im letzten teil genau ein '.', wird davon ausgegangen,
+        // dass es sich um eine Datei handelt, und nichts geändert.
+        if ((pos = path.indexOf('.',pos)) >= 0 && path.indexOf('.',pos+1) < 0)
+            return path;
+            
+        // Es handelt sich offenbar um eine Pfadangabe.
+        // Ein '/' wird angehängt.
+        return path + "/";                
     }
 
     /**
