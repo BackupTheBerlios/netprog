@@ -39,5 +39,6 @@ public class ReplicatedStringServer
 
         // Auf Aufrufe warten
         orb.run();
+
     }
 }

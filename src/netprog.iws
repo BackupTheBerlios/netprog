@@ -2,35 +2,40 @@
 <project version="3" relativePaths="false">
   <component name="FileEditorManager">
     <history>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainB_RegisterTeilvektor.java" line="6" column="13" vertical-scroll-proportion="0.09888752" horizontal-scroll-proportion="0.10136452" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainC_RegisterTeilvektor.java" line="6" column="13" vertical-scroll-proportion="0.09650181" horizontal-scroll-proportion="0.10136452" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainD_RegisterTeilvektor.java" line="6" column="13" vertical-scroll-proportion="0.09650181" horizontal-scroll-proportion="0.10136452" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/MainE_ConnectAndTest.java" line="5" column="13" vertical-scroll-proportion="-0.04101327" horizontal-scroll-proportion="0.10136452" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/TeilVektorImpl.java" line="56" column="0" vertical-scroll-proportion="0.86610377" horizontal-scroll-proportion="0.0" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a5/TestRegistry.java" line="10" column="7" vertical-scroll-proportion="0.21712907" horizontal-scroll-proportion="0.054580897" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a2/GruppenlisteServer.java" line="13" column="49" vertical-scroll-proportion="0.24125452" horizontal-scroll-proportion="0.38506877" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring.idl" line="0" column="0" vertical-scroll-proportion="0.0" horizontal-scroll-proportion="0.0" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a3/ReplicatedStringImpl.java" line="75" column="0" vertical-scroll-proportion="0.85524726" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServiceImpl.java" line="4" column="13" vertical-scroll-proportion="0.09650181" horizontal-scroll-proportion="0.10136452" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/AdderServiceImpl.java" line="14" column="13" vertical-scroll-proportion="0.30624264" horizontal-scroll-proportion="0.10136452" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/RegistryManager.java" line="32" column="49" vertical-scroll-proportion="0.87323946" horizontal-scroll-proportion="0.38206628" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="22" column="34" vertical-scroll-proportion="0.6197183" horizontal-scroll-proportion="0.2651072">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/AdderServer.java" line="28" column="1" vertical-scroll-proportion="0.70422536" horizontal-scroll-proportion="0.007797271" />
+      <source-position-entry url="jar://D:/j2sdk1.4.2/src.zip!/org/omg/PortableServer/Servant.java" line="23" column="22" vertical-scroll-proportion="-8.130435" horizontal-scroll-proportion="0.18506835" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstringPOA.java" line="10" column="76" vertical-scroll-proportion="0.3320158" horizontal-scroll-proportion="0.63399374" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstring.java" line="11" column="1" vertical-scroll-proportion="0.41699606" horizontal-scroll-proportion="0.008342023" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="10" column="35" vertical-scroll-proportion="0.3339921" horizontal-scroll-proportion="0.2919708">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/AdderServer.java" line="28" column="1" vertical-scroll-proportion="0.70422536" horizontal-scroll-proportion="0.007797271" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/Test.java" line="26" column="15" vertical-scroll-proportion="-0.014084507" horizontal-scroll-proportion="0.116959065" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/_replicatedstringStub.java" line="17" column="9" vertical-scroll-proportion="0.6086956" horizontal-scroll-proportion="0.07570978" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstringOperations.java" line="16" column="67" vertical-scroll-proportion="0.63241106" horizontal-scroll-proportion="0.55891556" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/Test.java" line="13" column="59" vertical-scroll-proportion="-0.9367589" horizontal-scroll-proportion="0.49217936" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring.idl" line="5" column="28" vertical-scroll-proportion="0.19762845" horizontal-scroll-proportion="0.23357664" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServiceImpl.java" line="72" column="23" vertical-scroll-proportion="0.64426875" horizontal-scroll-proportion="0.19186653" />
     </history>
     <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="22" column="34" vertical-scroll-proportion="0.6197183" horizontal-scroll-proportion="0.2651072">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="10" column="35" vertical-scroll-proportion="0.3339921" horizontal-scroll-proportion="0.2919708">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/RegistryManager.java" line="32" column="49" vertical-scroll-proportion="0.87323946" horizontal-scroll-proportion="0.38206628" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/AdderServer.java" line="28" column="1" vertical-scroll-proportion="0.70422536" horizontal-scroll-proportion="0.007797271" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/Test.java" line="26" column="15" vertical-scroll-proportion="-0.014084507" horizontal-scroll-proportion="0.116959065" selected="true" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServiceImpl.java" line="72" column="23" vertical-scroll-proportion="0.64426875" horizontal-scroll-proportion="0.19186653" selected="true" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring.idl" line="5" column="28" vertical-scroll-proportion="0.19762845" horizontal-scroll-proportion="0.23357664" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/_replicatedstringStub.java" line="17" column="9" vertical-scroll-proportion="0.6086956" horizontal-scroll-proportion="0.07570978" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstring.java" line="11" column="1" vertical-scroll-proportion="0.41699606" horizontal-scroll-proportion="0.008342023" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstringOperations.java" line="16" column="67" vertical-scroll-proportion="0.63241106" horizontal-scroll-proportion="0.55891556" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstringPOA.java" line="10" column="76" vertical-scroll-proportion="0.3320158" horizontal-scroll-proportion="0.63399374" />
+      <source-position-entry url="jar://D:/j2sdk1.4.2/src.zip!/org/omg/PortableServer/Servant.java" line="23" column="22" vertical-scroll-proportion="-8.130435" horizontal-scroll-proportion="0.18506835" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/Test.java" line="13" column="59" vertical-scroll-proportion="-0.9367589" horizontal-scroll-proportion="0.49217936" />
     </open-files>
   </component>
   <component name="ToolWindowManager">
@@ -38,11 +43,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.14839424" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.34551495" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.17948718" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.22857143" order="0" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="docked" type="docked" visible="false" weight="0.39977852" order="3" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33001107" order="1" />

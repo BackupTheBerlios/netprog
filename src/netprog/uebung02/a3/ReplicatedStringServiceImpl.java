@@ -1,6 +1,6 @@
 package netprog.uebung02.a3;
 
-import netprog.uebung02.a3.repstring.replicatedstring;
+import netprog.uebung02.a3.repstring.*;
 
 public class ReplicatedStringServiceImpl
 extends netprog.uebung02.a3.repstring.replicatedstringPOA
@@ -11,7 +11,7 @@ extends netprog.uebung02.a3.repstring.replicatedstringPOA
     //------------------------------------------------
 
     private String s;
-    private replicatedstring replicate;
+    private replicatedstringOperations replicate;
     private boolean isReplicating = false;
 
     //------------------------------------------------
@@ -58,6 +58,8 @@ extends netprog.uebung02.a3.repstring.replicatedstringPOA
         if (replicate != null) replicate.set(s);
 
         isReplicating = false;
+
+        System.out.println("Request SET ("+s+")"+" sucessfully fulfilled.");
     }
 
     /**
