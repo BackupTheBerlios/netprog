@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -12,7 +12,7 @@ abstract public class _AdresseHelper
 {
   private static String  _id = "IDL:adressbuch/Adresse:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, adressbuch.Adresse that)
+  public static void insert (org.omg.CORBA.Any a, Adresse that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class _AdresseHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static adressbuch.Adresse extract (org.omg.CORBA.Any a)
+  public static Adresse extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -30,8 +30,8 @@ abstract public class _AdresseHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = adressbuch.AdresseHelper.type ();
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (adressbuch._AdresseHelper.id (), "Adresse", __typeCode);
+      __typeCode = AdresseHelper.type ();
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (_AdresseHelper.id (), "Adresse", __typeCode);
     }
     return __typeCode;
   }
@@ -41,16 +41,16 @@ abstract public class _AdresseHelper
     return _id;
   }
 
-  public static adressbuch.Adresse read (org.omg.CORBA.portable.InputStream istream)
+  public static Adresse read (org.omg.CORBA.portable.InputStream istream)
   {
-    adressbuch.Adresse value = null;
-    value = adressbuch.AdresseHelper.read (istream);
+    Adresse value = null;
+    value = AdresseHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, adressbuch.Adresse value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, Adresse value)
   {
-    adressbuch.AdresseHelper.write (ostream, value);
+    AdresseHelper.write (ostream, value);
   }
 
 }

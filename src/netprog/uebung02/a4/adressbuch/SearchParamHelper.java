@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -12,7 +12,7 @@ abstract public class SearchParamHelper
 {
   private static String  _id = "IDL:adressbuch/SearchParam:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, adressbuch.SearchParam that)
+  public static void insert (org.omg.CORBA.Any a, SearchParam that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class SearchParamHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static adressbuch.SearchParam extract (org.omg.CORBA.Any a)
+  public static SearchParam extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -30,7 +30,7 @@ abstract public class SearchParamHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_enum_tc (adressbuch.SearchParamHelper.id (), "SearchParam", new String[] { "NAME", "STRASSE", "STADT"} );
+      __typeCode = org.omg.CORBA.ORB.init ().create_enum_tc (SearchParamHelper.id (), "SearchParam", new String[] { "NAME", "STRASSE", "STADT"} );
     }
     return __typeCode;
   }
@@ -40,12 +40,12 @@ abstract public class SearchParamHelper
     return _id;
   }
 
-  public static adressbuch.SearchParam read (org.omg.CORBA.portable.InputStream istream)
+  public static SearchParam read (org.omg.CORBA.portable.InputStream istream)
   {
-    return adressbuch.SearchParam.from_int (istream.read_long ());
+    return SearchParam.from_int (istream.read_long ());
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, adressbuch.SearchParam value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, SearchParam value)
   {
     ostream.write_long (value.value ());
   }

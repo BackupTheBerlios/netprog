@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -10,6 +10,6 @@ package adressbuch;
 
 public interface AdressbuchOperations 
 {
-  void store (adressbuch.Adresse adr);
-  adressbuch.Adresse search (adressbuch.SearchParam param, String searchstr);
+  void store (Adresse adr);
+  Adresse search (SearchParam param, String searchstr);
 } // interface AdressbuchOperations

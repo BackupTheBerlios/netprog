@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -8,15 +8,15 @@ package adressbuch;
 * Samstag, 22. November 2003 16.13 Uhr CET
 */
 
-public class _AdressbuchStub extends org.omg.CORBA.portable.ObjectImpl implements adressbuch.Adressbuch
+public class _AdressbuchStub extends org.omg.CORBA.portable.ObjectImpl implements Adressbuch
 {
 
-  public void store (adressbuch.Adresse adr)
+  public void store (Adresse adr)
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("store", true);
-                adressbuch.AdresseHelper.write ($out, adr);
+                AdresseHelper.write ($out, adr);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
@@ -30,15 +30,15 @@ public class _AdressbuchStub extends org.omg.CORBA.portable.ObjectImpl implement
             }
   } // store
 
-  public adressbuch.Adresse search (adressbuch.SearchParam param, String searchstr)
+  public Adresse search (SearchParam param, String searchstr)
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("search", true);
-                adressbuch.SearchParamHelper.write ($out, param);
+                SearchParamHelper.write ($out, param);
                 $out.write_wstring (searchstr);
                 $in = _invoke ($out);
-                adressbuch.Adresse $result = adressbuch.AdresseHelper.read ($in);
+                Adresse $result = AdresseHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();

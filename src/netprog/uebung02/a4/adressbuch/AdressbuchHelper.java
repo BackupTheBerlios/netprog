@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -12,7 +12,7 @@ abstract public class AdressbuchHelper
 {
   private static String  _id = "IDL:adressbuch/Adressbuch:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, adressbuch.Adressbuch that)
+  public static void insert (org.omg.CORBA.Any a, Adressbuch that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class AdressbuchHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static adressbuch.Adressbuch extract (org.omg.CORBA.Any a)
+  public static Adressbuch extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -30,7 +30,7 @@ abstract public class AdressbuchHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (adressbuch.AdressbuchHelper.id (), "Adressbuch");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (AdressbuchHelper.id (), "Adressbuch");
     }
     return __typeCode;
   }
@@ -40,28 +40,28 @@ abstract public class AdressbuchHelper
     return _id;
   }
 
-  public static adressbuch.Adressbuch read (org.omg.CORBA.portable.InputStream istream)
+  public static Adressbuch read (org.omg.CORBA.portable.InputStream istream)
   {
     return narrow (istream.read_Object (_AdressbuchStub.class));
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, adressbuch.Adressbuch value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, Adressbuch value)
   {
     ostream.write_Object ((org.omg.CORBA.Object) value);
   }
 
-  public static adressbuch.Adressbuch narrow (org.omg.CORBA.Object obj)
+  public static Adressbuch narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof adressbuch.Adressbuch)
-      return (adressbuch.Adressbuch)obj;
+    else if (obj instanceof Adressbuch)
+      return (Adressbuch)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      adressbuch._AdressbuchStub stub = new adressbuch._AdressbuchStub ();
+      _AdressbuchStub stub = new _AdressbuchStub ();
       stub._set_delegate(delegate);
       return stub;
     }

@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 /**
 * adressbuch/AdressbuchHolder.java .
@@ -9,30 +9,30 @@ package adressbuch;
 
 public final class AdressbuchHolder implements org.omg.CORBA.portable.Streamable
 {
-  public adressbuch.Adressbuch value = null;
+  public Adressbuch value = null;
 
   public AdressbuchHolder ()
   {
   }
 
-  public AdressbuchHolder (adressbuch.Adressbuch initialValue)
+  public AdressbuchHolder (Adressbuch initialValue)
   {
     value = initialValue;
   }
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = adressbuch.AdressbuchHelper.read (i);
+    value = AdressbuchHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    adressbuch.AdressbuchHelper.write (o, value);
+    AdressbuchHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return adressbuch.AdressbuchHelper.type ();
+    return AdressbuchHelper.type ();
   }
 
 }

@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -12,21 +12,21 @@ public class SearchParam implements org.omg.CORBA.portable.IDLEntity
 {
   private        int __value;
   private static int __size = 3;
-  private static adressbuch.SearchParam[] __array = new adressbuch.SearchParam [__size];
+  private static SearchParam[] __array = new SearchParam [__size];
 
   public static final int _NAME = 0;
-  public static final adressbuch.SearchParam NAME = new adressbuch.SearchParam(_NAME);
+  public static final SearchParam NAME = new SearchParam(_NAME);
   public static final int _STRASSE = 1;
-  public static final adressbuch.SearchParam STRASSE = new adressbuch.SearchParam(_STRASSE);
+  public static final SearchParam STRASSE = new SearchParam(_STRASSE);
   public static final int _STADT = 2;
-  public static final adressbuch.SearchParam STADT = new adressbuch.SearchParam(_STADT);
+  public static final SearchParam STADT = new SearchParam(_STADT);
 
   public int value ()
   {
     return __value;
   }
 
-  public static adressbuch.SearchParam from_int (int value)
+  public static SearchParam from_int (int value)
   {
     if (value >= 0 && value < __size)
       return __array[value];

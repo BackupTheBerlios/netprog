@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 /**
 * adressbuch/SearchParamHolder.java .
@@ -9,30 +9,30 @@ package adressbuch;
 
 public final class SearchParamHolder implements org.omg.CORBA.portable.Streamable
 {
-  public adressbuch.SearchParam value = null;
+  public SearchParam value = null;
 
   public SearchParamHolder ()
   {
   }
 
-  public SearchParamHolder (adressbuch.SearchParam initialValue)
+  public SearchParamHolder (SearchParam initialValue)
   {
     value = initialValue;
   }
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = adressbuch.SearchParamHelper.read (i);
+    value = SearchParamHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    adressbuch.SearchParamHelper.write (o, value);
+    SearchParamHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return adressbuch.SearchParamHelper.type ();
+    return SearchParamHelper.type ();
   }
 
 }

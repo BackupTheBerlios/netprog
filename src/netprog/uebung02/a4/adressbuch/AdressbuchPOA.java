@@ -1,4 +1,4 @@
-package adressbuch;
+package netprog.uebung02.a4.adressbuch;
 
 
 /**
@@ -9,7 +9,7 @@ package adressbuch;
 */
 
 public abstract class AdressbuchPOA extends org.omg.PortableServer.Servant
- implements adressbuch.AdressbuchOperations, org.omg.CORBA.portable.InvokeHandler
+ implements AdressbuchOperations, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -34,7 +34,7 @@ public abstract class AdressbuchPOA extends org.omg.PortableServer.Servant
     {
        case 0:  // adressbuch/Adressbuch/store
        {
-         adressbuch.Adresse adr = adressbuch.AdresseHelper.read (in);
+         Adresse adr = AdresseHelper.read (in);
          this.store (adr);
          out = $rh.createReply();
          break;
@@ -42,12 +42,12 @@ public abstract class AdressbuchPOA extends org.omg.PortableServer.Servant
 
        case 1:  // adressbuch/Adressbuch/search
        {
-         adressbuch.SearchParam param = adressbuch.SearchParamHelper.read (in);
+         SearchParam param = SearchParamHelper.read (in);
          String searchstr = in.read_wstring ();
-         adressbuch.Adresse $result = null;
+         Adresse $result = null;
          $result = this.search (param, searchstr);
          out = $rh.createReply();
-         adressbuch.AdresseHelper.write (out, $result);
+         AdresseHelper.write (out, $result);
          break;
        }
 
