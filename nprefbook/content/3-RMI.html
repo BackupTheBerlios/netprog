@@ -59,7 +59,16 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top><li> Objektschnittstellen
+        definieren
+        Methoden des Objekts      
+        <li> Unterschiedliche
+        Implementierungen f&uuml;r gleiche Schnittstelle S</li><br><br>        
+        <li> Modulschnittstellen des RPC werden auf
+        Objektschnittstellen abgebildet
+      <li> Aufrufweiterleitung durch Stellvertreter (Proxy)<br>
+        <br>
+      <img src="rmi01.GIF" width="528" height="100">            </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -90,7 +99,31 @@
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD >&nbsp;</TD>
-      <TD vAlign=top>&nbsp; </TD>
+      <TD vAlign=top><table border="1" cellSpacing=0>
+        <tr>
+          <th scope="col">lokales Objekt </th>
+          <th scope="col">entferntes Objekt </th>
+        </tr>
+        <tr>
+          <td>Aufruf an Objekten
+
+          <td>Aufruf an Interfaces      
+        </tr>
+        <tr>
+          <td>Parameter und Ergebnisse als Referenzen         
+          <td>Parameter und Ergebnisse als Kopien
+        </tr>
+        <tr>
+          <td>Alle Objekte fallen zusammen aus         
+          <td>einzelne Objekte fallen aus         
+        </tr>
+        <tr>
+          <td>keine Fehlersemantik         
+          <td>Komplizierte Fehlersemantik<br>
+            (Referenzintegrit&auml;t, Netzfehler,
+          Sicherheit etc.)        
+        </tr>
+      </table> </TD>
       <TD >&nbsp;</TD>
     </TR>
 </TABLE>
@@ -233,6 +266,6 @@
 <br>
 <BR>
 <HR>
-<em>last modified: <!-- #BeginDate format:IS1 -->2003-12-30<!-- #EndDate --></em>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-21<!-- #EndDate --></em>
 </BODY>
 </HTML>

@@ -8,23 +8,49 @@
 <BODY>
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
 	<TR>
-	  <TD class=articlehead> Internet Dienste </TD>
+	  <TD class=articlehead>XML</TD>
 	</TR>
 	<TR><TD>&nbsp;</TD></TR>
 	<TR>
-	  <TD><ol>
-        <li>Wo und von wem werden Internet Protokolle definiert?
-        <li>Nennen Sie 4 Dienstprotokolle des Internet.
-        <li>Wodurch sind Internet Protokolle definiert?
-        <li>Wie ist die Interkation zwischen Dienstnutzer und -erbringer in HTTP?
-        <li>Wie ist eine HTTP Anfrage aufgebaut?
-        <li>Nennen Sie drei in HTTP definierte Methoden.
-        <li>Nennen Sie drei Header die in einer HTTP Anfrage auftreten k&ouml;nnen und ihre Bedeutung.
-        <li>Wie ist eine HTTP Antwort aufgebaut?
-        <li>Nennen Sie drei Header die in einer HTTP Antwort auftreten k&ouml;nnen und ihre Bedeutung.
-        <li>Nennen Sie drei wichtige Antwortcodes in HTTP und ihre Bedeutung.
-        <li>Nennen Sie zwei wichtige Unterschiede zwischen HTTP und FTP </li>
-      </ol>	    </TD>
+	  <TD>      <ol>
+        <li>Warum XML und nicht HTML6?</li>
+        <li>Was ist der Unterschied zwischen PCDATA und CDATA in XML?</li>
+        <li>Wie wird CDATA ausgezeichnet?</li>
+        <li>Welche Fehler sind in diesem XML Dokument:<br>
+          <span style="font-family: monospace;">&lt;?xml
+standalone="yes"&gt;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel&gt;0233/2938293&lt;tel&gt;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel&gt;3003-22424&lt;/Tel&gt;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel:fax&gt;3003-2242&lt;/tel:fax&gt;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&lt;tel
+loc=home&gt;030/99333993&lt;/tel&gt;</span><br>
+        </li>
+        <li>Was ist eine DTD?</li>
+        <li>Was sind wohlgeformte und valide Dokumente?</li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT Telekontakt&nbsp; (email
+| fax | SMS)*&gt;</span> <br>
+        </li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT&nbsp; Vorname (name)+&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT name (#PCDATA)&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT Beschreibung ANY&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ELEMENT hr EMPTY&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ATTLIST fax standard CDATA
+#IMPLIED "G3"&gt;</span></li>
+        <li>Was besagt die DTD-Regel <span
+ style="font-family: monospace;">&lt;!ATTLIST Anschrift PLZ CDATA
+#REQUIRED&gt;</span></li>
+      </ol>
+
+</TD>
 	</TR>
 </TABLE>	
 <BR>
@@ -32,7 +58,7 @@
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
       <TD class=question noWrap background=../img/bg-menu.gif height=16>
-        1. Wo und von wem werden Internet Protokolle definiert?</TD>
+        1. Wie ist eine URL aufgebaut?        </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
@@ -48,14 +74,14 @@
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
       <TD class=question noWrap background=../img/bg-menu.gif height=16>
-        2. Nennen Sie 4 Dienstprotokolle des Internet.</TD>
+        2. Nennen Sie drei bekannte URL-Schemata.</TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top> HTTP; FTP; SMTP; TELNET </TD>
+      <TD vAlign=top>&nbsp; </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -64,29 +90,14 @@
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
       <TD class=question noWrap background=../img/bg-menu.gif height=16>
-        3. Wodurch sind Internet Protokolle definiert?</TD>
+        3. Wie erstellt man ein eigenes URL Schema in Java? </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top> Internet Dienste sind (zumeist) definiert durch:<br>
-        <li>Aufgabe</li>
-         <li>Portnummer auf dem der Dienst angeboten wird</li>
-         <li>Transportprotokoll (TCP oder/und UDP)</li>
-         <li>Protokoll
-        
-           <br>
-           <br>
-           Beispiel: Web Dienst
-         <li>&Uuml;bertragen von
-        HTML Seiten</li>
-<li>Port 80</li>
-<li> TCP</li>
-<li> HTTP
-    </li>
-</li></TD>
+      <TD vAlign=top> </li></TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -94,7 +105,7 @@
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Wie ist die Interkation zwischen Dienstnutzer und -erbringer in HTTP?</TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 4. Wie l&auml;dt man im einfachsten Fall in Java den Inhalt einer mit einer URL beschriebenen Resource? </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
@@ -109,19 +120,14 @@
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Wie ist eine HTTP Anfrage aufgebaut?</TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 5. Wie geht man vor, wenn man zus&auml;tzlich Header setzen will? </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top> Request besteht aus<br>
-        <li>Request<br>
-        <li>Request-Beschreibung durch Header<br>
-        <li>Allgemeine Beschreibungen<br>
-        <li>Request-spezifische Beschreibungen<br>
-        <li>Beschreibung eventuell beiliegenden Inhalts</TD>
+      <TD vAlign=top>&nbsp; </TD>
       <TD>&nbsp;</TD>
     </TR>    
 </TABLE>
@@ -129,14 +135,14 @@
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Nennen Sie drei in HTTP definierte Methoden.</TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 6. Wie l&auml;uft Authentifizierung in HTTP ab, welche Antwortcodes und Header sind dabei relevant? </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top> GET, HEAD, POST</TD>
+      <TD vAlign=top>&nbsp; </TD>
       <TD>&nbsp;</TD>
     </TR>
 </TABLE>
@@ -144,21 +150,14 @@
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
     <TR>
       <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Nennen Sie drei Header die in einer HTTP Anfrage auftreten k&ouml;nnen und ihre Bedeutung. </TD>
+      <TD class=question noWrap background=../img/bg-menu.gif height=16> 7. Mit welchen zwei HTTP Nutzungsarten &uuml;bertr&auml;gt man Daten zu einem Skript? </TD>
       <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
     </TR>
     <TR>
       <TD colspan=3>&nbsp;</TD>
     <TR>
       <TD>&nbsp;</TD>
-      <TD vAlign=top><p> Host: Name<br>
-        Aus der URL ermittelter Name des Rechners von dem
-      angefordert wird. Pflichtheader in HTTP 1.1 <br>
-       User-Agent: Produkt/Version<br>
-      Browser z.B.
-      (Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)<br>
-       Referer: URL<br>
-      Seite auf der ein Link auf die angeforderte Seite stand      <br>
+      <TD vAlign=top><p><br>
       </p>        </TD>
       <TD>&nbsp;</TD>
     </TR>
@@ -167,27 +166,7 @@
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
   <TR>
     <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Wie ist eine HTTP Antwort aufgebaut?</TD>
-    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-  </TR>
-  <TR>
-    <TD colspan=3>&nbsp;</TD>
-  <TR>
-    <TD>&nbsp;</TD>
-    <TD vAlign=top> Response besteht aus<br>
-       Antwort-Code<br>
-       Response-Beschreibung durch Header<br>
-       Allgemeine Beschreibungen<br>
-       Response-spezifische Beschreibungen<br>
-     Beschreibung eventuell beiliegenden Inhalts</TD>
-    <TD>&nbsp;</TD>
-  </TR>
-</TABLE>
-<br>
-<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
-  <TR>
-    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Nennen Sie drei Header die in einer HTTP Antwort auftreten k&ouml;nnen und ihre Bedeutung. </TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 8. Wie realisiert man das jeweils in Java?</TD>
     <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
   </TR>
   <TR>
@@ -202,26 +181,7 @@
 <TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
   <TR>
     <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    <TD class=question noWrap background=../img/bg-menu.gif height=16> 10. Nennen Sie drei wichtige Antwortcodes in HTTP und ihre Bedeutung.</TD>
-    <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-  </TR>
-  <TR>
-    <TD colspan=3>&nbsp;</TD>
-  <TR>
-    <TD>&nbsp;</TD>
-    <TD vAlign=top><p>200 - Aufgabe konnte fehlerfrei erledigt werden <br>
-      401
-- Authentifizierung erforderlich<br>
-404 - Seite nicht auffindbar
-</p>    </TD>
-    <TD>&nbsp;</TD>
-  </TR>
-</TABLE>
-<br>
-<TABLE width="100%" border=0 cellPadding=0 cellSpacing=0>
-  <TR>
-    <TD width="20" class=question background=../img/l-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
-    <TD class=question noWrap background=../img/bg-menu.gif height=16> 11. Nennen Sie zwei wichtige Unterschiede zwischen HTTP und FTP </TD>
+    <TD class=question noWrap background=../img/bg-menu.gif height=16> 9. Wie funktioniert das Cookie-Verfahren und welche HTTP-Header werden dabei benutzt? </TD>
     <TD width="20" class=question background=../img/r-fade.gif height=16><IMG height=12 src="../img/a-trans.gif" width=20></TD>
   </TR>
   <TR>
@@ -236,6 +196,6 @@
 
 <BR>
 <HR>
-<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-13<!-- #EndDate --></em>
+<em>last modified: <!-- #BeginDate format:IS1 -->2004-01-08<!-- #EndDate --></em>
 </BODY>
 </HTML>
