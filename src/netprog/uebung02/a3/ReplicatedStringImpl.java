@@ -59,7 +59,6 @@ extends netprog.uebung02.a3.repstring.replicatedstringPOA
 
         isReplicating = false;
 
-        System.out.println("Request SET (" + s + ")" + " sucessfully fulfilled.");
     }
 
     /**
@@ -71,5 +70,7 @@ extends netprog.uebung02.a3.repstring.replicatedstringPOA
     public void replicateAt(replicatedstring rs)
     {
         replicate = rs;
+
+		set(get());
     }
 }
