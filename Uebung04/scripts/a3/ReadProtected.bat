@@ -1,0 +1,1 @@
+cmd /k java -cp ..\..\classes uebung04.a3.ReadProtected http://www.inf.fu-berlin.de/inst/ag-nbi/lehre/0304/V_NP/geheim2/geheim.txt
