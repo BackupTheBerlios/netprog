@@ -40,8 +40,7 @@ extends ServerSocket
                 new Thread(new Runnable()
                 {
                     public void run()
-                    {
-                        try
+                    {   try
                         {
                             new AdderHandler(client);
                         }
@@ -60,7 +59,5 @@ extends ServerSocket
 
             // and continue listening for new Clients
         }
-
-
     }
 }

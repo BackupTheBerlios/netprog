@@ -3,6 +3,7 @@ package uebung03.a3;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.io.IOException;
 
 public class StartClient
 {
@@ -23,6 +24,8 @@ public class StartClient
             return;
         }
 
+        //    --------|=|-----------|=| Read IP and Port |=|-----------|=|--------    \\
+
         int port = 0;
         InetAddress addr = null;
 
@@ -41,6 +44,8 @@ public class StartClient
             System.out.println("Das Format der Portnummer ist ungültig !");
             return;
         }
+
+        //    --------|=|-----------|=| Read Values |=|-----------|=|--------    \\
 
         int a;
         int b;
@@ -65,6 +70,8 @@ public class StartClient
             return;
         }
 
+        //    --------|=|-----------|=| Start Client |=|-----------|=|--------    \\
+
         try
         {
             DivClient client = new DivClient(addr, port);
@@ -73,6 +80,8 @@ public class StartClient
             client.divide(a, b);
 
             // further tests:
+            System.out.println("\nWeitere Tests:\n");
+
             client.divide(10, 5);
             client.divide(20, 5);
             client.divide(30, 3);
@@ -81,6 +90,10 @@ public class StartClient
             client.close();
         }
         catch (SocketException e)
+        {
+            System.err.println(e.toString());
+        }
+        catch (IOException e)
         {
             System.err.println(e.toString());
         }

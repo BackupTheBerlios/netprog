@@ -1,0 +1,1 @@
+cmd /k java -cp ..\..\classes uebung03.a3.StartServer 7777

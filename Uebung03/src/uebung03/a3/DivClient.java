@@ -6,7 +6,6 @@ import java.net.*;
 public class DivClient
 extends DatagramSocket
 {
-
     //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
     //  |                      Fields                       |   \\
     //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
@@ -82,7 +81,7 @@ extends DatagramSocket
         }
         catch (SocketTimeoutException e)
         {
-            System.out.println("Der Server hat innerhalb 3 sec. nicht geantwortet.");
+            System.out.println("Der Server hat innerhalb des TimeOut sec. nicht geantwortet.");
             throw e;
         }
         catch (IOException e)

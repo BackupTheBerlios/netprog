@@ -8,41 +8,49 @@ import java.net.*;
  */
 public class AdderHandler
 {
+    //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+    //  |                   Constructors                    |   \\
+    //  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+
     public AdderHandler(Socket clientSocket)
     throws IOException
     {
         if (clientSocket == null) return;
 
-        // initialize streams:
         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
-        
-        // read numbers and write result:
-        try
-        {
-            int a1 = Integer.parseInt(in.readLine());
-            int a2 = Integer.parseInt(in.readLine());
 
-            out.println("" + (a1 + a2));
-        }
-        catch (NumberFormatException e)
+        while (true)
         {
-            out.println(e.getMessage());
-        }
-        catch (NullPointerException e)
-        {
-            out.println(e.getMessage());
-        }
-        catch (Exception e)
-        {
-            out.println(e.getMessage());
-        }
-        finally
-        {
-            out.flush();
-            in.close();
-            out.close();
-            clientSocket.close();
+            // read numbers and write result:
+            try
+            {
+                String readLine = in.readLine();
+                if (readLine.equals("CLOSE")) break;
+                int a1 = Integer.parseInt(readLine);
+
+                readLine = in.readLine();
+                if (readLine.equals("CLOSE")) break;
+                int a2 = Integer.parseInt(readLine);
+
+                out.println("" + (a1 + a2));
+            }
+            catch (NumberFormatException e)
+            {
+                out.println(e.getMessage());
+            }
+            catch (NullPointerException e)
+            {
+                out.println(e.getMessage());
+            }
+            catch (Exception e)
+            {
+                out.println(e.getMessage());
+            }
+            finally
+            {
+                out.flush();
+            }
         }
     }
 }

@@ -7,6 +7,8 @@ public class StartServer
 
     public static void main(String[] args)
     {
+        //    --------|=|-----------|=| Read Port |=|-----------|=|--------    \\
+
         if (args.length <= 0)
         {
             System.out.println("Bitte geben einen Port an!");
@@ -24,6 +26,8 @@ public class StartServer
             System.out.println("Das Format der Portnummer ist ungültig !");
             return;
         }
+
+        //    --------|=|-----------|=| Start Server |=|-----------|=|--------    \\
 
         try
         {

@@ -6,7 +6,10 @@ import java.io.*;
 public class StartClient
 {
     public static void main(String[] args)
-    {   if (args.length < 4)
+    {
+        //    --------|=|-----------|=| Read IP And Port |=|-----------|=|--------    \\
+
+        if (args.length < 4)
         {
             System.out.println("Bitte geben Sie eine IP- und eine Port-Nummer und zwei Ganzzahlen" +
                     " im folgenden Format an: IP port a1 a2");
@@ -15,16 +18,12 @@ public class StartClient
 
         int port;
         InetAddress addr;
-        Socket socket;
-
-        BufferedReader in = null;
-        PrintWriter out = null;
 
         try
         {
             addr = InetAddress.getByName(args[0]);
             port = Integer.parseInt(args[1]);
-            socket = new Socket(addr.getHostAddress(), port);
+
         }
         catch (UnknownHostException e)
         {
@@ -36,53 +35,40 @@ public class StartClient
             System.out.println("Das Format der Portnummer ist ungültig !");
             return;
         }
-        catch (IOException e)
-        {
-            System.err.println("Fehler beim Aufbauen einer Verbindung mit dem Server!");
-            e.printStackTrace();
-            return;
-        }
+
+        //    --------|=|-----------|=| Read Values |=|-----------|=|--------    \\
+
+        int a = 0;
+        int b = 0;
 
         try
         {
-            //Ströme vorbereiten
-            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            out = new PrintWriter(socket.getOutputStream());
+            a = Integer.parseInt(args[2]);
+            b = Integer.parseInt(args[3]);
+        }
+        catch (NumberFormatException e)
+        {
+            System.err.println("Fehler beim Lesen der Summanden "+e.toString());
+            return;
+        }
 
-            //Befehl schicken
-            out.println(args[2]);
-            out.println(args[3]);
-            out.flush();//sendet den Inhalt des Puffers des Ausgabenstroms explizit
+        //    --------|=|-----------|=| Start Client |=|-----------|=|--------    \\
 
-            System.out.println(in.readLine());	//Antwort ausgeben
+        try
+        {
+            AdderClient client = new AdderClient(addr.getHostAddress(), port);
+            client.add(a,b);
+
+            // further tests:
+            System.out.println("\nWeitere Tests:\n");
+
+            client.add(4,9);
+            client.add(Integer.MAX_VALUE,1);
+            client.close();
         }
         catch (IOException e)
         {
             System.err.println("Fehler bei der Kommunikation mit dem Server!");
-            e.printStackTrace();
-            return;
-        }
-        finally
-        {   out.close();
-
-            try
-            {
-                in.close();
-            }
-            catch (IOException e)
-            {
-                System.err.println(e.toString());
-            }
-
-            try
-            {
-                socket.close();
-            }
-            catch (IOException e)
-            {
-                System.err.println(e.toString());
-            }
-
         }
     }
 }
