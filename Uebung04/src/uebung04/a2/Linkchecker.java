@@ -158,19 +158,19 @@ public class Linkchecker
             break;
                             
             case HttpURLConnection.HTTP_NOT_FOUND:
-                System.out.println(path+" nicht gefunden. (" + code + ")");
+                System.out.println("Ressource "+path+" nicht gefunden. (" + code + ")");
             break;
 
             case HttpURLConnection.HTTP_UNAUTHORIZED:
-                System.out.println("Autorisation für "+path+" erforderlich. (" + code + ")");
+                System.out.println("Autorisation für Ressource "+path+" erforderlich. (" + code + ")");
             break;
 
             case HttpURLConnection.HTTP_FORBIDDEN:
-                System.out.println("Zugriff auf "+path+" verboten. (" + code + ")");
+                System.out.println("Zugriff auf Ressource "+path+" verboten. (" + code + ")");
             break;
                             
             default:
-                System.out.println("Zugriff auf "+path+" fehlgeschlagen. (HTTP-Code " + code + ")");
+                System.out.println("Zugriff auf Ressource "+path+" fehlgeschlagen. (HTTP-Code " + code + ")");
             break;
         }
     }
