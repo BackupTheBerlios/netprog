@@ -42,7 +42,7 @@ extends netprog.uebung02.a3.repstring.replicatedstringPOA
      * Stores the given String and replicates it if another {@link netprog.uebung01.a3.ReplicatedString} has been set
      by using {@link replicateAt(netprog.uebung01.a3.ReplicatedString)}.
      * The given String may be null.
-     * If there is a ring (e.g. this object is it's own replicant's replicant) recurvive replicating
+     * If there is a ring (e.g. this object is it's own replicant's replicant) recursive replication
      * stops once all replicants have been updated avoiding endless recursion.
      *
      * @param s the string to be stored and replicated.
@@ -71,6 +71,6 @@ extends netprog.uebung02.a3.repstring.replicatedstringPOA
     {
         replicate = rs;
 
-		set(get());
+    	set(get());
     }
 }
