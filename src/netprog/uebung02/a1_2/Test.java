@@ -9,11 +9,11 @@ import org.omg.CosNaming.NamingContextExtHelper;
 /**
  * <p>Title: NETZPROGRAMMIERUNG UEBUNG 2 - AUFGABE 1 / 2</p>
  * <p>Description:
-         * --------------------------------- AUFGABE 1 ---------------------------------
+ * --------------------------------- AUFGABE 1 ---------------------------------
  * Client starten:
  * > java netprog.uebung02.a1_2.Test -ORBInitialPort 3000 -ORBInitialHost nawab.inf.fu-berlin.de
  *
-         * --------------------------------- AUFGABE 2 ---------------------------------
+ * --------------------------------- AUFGABE 2 ---------------------------------
  * 1. ORB Server starten:
  *     > orbd -ORBInitialPort 3000
  * 2. Addier-Server starten:

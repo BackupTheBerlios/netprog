@@ -1,0 +1,8 @@
+module repstring {
+
+    interface replicatedstring {
+		void set(in string s); 
+		string get();  
+		void replicateAt(in replicatedstring rs);
+    };
+};
