@@ -1,10 +1,8 @@
 package uebung05.a2;
 
-import java.net.URL;
-import java.net.URLConnection;
-import java.io.*;
-import java.util.Set;
-import java.util.Iterator;
+import java.io.InputStream;
+import java.net.*;
+import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,41 +11,52 @@ import java.util.Iterator;
  * Time: 9:47:38 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Start {
+public class Start
+{
 
-    public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 
-        try {
-            URL page = new URL("http://www.flughafen.co.at/airportcodes/airport.htm");
+		try
+		{
+			URL page = new URL("http://www.flughafen.co.at/airportcodes/airport.htm");
 
-            URLConnection connection = page.openConnection();
-            connection.connect();
-            if (connection.getContentType().startsWith("text/html")) {
+			URLConnection connection = page.openConnection();
+			connection.connect();
+			if (connection.getContentType().startsWith("text/html"))
+			{
 
-            //File f = new File("e:/airport.htm");
-
-
-                InputStream is = connection.getInputStream(); //new FileInputStream(f);
-
-                HTMLParser hp = new HTMLParser();
-                AirportCodes d = hp.parse(is);
+				//File f = new File("e:/airport.htm");
 
 
-                // damit spielen
-                Set keySet = d.getCodes();
-                Iterator iter = keySet.iterator();
+				InputStream is = connection.getInputStream(); //new FileInputStream(f);
+
+				HTMLParser hp = new HTMLParser();
+				AirportCodes d = hp.parse(is);
 
 
-                System.out.println("CODE\tORT");
-                while (iter.hasNext()) {
-                    String key = (String) iter.next();
-                    String name = d.get(key);
+				// damit spielen
+				Set keySet = d.getCodes();
+				Iterator iter = keySet.iterator();
 
-                    System.out.println(key + "\t" + name);
-                }
-            } else System.out.println(connection.getContentType());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
+				System.out.println("CODE\tORT");
+				while (iter.hasNext())
+				{
+					String key = (String) iter.next();
+					String name = d.get(key);
+
+					System.out.println(key + "\t" + name);
+				}
+			}
+			else
+			{
+				System.out.println(connection.getContentType());
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 }

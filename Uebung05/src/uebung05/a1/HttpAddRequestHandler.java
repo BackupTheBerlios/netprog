@@ -1,12 +1,12 @@
 package uebung05.a1;
 
-public class HttpAddRequestHandler
+public abstract class HttpAddRequestHandler
 {
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                      Fields                       |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-	private int sum = 0;
+	int sum = 0;
 
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                      Methods                      |   \\
@@ -22,22 +22,22 @@ public class HttpAddRequestHandler
 	public String createResponse(HttpAddRequest request)
 	{
 
-		if (request == null || !(request.isGet() || request.isPost()))
+		if (request == null)
 		{
 			return "HTTP /1.0 400 BAD REQUEST";
 		}
 
-		if (request.isPost())
-		{
-			sum += request.getSummand();
-		}
+
+		sum += request.getSummand();
+
 
 		return "HTTP /1.0 200 OK\n" +
+		       getAdditionalHeaders(request) +
 		       "Content-type: text/html\n\n" +
 
 		       "<HTML>\n" +
 		       "<BODY><CENTER>\n" +
-		       "<FORM method=\"post\">\n" +
+		       "<FORM method=\"" + getMethodName() + "\">\n" +
 		       "<TABLE border=\"1\">\n" +
 		       "<TR>\n" +
 		       "<TD>Bisherige Summe:</TD>\n" +
@@ -46,7 +46,7 @@ public class HttpAddRequestHandler
 		       "<TR>\n" +
 		       "<TD>Neuer Summand:</TD>\n" +
 		       "<TD><input name=\"summand\" value=\"0\" type=\"text\" />" +
-		       "<input name=\"sessionID\" value=\"" + request.getSessionID() + "\" type=\"hidden\" /></TD>\n" +
+		       getAdditionalForms(request) + "</TD>\n" +
 		       "</TR>\n" +
 		       "<TR>\n" +
 		       "<TD colspan=\"2\" align=\"center\">\n" +
@@ -58,4 +58,10 @@ public class HttpAddRequestHandler
 		       "</CENTER></BODY>\n" +
 		       "</HTML>\n";
 	}
+
+	protected abstract String getAdditionalHeaders(HttpAddRequest request);
+
+	protected abstract String getMethodName();
+
+	protected abstract String getAdditionalForms(HttpAddRequest request);
 }

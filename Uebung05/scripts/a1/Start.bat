@@ -1,1 +1,1 @@
-cmd /k java -cp ..\..\classes uebung05.a1.StartServer
+cmd /k java -cp ..\..\classes uebung05.a1.StartServers

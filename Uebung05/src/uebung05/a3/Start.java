@@ -3,7 +3,6 @@ package uebung05.a3;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URL;
-import java.util.Vector;
 
 public class Start
 {

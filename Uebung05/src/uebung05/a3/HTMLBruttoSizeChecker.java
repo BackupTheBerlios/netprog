@@ -272,7 +272,8 @@ extends HTMLEditorKit.ParserCallback
 		if (DEBUG) System.out.println("READING " + message);
 
 		checkResource(url.toExternalForm());
-		new ParserDelegator().parse(new BufferedReader(new InputStreamReader(url.openConnection().getInputStream())), this, true);
+		new ParserDelegator().parse(new BufferedReader(new InputStreamReader(url.openConnection().getInputStream())), this,
+		                            true);
 
 		return size;
 	}

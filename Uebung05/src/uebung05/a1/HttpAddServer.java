@@ -1,29 +1,24 @@
 package uebung05.a1;
 
+import uebung05.a1.post.HttpAddRequest_POST;
+
 import java.io.*;
 import java.net.*;
 import java.util.HashMap;
 
-public class HttpAddServer
+public abstract class HttpAddServer
 implements Runnable
 {
-
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                      Fields                       |   \\
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 
-	private ServerSocket socket;
+	private final ServerSocket socket;
 	private HashMap handlers = new HashMap();
 
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                   Constructors                    |   \\
 	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
-
-	public HttpAddServer()
-	throws IOException
-	{
-		this(80);
-	}
 
 	public HttpAddServer(int port)
 	throws IOException
@@ -40,11 +35,9 @@ implements Runnable
 		new Thread(this).start();
 	}
 
-	//    --------|=|-----------|=||=|-----------|=|--------    \\
-
 	/**
 	 * Waits for a client connection, reads it's content, delegates content to
-	 * corresponding handler and prints result to clients OutputStream.
+	 * corresponding handler and prints result to client's OutputStream.
 	 */
 	public void run()
 	{
@@ -56,21 +49,7 @@ implements Runnable
 				Socket client = socket.accept();
 
 				// Read HTTP Request and create representation:
-				HttpAddRequest request = new HttpAddRequest(readRequest(client));
-
-				// if no corresponding handler exists, create a new one:
-				String sessionID = request.getSessionID();
-
-				if (sessionID.equals(HttpAddRequest.NO_SESSIONID) || !handlers.containsKey(sessionID))
-				{
-					HttpAddRequestHandler handler = new HttpAddRequestHandler();
-					request.setSessionID(handler.toString());
-					handlers.put(handler.toString(), handler);
-				}
-
-				// get handler and let it create the appropriate answer (in HTML)
-				HttpAddRequestHandler handler = (HttpAddRequestHandler) handlers.get(request.getSessionID());
-				String response = handler.createResponse(request);
+				String response = getResponse(readRequest(client));
 
 				// send answer to client:
 				BufferedWriter out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
@@ -87,18 +66,36 @@ implements Runnable
 		}
 	}
 
-	//    --------|=|-----------|=||=|-----------|=|--------    \\
+	private String getResponse(String req)
+	{
+		HttpAddRequest request = createRequest(req);
+
+		// if no corresponding handler exists, create a new one:
+		String sessionID = request.getSessionID();
+
+		if (sessionID.equals(HttpAddRequest_POST.NO_SESSIONID) || !handlers.containsKey(sessionID))
+		{
+			HttpAddRequestHandler handler = createAddRequestHandler();
+			request.setSessionID(handler.toString());
+			handlers.put(handler.toString(), handler);
+		}
+
+		// get handler and let it create the appropriate answer (in HTML)
+		HttpAddRequestHandler handler = (HttpAddRequestHandler) handlers.get(request.getSessionID());
+		return handler.createResponse(request);
+	}
 
 	/**
 	 * Reads an HTTP Request from a client socket
 	 *
 	 * @param client the socket where to read from
 	 * @return all read lines in one String
-	 * @throws IOException
+	 * @throws java.io.IOException
 	 */
 	private String readRequest(Socket client)
 	throws IOException
 	{
+
 		client.setSoTimeout(50);
 
 		StringBuffer buffer = new StringBuffer();
@@ -119,6 +116,16 @@ implements Runnable
 
 		client.setSoTimeout(0);
 
-		return new String(buffer);
+
+		String result = new String(buffer);
+		return result;
 	}
+
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+	//  |                 Abstract Services                 |   \\
+	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+
+	protected abstract HttpAddRequest createRequest(String req);
+
+	protected abstract HttpAddRequestHandler createAddRequestHandler();
 }
