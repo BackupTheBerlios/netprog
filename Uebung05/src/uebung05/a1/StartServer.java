@@ -1,6 +1,6 @@
 package uebung05.a1;
 
-import java.io.IOException;
+import java.io.*;
 
 public class StartServer
 {

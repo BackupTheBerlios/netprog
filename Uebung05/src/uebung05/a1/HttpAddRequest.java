@@ -6,7 +6,7 @@ public class HttpAddRequest
 	//  |                     Constants                     |   \\
 	//  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
 
-	public static final String NO_SESSIONID = "-1";
+	public static final String NO_SESSIONID = "NONE";
 
 	//  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
 	//  |                      Fields                       |   \\
@@ -133,7 +133,7 @@ public class HttpAddRequest
 	}
 
 	/**
-	 * return the value of the given parameter if exists, null otherwise.
+	 * returns the value of the given parameter if exists, null otherwise.
 	 *
 	 * @param parameter the parameter's name
 	 * @param request   the String where to search for the given parameter
