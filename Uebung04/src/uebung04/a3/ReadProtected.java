@@ -10,16 +10,18 @@ import java.net.URL;
 
 
 /**
- * Ablauf bei
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * Ablauf:
  * - Normales GET
  * - Antwort 401 und WWW-Authenticate: Header, der Nachweis in unterschiedlichen
- * Schemata anfordert
+ *   Schemata anfordert
  * - Weiteres GET mit Authorization: Header, der je nach Schema Parameter trägt
  * - Antwort 200
- * <p/>
- * User: user0
- * Date: 11.01.2004
- * Time: 11:23:56
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author Sebastian S.
+ * @version 1.0
  */
 public class ReadProtected {
 
