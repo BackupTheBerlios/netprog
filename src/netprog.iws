@@ -3,41 +3,15 @@
   <component name="FileEditorManager">
     <history>
       <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="20" column="15" vertical-scroll-proportion="0.47114253" horizontal-scroll-proportion="0.11549567" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="0" column="0" vertical-scroll-proportion="0.0" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="14" column="5" vertical-scroll-proportion="0.32979977" horizontal-scroll-proportion="0.038498558">
-        <folding>
-          <element signature="method#trageEin#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#GruppenlisteImpl#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#toString#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#main#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#loesche#0;class#GruppenlisteImpl" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="62" column="1" vertical-scroll-proportion="1.4605418" horizontal-scroll-proportion="0.0076997112">
-        <folding>
-          <element signature="method#main#0;class#Eintrag" expanded="true" />
-          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
-        </folding>
-      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="48" column="0" vertical-scroll-proportion="0.8716137" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="4" column="17" vertical-scroll-proportion="0.094228506" horizontal-scroll-proportion="0.1308951" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="25" column="20" vertical-scroll-proportion="0.5418139" horizontal-scroll-proportion="0.15399423" />
     </history>
     <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="0" column="0" vertical-scroll-proportion="0.0" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="62" column="1" vertical-scroll-proportion="1.4605418" horizontal-scroll-proportion="0.0076997112" selected="true">
-        <folding>
-          <element signature="method#main#0;class#Eintrag" expanded="true" />
-          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
-        </folding>
-      </source-position-entry>
       <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="20" column="15" vertical-scroll-proportion="0.47114253" horizontal-scroll-proportion="0.11549567" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="14" column="5" vertical-scroll-proportion="0.32979977" horizontal-scroll-proportion="0.038498558">
-        <folding>
-          <element signature="method#trageEin#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#GruppenlisteImpl#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#toString#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#main#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#loesche#0;class#GruppenlisteImpl" expanded="true" />
-        </folding>
-      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="48" column="0" vertical-scroll-proportion="0.8716137" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="4" column="17" vertical-scroll-proportion="0.094228506" horizontal-scroll-proportion="0.1308951" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="25" column="20" vertical-scroll-proportion="0.5418139" horizontal-scroll-proportion="0.15399423" selected="true" />
     </open-files>
   </component>
   <component name="ToolWindowManager">
@@ -255,10 +229,9 @@
   <component name="ProjectViewSettings">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/docs" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
     </view>
     <view id="SourcepathPane" />
     <view id="ClasspathPane" />
