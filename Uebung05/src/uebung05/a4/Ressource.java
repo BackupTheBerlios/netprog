@@ -2,6 +2,7 @@ package uebung05.a4;
 
 import java.io.*;
 import java.net.*;
+
 import javax.swing.text.html.*;
 import javax.swing.text.html.parser.*;
 
@@ -11,9 +12,8 @@ import javax.swing.text.html.parser.*;
  */
 public class Ressource
 {
-    private final URL url;
+    private URL url;
     private final boolean crawlable;
-    private final boolean internal;
     
     /**
      * Konstruktor
@@ -24,10 +24,7 @@ public class Ressource
     {
         try
         {
-            this.url = new URL(context,link);
-            
-            internal = url.getProtocol().equals(context.getProtocol())
-                       && url.getAuthority().equalsIgnoreCase(context.getAuthority());
+			this.url = new URL(context,normalize(link));
 
             // Verbindung erstellen
             URLConnection connection = url.openConnection();
@@ -44,7 +41,7 @@ public class Ressource
                 connection.connect();
                 try
                 {
-                    connection.getContent(); //TODO
+                    connection.getContent();
                 }
                 catch (IOException e)
                 {
@@ -101,11 +98,12 @@ public class Ressource
     }
     
     /**
-     * Ist dies ein interner link? 
+     * Befindet sich diese Ressource auf dem Webserver in der URL 
      */
-    public boolean isInternal()
+    public boolean isOnServer(URL url)
     {
-        return internal;
+        return this.url.getProtocol().equalsIgnoreCase(url.getProtocol())
+            && this.url.getAuthority().equalsIgnoreCase(url.getAuthority());
     }
     
     /**
@@ -126,6 +124,14 @@ public class Ressource
     }
     
     /**
+     * URL rausgeben
+     */
+    public URL getURL()
+    {
+        return url;
+    }
+    
+    /**
      * Zwei Ressourcen vergleichen (URL Vergleich)
      */
     public boolean equals(Object object)
@@ -141,6 +147,20 @@ public class Ressource
     public String toString()
     {
         return url.toExternalForm();
+    }
+    
+    /**
+     * Pfadangaben mit '/' abschliessen.
+     * Falls kein Punkt nachdem letzten '/' in path vorkommt, ist kein Dateiname angegeben.
+     * So eine Pfadangabe muss unbedingt durch ein '/' abgeschlossen werden,
+     * da sonst der Konstruktor URL(URL,String) nicht korrekt arbeitet.
+     */    
+    public static String normalize(String path)
+    {
+        if (path.indexOf('.',path.lastIndexOf('/')) < 0 && !path.endsWith("/") && path.length() > 0)
+            return path + "/";
+        else
+            return path;        
     }
 
     /**
@@ -165,6 +185,6 @@ public class Ressource
         public String toString()
         {
             String causeMessage = (getCause()==null ? "" : " - "+getCause().getLocalizedMessage());
-            return "Ressource "+link+"ist nicht erreichbar. ("+getMessage()+causeMessage+")";        }
+            return "Ressource " + link + "ist nicht erreichbar. " + getMessage() + causeMessage;        }
     }
 }

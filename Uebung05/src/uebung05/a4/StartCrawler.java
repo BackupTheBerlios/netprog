@@ -19,7 +19,7 @@ public class StartCrawler
         
         try
         {
-            new Crawler(new URL(args[0]),args[1]);
+            new Crawler(new URL(Ressource.normalize(args[0])),args[1]);
         }
         catch (MalformedURLException e)
         {
@@ -28,7 +28,7 @@ public class StartCrawler
         } 
         catch (Ressource.NotAccessibleException e)
         {
-            System.out.println("Fehler beim Zugriff auf Start-URL: " + e);
+            System.out.println("Fehler: " + e);
         }        
     }
 }
