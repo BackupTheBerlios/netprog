@@ -1,4 +1,4 @@
-package netprog;
+package netprog.uebung01;
 
 import java.rmi.*;
 import java.rmi.registry.*;

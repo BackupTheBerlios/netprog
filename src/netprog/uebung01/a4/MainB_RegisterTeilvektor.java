@@ -2,7 +2,7 @@ package netprog.uebung01.a4;
 
 import java.rmi.*;
 
-import netprog.RegistryManager;
+import netprog.uebung01.RegistryManager;
 
 public class MainB_RegisterTeilvektor
 {

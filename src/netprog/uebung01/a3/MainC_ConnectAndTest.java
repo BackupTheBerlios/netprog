@@ -2,7 +2,7 @@ package netprog.uebung01.a3;
 
 import java.rmi.*;
 
-import netprog.RegistryManager;
+import netprog.uebung01.RegistryManager;
 
 public class MainC_ConnectAndTest
 {

@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
-import netprog.RegistryManager;
+import netprog.uebung01.RegistryManager;
 
 public class GruppenlisteImpl
 extends UnicastRemoteObject
