@@ -1,0 +1,5 @@
+module adder {
+ interface floatadd {
+    void sum(inout double a, in double b);
+ };
+};
