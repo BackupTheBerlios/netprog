@@ -8,7 +8,7 @@ public class Eintrag
      |  Konstanten:
      *************************************************/
 
-    private static final boolean LOCAL_RMI = true;
+    private static final boolean LOCAL_RMI = false;
 
     /************************************************
      |  Klassenprozeduren:
@@ -33,9 +33,11 @@ public class Eintrag
             grouplist.loesche(6);
 
             grouplist.trageEin(6, "Sebastian Koske", "3500729", "koske@inf.fu-berlin.de");
-            grouplist.trageEin(6, "Rafael Grote", "3500729", "grote@inf.fu-berlin.de");
-            grouplist.trageEin(6, "Sebastian Schaepe", "3500729", "schaepe@inf.fu-berlin.de");
-            grouplist.trageEin(6, "Mike Rohland", "3500729", "rohland@inf.fu-berlin.de");
+			grouplist.trageEin(6, "Boris Tsarev", "3668329", "tsarev@inf.fu-berlin.de");
+
+            grouplist.trageEin(6, "Rafael Grote", "XXX", "grote@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Sebastian Schaepe", "XXX", "schaepe@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Mike Rohland", "XXX", "rohland@inf.fu-berlin.de");
 
             String[] content = grouplist.toString(6);
 
