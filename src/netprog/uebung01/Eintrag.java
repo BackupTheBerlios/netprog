@@ -44,14 +44,6 @@ public class Eintrag
 
             grouplist.loesche(6);
 
-            /*  Ich bekomme bei der uni-rmi immer folgende Exception:
-
-                java.rmi.UnmarshalException: error unmarshalling return; nested exception is:
-                java.lang.ClassNotFoundException: GruppenlisteServer_Stub (no security manager: RMI class loader disabled)
-
-                Ich denke es an der Serverkonfiguration an der Uni liegt, denn lokal gibt es keine Probleme.
-                Hat jemand vielleicht noch eine Idee?
-            */
         }
         catch (NotBoundException e)
         {
