@@ -25,7 +25,7 @@ public class DivisionService {
     private DatagramPacket in;
 
     static final int RETRIES = 3;
-    static final int TIMEOUT = 300;
+    static final int TIMEOUT = 1000;
 
     public DivisionService(int port) {
 
@@ -64,13 +64,14 @@ public class DivisionService {
             } catch (IOException ex) {
                 i++;
             }
-        } while (done || i >= RETRIES);
+        } while (!done || i >= RETRIES);
         return done;
     }
 
 
     private void division() {
         while (true) {
+            System.out.println("LISTEN");
             String numerator = "", denominator = "";
 
             // Erstes Argument empfangen
@@ -82,6 +83,8 @@ public class DivisionService {
             } catch (IOException ex) {
                 continue;
             }
+
+            System.out.println("RECEIVED ARG1: " + numerator);
 
             // Erstes Argument überprüfen
             // das erste Argument ist mit "NUM:" gekennzeichnet
@@ -96,6 +99,8 @@ public class DivisionService {
             // falls es schief geht, zurück zum Ausgangszustand
             if (!send(in.getData(), senderIP, senderPort)) continue;
 
+            System.out.println("SEND OK");
+
             // Zweites Argument empfangen
             // falls der Client nicht antwortet
             try {
@@ -107,6 +112,8 @@ public class DivisionService {
                 continue;
             }
 
+            System.out.println("RECEIVED ARG2: " + denominator);
+
             // Zweites Argument überprüfen
             // das zweite Argument ist vom Client mit "DEN:" gekennzeichnet
             if (!denominator.startsWith("DEN:")) continue;
@@ -116,6 +123,7 @@ public class DivisionService {
 
             // Ergebnis senden
             send(outData, senderIP, senderPort);
+            System.out.println("SENDED ARG1 / ARG2");
         }
     }
 
@@ -131,12 +139,12 @@ public class DivisionService {
     private byte[] calculate(String s, String t) {
         double arg1, arg2;
         try {
-            arg1 = Double.parseDouble(s.substring(3));
+            arg1 = Double.parseDouble(s.substring(4));
         } catch (NumberFormatException ex) {
             return "error: <arg1> is not a number".getBytes();
         }
         try {
-            arg2 = Double.parseDouble(t.substring(3));
+            arg2 = Double.parseDouble(t.substring(4));
             if (arg2 == 0) return "error: division by zero".getBytes();
         } catch (NumberFormatException ex) {
             return "error: <arg2> is not a number".getBytes();
@@ -153,6 +161,12 @@ public class DivisionService {
      */
     public static void main(String[] args) {
         int port = 0;
+
+        if (args.length < 1) {
+            System.out.println("Usage: java uebung03.a3.DivisionService <port>");
+            System.exit(1);
+        }
+
         try {
             port = Integer.parseInt(args[0]);
         } catch (NumberFormatException ex) {
