@@ -9,11 +9,6 @@
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring.idl" line="5" column="28" vertical-scroll-proportion="0.12062726" horizontal-scroll-proportion="0.23357664" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstringOperations.java" line="16" column="67" vertical-scroll-proportion="0.38600725" horizontal-scroll-proportion="0.55891556" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/adder/floataddPOA.java" line="10" column="22" vertical-scroll-proportion="0.23557127" horizontal-scroll-proportion="0.1835245" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/AdderServiceImpl.java" line="15" column="16" vertical-scroll-proportion="0.3533569" horizontal-scroll-proportion="0.13347237">
-        <folding>
-          <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringImpl.java" line="4" column="13" vertical-scroll-proportion="-0.81302774" horizontal-scroll-proportion="0.1084463" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/AdderServer.java" line="28" column="0" vertical-scroll-proportion="0.9556314" horizontal-scroll-proportion="0.0" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a1_2/Test.java" line="27" column="13" vertical-scroll-proportion="0.2542662" horizontal-scroll-proportion="0.1084463">
@@ -22,7 +17,7 @@
         </folding>
       </source-position-entry>
       <source-position-entry url="jar://D:/j2sdk1.4.2/src.zip!/org/omg/CORBA/ORB.java" line="412" column="16" vertical-scroll-proportion="-20.252954" horizontal-scroll-proportion="0.13573702" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="38" column="0" vertical-scroll-proportion="0.15194346" horizontal-scroll-proportion="0.0">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="38" column="0" vertical-scroll-proportion="0.17196701" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
@@ -41,7 +36,7 @@
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="38" column="0" vertical-scroll-proportion="0.15194346" horizontal-scroll-proportion="0.0">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="38" column="0" vertical-scroll-proportion="0.17196701" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
@@ -263,12 +258,12 @@
   <component name="ProjectViewSettings">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung02/a3" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung02/a1_2" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung02" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung02" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung02/a3" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung02/a1_2" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
     </view>
     <view id="SourcepathPane" />
     <view id="ClasspathPane" />
