@@ -19,7 +19,7 @@ import org.omg.CosNaming.NamingContextExtHelper;
  * 2. Addier-Server starten:
  *     > java adder.AdderServer -ORBInitialPort 3000
  * 3. Client starten:
- *     > java netprog.uebung02.a1_2.AdderClient -ORBInitialPort 3000
+ *     > java netprog.uebung02.a1_2.Test -ORBInitialPort 3000
  * </p>
  * <p>Copyright: Copyright (c) 2003</p>
  * <p>Company: Hotzenklotz</p>
@@ -27,7 +27,7 @@ import org.omg.CosNaming.NamingContextExtHelper;
  * @version 1.0
  */
 
-public class AdderClient {
+public class Test {
 
     public static void main(String[] args) throws Exception {
 
