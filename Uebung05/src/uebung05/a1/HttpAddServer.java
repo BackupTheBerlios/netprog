@@ -99,7 +99,7 @@ implements Runnable
 	private String readRequest(Socket client)
 	throws IOException
 	{
-		client.setSoTimeout(100);
+		client.setSoTimeout(50);
 
 		StringBuffer buffer = new StringBuffer();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
