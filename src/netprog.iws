@@ -2,40 +2,50 @@
 <project version="3" relativePaths="false">
   <component name="FileEditorManager">
     <history>
+      <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="20" column="15" vertical-scroll-proportion="0.47114253" horizontal-scroll-proportion="0.11549567" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="0" column="0" vertical-scroll-proportion="0.0" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="19" column="101" vertical-scroll-proportion="0.70240295" horizontal-scroll-proportion="0.77767086" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="39" column="42" vertical-scroll-proportion="0.7042514" horizontal-scroll-proportion="0.32338786">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="14" column="5" vertical-scroll-proportion="0.32979977" horizontal-scroll-proportion="0.038498558">
         <folding>
-          <element signature="method#toString#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#GruppenlisteImpl#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#loesche#0;class#GruppenlisteImpl" expanded="true" />
           <element signature="method#trageEin#0;class#GruppenlisteImpl" expanded="true" />
+          <element signature="method#GruppenlisteImpl#0;class#GruppenlisteImpl" expanded="true" />
+          <element signature="method#toString#0;class#GruppenlisteImpl" expanded="true" />
           <element signature="method#main#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="imports" expanded="true" />
+          <element signature="method#loesche#0;class#GruppenlisteImpl" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="62" column="1" vertical-scroll-proportion="1.4605418" horizontal-scroll-proportion="0.0076997112">
+        <folding>
+          <element signature="method#main#0;class#Eintrag" expanded="true" />
+          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
         </folding>
       </source-position-entry>
     </history>
     <open-files>
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="0" column="0" vertical-scroll-proportion="0.0" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="19" column="101" vertical-scroll-proportion="0.70240295" horizontal-scroll-proportion="0.77767086" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="39" column="42" vertical-scroll-proportion="0.7042514" horizontal-scroll-proportion="0.32338786" selected="true">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="62" column="1" vertical-scroll-proportion="1.4605418" horizontal-scroll-proportion="0.0076997112" selected="true">
         <folding>
-          <element signature="method#toString#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#GruppenlisteImpl#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="method#loesche#0;class#GruppenlisteImpl" expanded="true" />
+          <element signature="method#main#0;class#Eintrag" expanded="true" />
+          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="20" column="15" vertical-scroll-proportion="0.47114253" horizontal-scroll-proportion="0.11549567" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="14" column="5" vertical-scroll-proportion="0.32979977" horizontal-scroll-proportion="0.038498558">
+        <folding>
           <element signature="method#trageEin#0;class#GruppenlisteImpl" expanded="true" />
+          <element signature="method#GruppenlisteImpl#0;class#GruppenlisteImpl" expanded="true" />
+          <element signature="method#toString#0;class#GruppenlisteImpl" expanded="true" />
           <element signature="method#main#0;class#GruppenlisteImpl" expanded="true" />
-          <element signature="imports" expanded="true" />
+          <element signature="method#loesche#0;class#GruppenlisteImpl" expanded="true" />
         </folding>
       </source-position-entry>
     </open-files>
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1408" height="1028" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.33554816" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.19379845" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
@@ -245,9 +255,10 @@
   <component name="ProjectViewSettings">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/docs" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog" />
-      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
     </view>
     <view id="SourcepathPane" />
     <view id="ClasspathPane" />
@@ -293,13 +304,13 @@
       <Port>5050</Port>
       <LaunchServer>false</LaunchServer>
     </configuration>
-    <configuration name="Uebung01" type="Application" default="false" selected="false">
+    <configuration name="Client" type="Application" default="false" selected="true">
       <option name="MAIN_CLASS_NAME" value="netprog.uebung01.Eintrag" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Server" type="Application" default="false" selected="true">
+    <configuration name="Server" type="Application" default="false" selected="false">
       <option name="MAIN_CLASS_NAME" value="netprog.uebung01.GruppenlisteImpl" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
