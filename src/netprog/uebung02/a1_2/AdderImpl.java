@@ -12,7 +12,7 @@ import org.omg.CORBA.DoubleHolder;
  * @version 1.0
  */
 
-public class AdderServiceImpl
+public class AdderImpl
 extends floataddPOA
 {
     /**

@@ -2,7 +2,6 @@
 <project version="3" relativePaths="false">
   <component name="FileEditorManager">
     <history>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/RMIManager.java" line="32" column="49" vertical-scroll-proportion="0.87323946" horizontal-scroll-proportion="0.38206628" />
       <source-position-entry url="jar://D:/j2sdk1.4.2/src.zip!/org/omg/PortableServer/Servant.java" line="23" column="22" vertical-scroll-proportion="-7.4703555" horizontal-scroll-proportion="0.18506835" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstringPOA.java" line="10" column="76" vertical-scroll-proportion="0.24125452" horizontal-scroll-proportion="0.63399374" />
       <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/repstring/replicatedstring.java" line="11" column="1" vertical-scroll-proportion="0.26537997" horizontal-scroll-proportion="0.008342023" />
@@ -22,26 +21,27 @@
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="20" column="2" vertical-scroll-proportion="0.47114253" horizontal-scroll-proportion="0.016684046">
+      <source-position-entry url="jar://D:/j2sdk1.4.2/src.zip!/org/omg/CORBA/ORB.java" line="412" column="16" vertical-scroll-proportion="-20.252954" horizontal-scroll-proportion="0.13573702" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="38" column="0" vertical-scroll-proportion="0.15194346" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/Test.java" line="24" column="0" vertical-scroll-proportion="0.49469966" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="31" column="2" vertical-scroll-proportion="0.22261484" horizontal-scroll-proportion="0.016684046">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/Test.java" line="35" column="0" vertical-scroll-proportion="0.8009423" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="18" column="0" vertical-scroll-proportion="0.42402828" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
     </history>
     <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/Test.java" line="24" column="0" vertical-scroll-proportion="0.49469966" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="20" column="2" vertical-scroll-proportion="0.47114253" horizontal-scroll-proportion="0.016684046">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/Test.java" line="35" column="0" vertical-scroll-proportion="0.8009423" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/a3/ReplicatedStringServer.java" line="18" column="0" vertical-scroll-proportion="0.42402828" horizontal-scroll-proportion="0.0" selected="true">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="31" column="2" vertical-scroll-proportion="0.22261484" horizontal-scroll-proportion="0.016684046" selected="true">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung02/CorbaManager.java" line="38" column="0" vertical-scroll-proportion="0.15194346" horizontal-scroll-proportion="0.0">
         <folding>
           <element signature="imports" expanded="true" />
         </folding>
@@ -53,7 +53,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.2857143" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="docked" type="docked" visible="false" weight="0.2857143" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />

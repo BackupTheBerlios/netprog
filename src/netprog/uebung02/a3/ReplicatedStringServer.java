@@ -14,11 +14,7 @@ public class ReplicatedStringServer
     {
         // Neuen Counter erzeugen
         ReplicatedStringImpl repString = new ReplicatedStringImpl();
-//        ReplicatedStringImpl repString2 = new ReplicatedStringImpl();
 
-
-        CorbaManager.installRemoteObjectAtLocalhost(repString,"ReplStringService1");
-//        CorbaManager.installRemoteObjectAtLocalhost(repString2,"ReplStringService2");
-
+        CorbaManager.installRemoteObjectAtLocalhost(repString, "ReplStringService1");
     }
 }

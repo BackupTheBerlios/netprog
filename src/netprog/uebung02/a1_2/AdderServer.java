@@ -22,7 +22,7 @@ public class AdderServer
      */
     public static void main(String[] args) throws Exception
     {   // Neuen Counter erzeugen
-        AdderServiceImpl theAdder = new AdderServiceImpl();
+        AdderImpl theAdder = new AdderImpl();
 
         // Referenz auf Counter Objekt unter "OurFloatAdd" registrieren
         CorbaManager.installRemoteObjectAtLocalhost(theAdder, "OurFloatAdd");

@@ -2,7 +2,7 @@ package netprog.uebung01.a4;
 
 import java.rmi.*;
 
-import netprog.uebung01.RegistryManager;
+import netprog.uebung01.RMIManager;
 
 public class MainD_RegisterTeilvektor
 {
@@ -16,7 +16,7 @@ public class MainD_RegisterTeilvektor
     {
         Integer[] field = {new Integer(7), new Integer(8), new Integer(9)};
 
-        RegistryManager.getLocalRegistry().bind("TeilVektor3", new TeilVektorImpl(field));
+        RMIManager.getLocalRegistry().bind("TeilVektor3", new TeilVektorImpl(field));
 
     }
 }

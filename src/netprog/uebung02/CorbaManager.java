@@ -38,7 +38,7 @@ public class CorbaManager
         String[] args = {"-ORBInitialPort", "3000"};
 
         // ORB initialisieren
-        ORB orb = ORB.init(args, null);
+        final ORB orb = ORB.init(args, null);
 
         // Root Objekt ermitteln und aktivieren
         POA root = POAHelper.narrow(orb.resolve_initial_references("RootPOA")); // Cast (POA) rootRef
@@ -53,6 +53,16 @@ public class CorbaManager
         naming.rebind(path, serviceRef);
 
         // Auf Aufrufe warten
-        orb.run();
+        Thread t = new Thread(new Runnable()
+        {
+            public void run()
+            {
+                orb.run();
+            }
+        });
+
+        t.start();
+
     }
+
 }
