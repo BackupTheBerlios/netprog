@@ -16,8 +16,11 @@ implements Gruppenliste
     {
         System.setSecurityManager(new RMISecurityManager());
 
-        GruppenlisteImpl liste = new GruppenlisteImpl();
+        Gruppenliste liste  = new GruppenlisteImpl();
+        Gruppenliste liste2 = new GruppenlisteImpl();
+
         java.rmi.registry.LocateRegistry.createRegistry(1099).rebind("liste", liste);
+        java.rmi.registry.LocateRegistry.getRegistry(1099).rebind("liste2", liste2);
     }
 
     /************************************************
