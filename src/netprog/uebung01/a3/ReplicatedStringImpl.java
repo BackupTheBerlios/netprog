@@ -40,7 +40,7 @@ implements ReplicatedString
     //------------------------------------------------
 
     /**
-     * Stores the given String and replicates it if another ReplicateString has been set
+     * Stores the given String and replicates it if another {@link ReplicatedString} has been set
      by using {@link #replicateAt(ReplicatedString)}.
      * The given String may be null.
      * If there is a ring (e.g. this object is it's own replicant's replicant) recurvive replicating
