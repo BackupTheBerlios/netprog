@@ -2,6 +2,11 @@ package uebung04;
 
 import java.net.URL;
 import java.net.MalformedURLException;
+import java.net.HttpURLConnection;
+import java.net.URLConnection;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class URLParser
 {
@@ -50,4 +55,30 @@ public class URLParser
 
 		return url;
 	}
+
+	public boolean checkResponseOK(HttpURLConnection httpURLConnection)
+	throws IOException
+	{
+		int responseCode = httpURLConnection.getResponseCode();
+
+		switch (responseCode)
+		{
+			case HttpURLConnection.HTTP_OK:
+				return true;
+			case HttpURLConnection.HTTP_NOT_FOUND:
+				System.err.println(httpURLConnection + "  - wurde nicht gefunden");
+				return false;
+			case HttpURLConnection.HTTP_FORBIDDEN:
+				System.err.println((httpURLConnection + " - Zugriff verweigert"));
+				return false;
+			case HttpURLConnection.HTTP_UNAUTHORIZED:
+				System.err.println((httpURLConnection + " - Authorisierung erforderlich"));
+				return false;
+			default :
+				System.err.println((httpURLConnection + " - unbekannter Fehler"));
+				return false;
+		}
+	}
+
+
 }
