@@ -11,12 +11,21 @@ public class URLSizeChecker
 extends HTMLEditorKit.ParserCallback
 {
 	private final URL url;
-	private long size;
-	private final HashMap resources = new HashMap();
+	private long size = 0;
+	private final HashMap resources;
 
 	public URLSizeChecker(URL url)
 	{
+		this(url, new HashMap());
+
+	}
+
+	private URLSizeChecker(URL url, HashMap recources)
+	{
 		this.url = url;
+		this.resources = recources;
+
+
 	}
 
 	public void handleEndTag(HTML.Tag t, int pos)
@@ -55,15 +64,18 @@ extends HTMLEditorKit.ParserCallback
 				checkResource((String) attributeSet.getAttribute(HTML.Attribute.HREF));
 			}
 
-			else if (tag.equals(HTML.Tag.FRAME)) //todo implement here
+			else if (tag.equals(HTML.Tag.FRAME))
 			{
-				;
+				URL frameURL = getURL((String) attributeSet.getAttribute(HTML.Attribute.SRC));
+				URLSizeChecker n = new URLSizeChecker(frameURL, resources);
+				size += n.checkSize();
 			}
 
-			else if (tag.equals(HTML.Tag.FRAMESET)) //todo implement here
-			{
-				;
-			}
+			// todo implement object -> classid, falls java
+			// todo implement applet -> codebase
+			// todo implement oject -> data (allgemeine plugins)
+			// todo implement oject -> param -> value (wav, mpeg, midi, etc.)
+			// todo implement oject -> param -> value (flash)
 		}
 		catch (URISyntaxException e)
 		{
@@ -82,12 +94,15 @@ extends HTMLEditorKit.ParserCallback
 	private void checkResource(String attribute)
 	throws URISyntaxException, IOException
 	{
+		if (attribute == null) return;
+
 		URL url = getURL(attribute);
 
 		if (resources.containsKey(url.toExternalForm())) return;
 
 		resources.put(url.toExternalForm(), url);
-		size += url.openConnection().getContentLength();
+		int contentLength = url.openConnection().getContentLength();
+		if (contentLength > 0) size += contentLength;
 	}
 
 	private URL getURL(String attribute)
@@ -127,21 +142,16 @@ extends HTMLEditorKit.ParserCallback
 	}
 
 
-	public void handleStartTag(HTML.Tag t, MutableAttributeSet a, int pos)
-	{
 
-	}
-
-	public void handleText(char[] data, int pos)
-	{
-
-	}
 
 	public long checkSize()
-	throws IOException
-	{
-		new ParserDelegator().parse(new BufferedReader(new InputStreamReader(url.openConnection().getInputStream())), this,
-		                            false);
+	throws IOException, URISyntaxException
+	{   checkResource(url.toExternalForm());
+
+		ParserDelegator parserDelegator = new ParserDelegator();
+
+		parserDelegator.parse(new BufferedReader(new InputStreamReader(url.openConnection().getInputStream())), this,
+		                            true);
 
 		return size;
 	}
