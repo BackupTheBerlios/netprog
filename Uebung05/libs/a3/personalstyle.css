@@ -1,0 +1,49 @@
+body{
+	marginheight: 0;
+	marginwidth: 0;
+	scrollbar-face-color :          #D2841A;
+	scrollbar-shadow-color :        #000000;
+	scrollbar-highlight-color :     #000000;
+    scrollbar-3dlight-color :       #000040;
+    scrollbar-darkshadow-color :    #000040;
+	scrollbar-track-color :         #000040;
+	scrollbar-arrow-color : #000000;
+
+	font-size:10pt;
+
+	background-color:#000030;
+	}
+
+	.Modify
+	{font-size:10pt;font-family="Verdana" ; color:black;
+	}
+
+	.News
+	{   font-size:10pt;font-family="Verdana" ; color:black;
+	}
+
+	.Headline1
+	{font-size:16pt;font-family="Verdana" ; color:#FFE99B;
+	}
+
+	.Headline2
+	{   font-size:12pt;
+	    font-family="Verdana" ; color:#FFF0BE;
+	    font-style:normal;
+	    text-decoration:underline;
+
+	}
+
+td { font-size:10pt; font-family="Courier New"; color:#FFF0BE;}
+div {font-size:10pt;font-family="Verdana" ; color:#FFF0BE;}
+
+a, a:visited
+{   font-family="Verdana"; color:#FF8000;text-decoration: none;
+    font-size:10pt;
+}
+
+a:hover
+{   font-family="Verdana";color:#FDCE42;
+    text-decoration: underline & overline;
+    font-size:10pt;
+}
