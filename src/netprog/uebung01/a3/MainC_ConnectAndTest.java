@@ -4,7 +4,7 @@ import java.rmi.*;
 
 import netprog.RegistryManager;
 
-public class Aufgabe4StartC
+public class MainC_ConnectAndTest
 {
     public static void main(String[] args) throws RemoteException, NotBoundException
     {

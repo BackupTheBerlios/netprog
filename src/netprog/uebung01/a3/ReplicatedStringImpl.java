@@ -2,8 +2,6 @@ package netprog.uebung01.a3;
 
 import java.rmi.RemoteException;
 
-import netprog.uebung01.a3.ReplicatedString;
-
 public class ReplicatedStringImpl
 extends java.rmi.server.UnicastRemoteObject
 implements ReplicatedString

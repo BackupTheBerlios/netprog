@@ -5,7 +5,7 @@ import java.rmi.registry.Registry;
 
 import netprog.RegistryManager;
 
-public class Aufgabe4StartA
+public class MainA_RegisterRepString
 {
     public static void main(String[] args) throws RemoteException
     {

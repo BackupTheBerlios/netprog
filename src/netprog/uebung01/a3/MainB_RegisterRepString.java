@@ -4,9 +4,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
 
 import netprog.RegistryManager;
-import netprog.uebung01.a4.*;
 
-public class Aufgabe4StartB
+public class MainB_RegisterRepString
 {
     public static void main(String[] args) throws RemoteException
     {
