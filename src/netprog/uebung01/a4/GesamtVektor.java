@@ -9,6 +9,6 @@ public interface GesamtVektor extends Remote
     public void remove(TeilVektor t) throws RemoteException;
 
     public int size() throws RemoteException;
- 
+
     public int sum() throws RemoteException;
 }
