@@ -142,7 +142,7 @@ public class ReadProtected
 				// neu anforden mit Authorization Header
 				connection = (HttpURLConnection) page.openConnection();
 				connection.setRequestProperty("Authorization", "Basic " +
-				encodeBase64(userNames[i],passwords[j]));
+				encodeBase64(userNames[i], passwords[j]));
 				// Response-Code erfragen
 				response = connection.getResponseCode();
 

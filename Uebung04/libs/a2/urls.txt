@@ -1,0 +1,8 @@
+http://www.spiegel.de
+http://www.inf.fu-berlin.de
+http://www.inf.fu-berlin.de/inst/ag-nbi/np/index.html
+http://www..focus.de
+ftp://ftp.inf.fu-berlin.de
+ftp://ftp.inf.fu-berlin.de/frei/README
+gropher://ftp.inf.fu-berlin.de
+http://www.inf.fu-berlin.de/inst/ag-nbi/lehre/0304/V_NP/u3/index.html
