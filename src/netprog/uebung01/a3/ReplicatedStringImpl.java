@@ -12,6 +12,7 @@ implements ReplicatedString
 
     private String s;
     private ReplicatedString replicate;
+    private boolean isReplicating = false;
 
     //------------------------------------------------
     //  Konstruktoren:
@@ -40,10 +41,10 @@ implements ReplicatedString
 
     /**
      * Stores the given String and replicates it if another ReplicateString has been set
-     by using {@link netprog.uebung01.a3.ReplicatedStringImpl#replicateAt(ReplicatedString)
-     replicateAt(ReplicatedString s)}.
+     by using {@link #replicateAt(ReplicatedString)}.
      * The given String may be null.
-     * Note that calling this method may cause a StackOverflow when a cycle has been created.
+     * If there is a ring (e.g. this object is it's own replicant's replicant) recurvive replicating
+     * stops once all replicants have been updated avoiding endless recursion.
      *
      * @param s the string to be stored and replicated.
      * @throws RemoteException
@@ -51,8 +52,14 @@ implements ReplicatedString
     public void set(String s)
     throws RemoteException
     {
+        if (isReplicating) return;
+
+        isReplicating = true;
+
         this.s = s;
         if (replicate != null) replicate.set(s);
+
+        isReplicating = false;
     }
 
     /**

@@ -16,7 +16,7 @@ implements Gruppenliste
 
     /**
      * Installs an instance of {@link Gruppenliste} in the local {@link java.rmi.registry.Registry} with the name
-     * "liste".
+     "liste".
      * @param args isn't used.
      * @throws RemoteException
      */
@@ -51,7 +51,6 @@ implements Gruppenliste
     //------------------------------------------------
 
     /**
-     *
      * @param gruppenNummer unique group id
      * @return a String representation of the given group's data
      * @throws RemoteException

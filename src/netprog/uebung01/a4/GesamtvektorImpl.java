@@ -64,7 +64,7 @@ implements GesamtVektor
 
     /**
      * Appends a {@link TeilVektor}. If it is already contained or null, nothing happens.
-     Also size and sum informations are updated.
+     * Also size and sum informations are updated.
      * @param t the {@link TeilVektor} to be appended.
      * @throws RemoteException
      */
@@ -80,7 +80,7 @@ implements GesamtVektor
 
     /**
      * Removes a {@link TeilVektor}. If it is already contained or null, nothing happens.
-     Also size and sum informations are updated.
+     * Also size and sum informations are updated.
      * @param t the {@link TeilVektor} to be removed.
      * @throws RemoteException
      */

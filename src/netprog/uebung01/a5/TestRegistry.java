@@ -7,7 +7,8 @@ public class TestRegistry
 {
     /**
      * Checks the given host for a running registry.
-     Prints the number of registered objects if a registry is found. Otherwise prints that there is no running registry.
+     * Prints the number of registered objects if a registry is found.
+     * Otherwise prints that there is no running registry.
      * @param args the host to be checked for a running registry.
      */
     public static void main(String[] args)

@@ -20,7 +20,7 @@ implements TeilVektor
 
     /**
      * Creates an internal field with the given Integers.
-     Sum information is updated.
+     * Sum information is updated.
      * @param field the Integers to be stored
      * @throws RemoteException
      */
@@ -41,7 +41,6 @@ implements TeilVektor
     //------------------------------------------------
 
     /**
-     *
      * @return the field's size
      */
     public int size()
@@ -50,12 +49,10 @@ implements TeilVektor
     }
 
     /**
-     *
      * @return the field's integers' size
      */
     public int sum()
     {
         return sum;
-
     }
 }

@@ -15,7 +15,7 @@ public class Eintrag
     //------------------------------------------------
 
     /**
-     * Connects to an instance of {@link Gruppenliste} running in a different JVM and registers this group.
+     * Connects to an instance of {@link Gruppenliste} running in a different JVM and adds this group.
      Prints group infomation afterwards.
      * @param args isn't used.
      */
