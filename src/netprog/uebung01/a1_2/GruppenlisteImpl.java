@@ -1,10 +1,13 @@
-package netprog.uebung01;
+package netprog.uebung01.a1_2;
 
 import java.rmi.*;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
+import netprog.RegistryManager;
+
 public class GruppenlisteImpl
-extends java.rmi.server.UnicastRemoteObject
+extends UnicastRemoteObject
 implements Gruppenliste
 {
     /************************************************
@@ -16,11 +19,11 @@ implements Gruppenliste
     {
         System.setSecurityManager(new RMISecurityManager());
 
-        Gruppenliste liste  = new GruppenlisteImpl();
+        Gruppenliste liste = new GruppenlisteImpl();
         Gruppenliste liste2 = new GruppenlisteImpl();
 
-        java.rmi.registry.LocateRegistry.createRegistry(1099).rebind("liste", liste);
-        java.rmi.registry.LocateRegistry.getRegistry(1099).rebind("liste2", liste2);
+        RegistryManager.getLocalRegistry().rebind("liste", liste);
+        RegistryManager.getLocalRegistry().rebind("liste2", liste2);
     }
 
     /************************************************

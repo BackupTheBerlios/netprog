@@ -1,4 +1,4 @@
-package netprog.uebung01;
+package netprog.uebung01.a1_2;
 
 import java.rmi.*;
 
@@ -29,11 +29,11 @@ public class Eintrag
         {
             String hostname = LOCAL_RMI ? "localhost" : "nawab.inf.fu-berlin.de";
 
-            Gruppenliste grouplist = (Gruppenliste)java.rmi.Naming.lookup("rmi://" + hostname + "/liste");
+            Gruppenliste grouplist = (Gruppenliste)Naming.lookup("rmi://" + hostname + "/liste");
             grouplist.loesche(6);
 
             grouplist.trageEin(6, "Sebastian Koske", "3500729", "koske@inf.fu-berlin.de");
-			grouplist.trageEin(6, "Boris Tsarev", "3668329", "tsarev@inf.fu-berlin.de");
+            grouplist.trageEin(6, "Boris Tsarev", "3668329", "tsarev@inf.fu-berlin.de");
 
             grouplist.trageEin(6, "Rafael Grote", "XXX", "grote@inf.fu-berlin.de");
             grouplist.trageEin(6, "Sebastian Schaepe", "XXX", "schaepe@inf.fu-berlin.de");

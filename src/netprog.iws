@@ -2,45 +2,70 @@
 <project version="3" relativePaths="false">
   <component name="FileEditorManager">
     <history>
-      <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="72" column="0" vertical-scroll-proportion="1.213192" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="37" column="69" vertical-scroll-proportion="0.2697291" horizontal-scroll-proportion="0.5312801">
+      <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="72" column="0" vertical-scroll-proportion="1.2424608" horizontal-scroll-proportion="0.0" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/ReplicatedString.java" line="5" column="14" vertical-scroll-proportion="0.12062726" horizontal-scroll-proportion="0.10779596" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/RegistryManager.java" line="14" column="12" vertical-scroll-proportion="0.32979977" horizontal-scroll-proportion="0.092396535">
         <folding>
-          <element signature="method#main#0;class#Eintrag" expanded="true" />
-          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
+          <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/TestRegistry.java" line="19" column="107" vertical-scroll-proportion="0.42402828" horizontal-scroll-proportion="0.8238691">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Eintrag.java" line="31" column="55" vertical-scroll-proportion="0.16887817" horizontal-scroll-proportion="0.42348412" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Gruppenliste.java" line="14" column="11" vertical-scroll-proportion="0.33775634" horizontal-scroll-proportion="0.08469682" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/GruppenlisteImpl.java" line="9" column="8" vertical-scroll-proportion="-1.2677925" horizontal-scroll-proportion="0.062075656">
+        <folding>
+          <element signature="imports" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/Aufgabe4StartA.java" line="7" column="13" vertical-scroll-proportion="0.16887817" horizontal-scroll-proportion="0.10009625">
+        <folding>
+          <element signature="imports" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/Aufgabe4StartB.java" line="7" column="13" vertical-scroll-proportion="0.16887817" horizontal-scroll-proportion="0.10009625">
+        <folding>
+          <element signature="imports" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/Aufgabe4StartC.java" line="6" column="13" vertical-scroll-proportion="0.14475271" horizontal-scroll-proportion="0.10009625">
+        <folding>
+          <element signature="imports" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/ReplicatedStringImpl.java" line="4" column="13" vertical-scroll-proportion="0.09650181" horizontal-scroll-proportion="0.10009625" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a5/TestRegistry.java" line="14" column="23" vertical-scroll-proportion="0.33775634" horizontal-scroll-proportion="0.17709336">
         <folding>
           <element signature="method#main#0;class#TestRegistry" expanded="true" />
           <element signature="imports" expanded="true" />
-        </folding>
-      </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="4" column="17" vertical-scroll-proportion="0.094228506" horizontal-scroll-proportion="0.1308951" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="22" column="53" vertical-scroll-proportion="0.3533569" horizontal-scroll-proportion="0.41125122">
-        <folding>
-          <element signature="imports" expanded="true" />
-          <element signature="method#main#0;class#GruppenlisteImpl" expanded="true" />
         </folding>
       </source-position-entry>
     </history>
     <open-files>
-      <source-position-entry url="file://$PROJECT_DIR$/docs/Docments.txt" line="72" column="0" vertical-scroll-proportion="1.213192" horizontal-scroll-proportion="0.0" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/GruppenlisteImpl.java" line="22" column="53" vertical-scroll-proportion="0.3533569" horizontal-scroll-proportion="0.41125122" selected="true">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/Aufgabe4StartA.java" line="7" column="13" vertical-scroll-proportion="0.16887817" horizontal-scroll-proportion="0.10009625">
         <folding>
           <element signature="imports" expanded="true" />
-          <element signature="method#main#0;class#GruppenlisteImpl" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Gruppenliste.java" line="4" column="17" vertical-scroll-proportion="0.094228506" horizontal-scroll-proportion="0.1308951" />
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/Eintrag.java" line="37" column="69" vertical-scroll-proportion="0.2697291" horizontal-scroll-proportion="0.5312801">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/Aufgabe4StartB.java" line="7" column="13" vertical-scroll-proportion="0.16887817" horizontal-scroll-proportion="0.10009625">
         <folding>
-          <element signature="method#main#0;class#Eintrag" expanded="true" />
-          <element signature="method#Eintrag#0;class#Eintrag" expanded="true" />
+          <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
-      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/TestRegistry.java" line="19" column="107" vertical-scroll-proportion="0.42402828" horizontal-scroll-proportion="0.8238691">
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/Aufgabe4StartC.java" line="6" column="13" vertical-scroll-proportion="0.14475271" horizontal-scroll-proportion="0.10009625">
+        <folding>
+          <element signature="imports" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a4/ReplicatedStringImpl.java" line="4" column="13" vertical-scroll-proportion="0.09650181" horizontal-scroll-proportion="0.10009625" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a5/TestRegistry.java" line="14" column="23" vertical-scroll-proportion="0.33775634" horizontal-scroll-proportion="0.17709336" selected="true">
         <folding>
           <element signature="method#main#0;class#TestRegistry" expanded="true" />
+          <element signature="imports" expanded="true" />
+        </folding>
+      </source-position-entry>
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Eintrag.java" line="31" column="55" vertical-scroll-proportion="0.16887817" horizontal-scroll-proportion="0.42348412" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/Gruppenliste.java" line="14" column="11" vertical-scroll-proportion="0.33775634" horizontal-scroll-proportion="0.08469682" />
+      <source-position-entry url="file://$PROJECT_DIR$/netprog/uebung01/a1_2/GruppenlisteImpl.java" line="9" column="8" vertical-scroll-proportion="-1.2677925" horizontal-scroll-proportion="0.062075656">
+        <folding>
           <element signature="imports" expanded="true" />
         </folding>
       </source-position-entry>
@@ -48,14 +73,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1408" height="1028" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.19379845" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.16996337" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.16996337" order="0" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.39977852" order="3" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33001107" order="1" />
@@ -262,8 +287,11 @@
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
     <view id="ProjectPane">
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a4" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a5" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/docs" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog/uebung01/a1_2" />
       <expanded_node type="directory" url="file://$PROJECT_DIR$/netprog" />
     </view>
     <view id="SourcepathPane" />
@@ -310,22 +338,40 @@
       <Port>5050</Port>
       <LaunchServer>false</LaunchServer>
     </configuration>
-    <configuration name="Server" type="Application" default="false" selected="false">
-      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.GruppenlisteImpl" />
+    <configuration name="Aufgabe 2 Server" type="Application" default="false" selected="false">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.a1_2.GruppenlisteImpl" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Client" type="Application" default="false" selected="false">
-      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.Eintrag" />
+    <configuration name="Aufgabe 1, 2 Client" type="Application" default="false" selected="false">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.a1_2.Eintrag" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Aufgabe 5" type="Application" default="false" selected="true">
-      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.TestRegistry" />
+    <configuration name="Aufgabe 5" type="Application" default="false" selected="false">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.a5.TestRegistry" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" value="localhost" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Aufgabe 4 A" type="Application" default="false" selected="false">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.a4.Aufgabe4StartA" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Aufgabe 4 B" type="Application" default="false" selected="false">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.a4.Aufgabe4StartB" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Aufgabe 4 C" type="Application" default="false" selected="true">
+      <option name="MAIN_CLASS_NAME" value="netprog.uebung01.a4.Aufgabe4StartC" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
   </component>
