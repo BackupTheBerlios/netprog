@@ -8,15 +8,19 @@ import org.omg.PortableServer.*;
 import org.omg.PortableServer.POAManagerPackage.AdapterInactive;
 import org.omg.PortableServer.POAPackage.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sebastian Koske
- * Date: 21.11.2003
- * Time: 01:21:24
- * To change this template use Options | File Templates.
- */
 public class CorbaManager
 {
+    /**
+     * Look for a remote object with the given name at port 3000 at the given host and returns it.
+     *
+     * @param host The host where the object can be found
+     * @param name
+     * @return
+     * @throws InvalidName
+     * @throws CannotProceed
+     * @throws org.omg.CosNaming.NamingContextPackage.InvalidName
+     * @throws NotFound
+     */
     public static org.omg.CORBA.Object getRemoteObject(String host, String name)
     throws InvalidName, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName, NotFound
     {
@@ -25,13 +29,25 @@ public class CorbaManager
         // ORB initialisieren
         ORB orb = ORB.init(args, null);
 
-        // Namensdienst auffinden
-        NamingContextExt naming = NamingContextExtHelper.narrow(orb.resolve_initial_references("NameService"));
-        org.omg.CORBA.Object result = naming.resolve_str(name);
-
-        return result;
+        // Namensdienst auffinden und Object finden:
+        return NamingContextExtHelper.narrow(orb.resolve_initial_references("NameService")).resolve_str(name);
     }
 
+    /**
+     * Installs the given Servant at port 3000 at localhost with the given name.
+     * The run() method of the ORB object is started in a single Thread in order to enable the method caller to
+     * proceed (otherwise calling this method would result in an infinite loop).
+     *
+     * @param servant
+     * @param name
+     * @throws InvalidName
+     * @throws AdapterInactive
+     * @throws WrongPolicy
+     * @throws ServantNotActive
+     * @throws org.omg.CosNaming.NamingContextPackage.InvalidName
+     * @throws NotFound
+     * @throws CannotProceed
+     */
     public static void installRemoteObjectAtLocalhost(Servant servant, String name)
     throws InvalidName, AdapterInactive, WrongPolicy, ServantNotActive, org.omg.CosNaming.NamingContextPackage.InvalidName, NotFound, CannotProceed
     {
@@ -52,7 +68,7 @@ public class CorbaManager
         NameComponent[] path = naming.to_name(name);
         naming.rebind(path, serviceRef);
 
-        // Auf Aufrufe warten
+        // Auf Aufrufe warten:
         Thread t = new Thread(new Runnable()
         {
             public void run()
@@ -62,7 +78,5 @@ public class CorbaManager
         });
 
         t.start();
-
     }
-
 }
