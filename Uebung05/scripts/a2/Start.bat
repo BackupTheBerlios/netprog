@@ -1,0 +1,1 @@
+cmd /k java -cp ..\..\classes uebung05.a2.Start
