@@ -9,11 +9,11 @@ import org.omg.CosNaming.NamingContextExtHelper;
 /**
  * <p>Title: NETZPROGRAMMIERUNG UEBUNG 2 - AUFGABE 1 / 2</p>
  * <p>Description:
- * --------------------------------- AUFGABE 1 ---------------------------------
+         * --------------------------------- AUFGABE 1 ---------------------------------
  * Client starten:
  * > java netprog.uebung02.a1_2.AdderClient -ORBInitialPort 3000 -ORBInitialHost nawab.inf.fu-berlin.de
  *
- * --------------------------------- AUFGABE 2 ---------------------------------
+         * --------------------------------- AUFGABE 2 ---------------------------------
  * 1. ORB Server starten:
  *     > orbd -ORBInitialPort 3000
  * 2. Addier-Server starten:
@@ -29,6 +29,8 @@ import org.omg.CosNaming.NamingContextExtHelper;
 
 public class Test {
 
+    public static final boolean LOCALCALL = true;
+
     public static void main(String[] args) throws Exception {
 
         // ORB initialisieren
@@ -41,8 +43,8 @@ public class Test {
                 NamingContextExtHelper.narrow(namingRef); // (NamingContextExt)
 
         // Referenz auffinden
-        org.omg.CORBA.Object adderRef =
-                naming.resolve_str("FloatAdd");
+        String name = LOCALCALL ? "OurFloatAdd" : "FloatAdd";
+        org.omg.CORBA.Object adderRef = naming.resolve_str(name);
         floatadd adder = floataddHelper.narrow(adderRef);
 
         // nu mal testen:
@@ -50,6 +52,6 @@ public class Test {
         dH.value = 5;
         System.out.println("addiere " + dH.value + " mit 2");
         adder.sum(dH, 2);
-        System.out.println("Ergbnis: " + dH.value);
+        System.out.println("Ergebnis: " + dH.value);
     }
 }

@@ -41,10 +41,10 @@ public class AdderServer {
         // Neuen Counter erzeugen
         AdderServiceImpl theAdder = new AdderServiceImpl();
 
-        // Referenz auf Counter Objekt unter "FloatAdd" registrieren
+        // Referenz auf Counter Objekt unter "OurFloatAdd" registrieren
         org.omg.CORBA.Object serviceRef =
                 root.servant_to_reference(theAdder);
-        NameComponent[] path = naming.to_name("FloatAdd");
+        NameComponent[] path = naming.to_name("OurFloatAdd");
         naming.rebind(path, serviceRef);
 
         // Auf Aufrufe warten
