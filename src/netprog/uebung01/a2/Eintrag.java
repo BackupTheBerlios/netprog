@@ -1,3 +1,5 @@
+package netprog.uebung01.a2;
+
 import java.rmi.*;
 
 /**

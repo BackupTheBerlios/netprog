@@ -1,3 +1,5 @@
+package netprog.uebung01.a2;
+
 /**
  * Schnittstelle der Klasse auf dem Server, die die Gruppen registriert.
  */
