@@ -66,7 +66,7 @@ implements ReplicatedString
      * Sets the {@link ReplicatedString} where any String given as parameter for {@link set(String)} should be replicated.
      * The Object may be null causing no replication.
      *
-     * @param rs the Object where the String should be replicated.
+     * @param rs the {@link ReplicatedString} where the String should be replicated at.
      */
     public void replicateAt(ReplicatedString rs)
     {
