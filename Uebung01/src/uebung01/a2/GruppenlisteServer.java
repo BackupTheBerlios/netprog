@@ -13,8 +13,7 @@ public class GruppenlisteServer extends UnicastRemoteObject implements Gruppenli
 {
 
     public GruppenlisteServer() throws RemoteException
-    {
-    }
+    {    }
 
     public static void main(String[] args)
     {

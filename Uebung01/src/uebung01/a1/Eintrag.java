@@ -22,8 +22,7 @@ public class Eintrag
      * @param args isn't used.
      */
     public static void main(String[] args)
-    {
-        try
+    {        try
         {
             String hostname = LOCAL_RMI ? "localhost" : "nawab.inf.fu-berlin.de";
 
