@@ -1,2 +1,1 @@
-
-java -cp ..\..\classes uebung03.a2.AddierServer 7777
+cmd /k java -cp ..\..\classes uebung03.a2.StartServer 7777

@@ -8,6 +8,10 @@ import java.net.*;
 public class StartServer
 {
 
+    /**
+     * Starts a Div-Server at the given port.
+     * @param args the port where the server should be runnig at
+     */
     public static void main(String[] args)
     {
         if (args.length <= 0)

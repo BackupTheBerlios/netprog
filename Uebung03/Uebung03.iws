@@ -278,55 +278,12 @@
     <option name="HIDE_WARNINGS" value="false" />
   </component>
   <component name="FileEditorManager" split-orientation="horizontal" split-proportion="0.5">
-    <first-group selected-file="file://$PROJECT_DIR$/src/uebung03/a3/DivClient.java">
-      <entry file="file://$PROJECT_DIR$/src/uebung03/a3/StartServer.java" pinned="false">
-        <provider selected="true" editor-type-id="text-editor">
-          <state line="28" column="9" selection-start="555" selection-end="555" vertical-scroll-proportion="0.49361208">
-            <folding>
-              <element signature="method#main#0;class#StartServer#0" expanded="true" />
-            </folding>
-          </state>
-        </provider>
-      </entry>
-      <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivServer.java" pinned="false">
-        <provider selected="true" editor-type-id="text-editor">
-          <state line="53" column="16" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.6492451">
-            <folding>
-              <element signature="method#start#0;class#DivServer#0" expanded="true" />
-            </folding>
-          </state>
-        </provider>
-      </entry>
-      <entry file="file://$PROJECT_DIR$/src/uebung03/a3/StartClient.java" pinned="false">
-        <provider selected="true" editor-type-id="text-editor">
-          <state line="55" column="37" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.51335657">
-            <folding>
-              <element signature="docComment;class#StartClient#0" expanded="true" />
-              <element signature="method#main#0;class#StartClient#0" expanded="true" />
-            </folding>
-          </state>
-        </provider>
-      </entry>
-      <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivClient.java" pinned="false">
-        <provider selected="true" editor-type-id="text-editor">
-          <state line="78" column="11" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.65156794">
-            <folding>
-              <element signature="method#DivClient#0;class#DivClient#0" expanded="true" />
-              <element signature="method#divide#0;class#DivClient#0" expanded="true" />
-              <element signature="imports" expanded="true" />
-            </folding>
-          </state>
-        </provider>
-      </entry>
+    <first-group selected-file="file://$PROJECT_DIR$/src/uebung03/a3/DivHandler.java">
       <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivHandler.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="21" column="14" selection-start="444" selection-end="444" vertical-scroll-proportion="0.3554007">
+          <state line="45" column="14" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.5505226">
             <folding>
-              <element signature="method#canGetResult#0;class#DivHandler#0" expanded="true" />
-              <element signature="method#reset#0;class#DivHandler#0" expanded="true" />
-              <element signature="method#getResult#0;class#DivHandler#0" expanded="true" />
               <element signature="imports" expanded="true" />
-              <element signature="method#setValue#0;class#DivHandler#0" expanded="true" />
             </folding>
           </state>
         </provider>
@@ -359,10 +316,14 @@
   </component>
   <component name="PackagesPane" />
   <component name="ProjectPane">
-    <expanded_node url="file://$PROJECT_DIR$/src/uebung03/a3" module="Uebung03" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/scripts/a1" module="Uebung03" type="directory" />
     <expanded_node url="file://$PROJECT_DIR$" module="Uebung03" type="directory" />
     <expanded_node url="file://$PROJECT_DIR$/src" module="Uebung03" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/src/uebung03/a3" module="Uebung03" type="directory" />
     <expanded_node url="file://$PROJECT_DIR$/src/uebung03" module="Uebung03" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/src/uebung03/a2" module="Uebung03" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/scripts" module="Uebung03" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/scripts/a2" module="Uebung03" type="directory" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" flattenPackages="false" showMembers="false" showModules="true" showLibraryContents="false" hideEmptyPackages="false" showStructure="false" autoscrollToSource="false" splitterProportion="0.5" />
@@ -453,10 +414,17 @@
       <option name="WORKING_DIRECTORY" value="E:\Studium\Netzprogrammierung (WS 2004)\Übungen\Übung03\Uebung03" />
       <module name="Uebung03" />
     </configuration>
-    <configuration name="A3 Client" type="Application" default="false" selected="true">
+    <configuration name="A3 Client" type="Application" default="false" selected="false">
       <option name="MAIN_CLASS_NAME" value="uebung03.a3.StartClient" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="localhost 1000 10 5" />
+      <option name="WORKING_DIRECTORY" value="E:\Studium\Netzprogrammierung (WS 2004)\Übungen\Übung03\Uebung03" />
+      <module name="Uebung03" />
+    </configuration>
+    <configuration name="A1" type="Application" default="false" selected="true">
+      <option name="MAIN_CLASS_NAME" value="uebung03.a1.HostNames" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="192.168.0" />
       <option name="WORKING_DIRECTORY" value="E:\Studium\Netzprogrammierung (WS 2004)\Übungen\Übung03\Uebung03" />
       <module name="Uebung03" />
     </configuration>
@@ -506,7 +474,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.4" order="6" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="3" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="1" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="docked" type="docked" visible="false" weight="0.33" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.4" order="3" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
@@ -582,54 +550,133 @@
     <webview flattenPackages="false" showMembers="false" autoscrollToSource="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/StartServer.java">
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="555" selection-end="555" vertical-scroll-proportion="0.49361208">
+        <state line="53" column="16" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.6694611">
           <folding>
-            <element signature="method#main#0;class#StartServer#0" expanded="true" />
+            <element signature="method#start#0;class#DivServer#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/StartClient.java">
+    <entry file="jar://D:/j2sdk1.4.2/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="37" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.51335657">
+        <state line="1756" column="24" selection-start="69767" selection-end="69767" vertical-scroll-proportion="0.33652696">
           <folding>
-            <element signature="docComment;class#StartClient#0" expanded="true" />
+            <element signature="docComment;method#split#1;class#String#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/j2sdk1.4.2/src.zip!/java/lang/Byte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="23" selection-start="2647" selection-end="2647" vertical-scroll-proportion="0.33709982">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a1/HostNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="15" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.52934134">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1073341769143" expanded="false" signature="473:608" placeholder="{...}" />
+            <element signature="docComment;class#HostNames#0" expanded="true" />
+            <element signature="method#main#0;class#HostNames#0" expanded="true" />
+            <marker date="1073341769143" expanded="false" signature="707:1055" placeholder="{...}" />
+            <marker date="1073341769143" expanded="false" signature="1104:1215" placeholder="{...}" />
+            <marker date="1073341769143" expanded="false" signature="1713:1793" placeholder="{...}" />
+            <marker date="1073341769143" expanded="false" signature="1406:1657" placeholder="{...}" />
+            <marker date="1073341769143" expanded="false" signature="1291:1803" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/j2sdk1.4.2/src.zip!/java/lang/Short.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="24" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/a1/u3a1.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/CompileSource.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/a2/AddierClient.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/a2/AddierServer.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a2/StartServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.081437126">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a2/StartClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.38682634">
+          <folding>
             <element signature="method#main#0;class#StartClient#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/StartServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="444" selection-end="444" vertical-scroll-proportion="0.3554007">
+        <state line="11" column="45" selection-start="174" selection-end="174" vertical-scroll-proportion="0.1017964">
           <folding>
-            <element signature="method#canGetResult#0;class#DivHandler#0" expanded="true" />
-            <element signature="method#reset#0;class#DivHandler#0" expanded="true" />
-            <element signature="method#getResult#0;class#DivHandler#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#setValue#0;class#DivHandler#0" expanded="true" />
+            <element signature="method#main#0;class#StartServer#0" expanded="true" />
+            <element signature="docComment;method#main#0;class#StartServer#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="11" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.65156794">
+        <state line="21" column="26" selection-start="675" selection-end="675" vertical-scroll-proportion="0.41463414">
           <folding>
-            <element signature="method#DivClient#0;class#DivClient#0" expanded="true" />
-            <element signature="method#divide#0;class#DivClient#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivServer.java">
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/StartClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.6492451">
+        <state line="64" column="19" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.28502995">
           <folding>
-            <element signature="method#start#0;class#DivServer#0" expanded="true" />
+            <element signature="method#main#0;class#StartClient#0" expanded="true" />
+            <element signature="docComment;method#main#0;class#StartClient#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebung03/a3/DivHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="14" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.5505226">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

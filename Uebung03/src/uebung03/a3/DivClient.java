@@ -1,89 +1,94 @@
 package uebung03.a3;
 
-import java.net.*;
 import java.io.IOException;
+import java.net.*;
 
 public class DivClient
 extends DatagramSocket
 {
+
+    //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+    //  |                      Fields                       |   \\
+    //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+    
     private final InetAddress addr;
     private final int port;
-
+    
+    //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+    //  |                   Constructors                    |   \\
+    //  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+    
     public DivClient(InetAddress addr, int port)
     throws SocketException
-    {
+    {   // Preconditions:
+        assert addr != null : "PRE 1: addr != null returned false @ DivClient.DivClient()";
+        assert port >= 0 : "PRE 2: port >= 0 returned false @ DivClient.DivClient()";
+        
+        // Implementation:
         this.addr = addr;
         this.port = port;
     }
 
+    //  | = - = - = - = - = - /-||=||-\ - = - = - = - = - = |   \\
+    //  |                      Methods                      |   \\
+    //  | = - = - = - = - = - \-||=||-/ - = - = - = - = - = |   \\
+    
     public void divide(int a, int b)
+    throws IOException
     {
+        byte[] inData = new byte[1024];
+        byte[] outData = new byte[1024];
 
-        final int LENGTH = 100;
-        byte[] inData = new byte[LENGTH];
-        byte[] outData = null;
-        DatagramPacket inPacket = null;
-        DatagramPacket outPacket = null;
-        String strMessage = null;
+        DatagramPacket inPacket;
+        DatagramPacket outPacket;
 
-        String strErgebnis;
+        //    --------|=|-----------|=| Send Data |=|-----------|=|--------    \\
 
-        //maximal dreimal versuchen (2 Pakete pro Versuch)
-        outData = (a+"").getBytes();
-        outPacket = new DatagramPacket(outData, outData.length, addr, port);
         try
         {
+            outData = (a + "").getBytes();
+            outPacket = new DatagramPacket(outData, outData.length, addr, port);
+
             send(outPacket);	//die erste Zahl schicken
-        }
-        catch (IOException e)
-        {
-            System.out.println("Fehler beim Senden eines Pakets an den Server.");
-            e.printStackTrace();
-        }
 
-        outData = (":" + b).getBytes();
-        outPacket = new DatagramPacket(outData, outData.length, addr, port);
-        try
-        {
+            outData = (":" + b).getBytes();
+            outPacket = new DatagramPacket(outData, outData.length, addr, port);
+
             send(outPacket);	//die zweite Zahl schicken
         }
         catch (IOException e)
         {
-            System.out.println("Fehler beim Senden eines Pakets an den Server.");
-            e.printStackTrace();
+            System.err.println("Fehler beim Versenden der Zahlen: " + e.toString());
+            throw e;
         }
+        
+        //    --------|=|-----------|=| Receive Result |=|-----------|=|--------    \\
 
         inPacket = new DatagramPacket(inData, inData.length);
+
         try
         {
             receive(inPacket);
+            
+            // Ergebnis lesen:
+            String strErgebnis = new String(inPacket.getData(), inPacket.getOffset(), inPacket.getLength());
+            
+            // und ausgeben:
+            System.out.println("Ergebnis: " + a + " : " + b + " = " + Integer.parseInt(strErgebnis));
+        }
+        catch (NumberFormatException e)
+        {
+            System.out.println("Ergebnis: " + a + " : " + b + " = UNDEFINIERT");
         }
         catch (SocketTimeoutException e)
         {
             System.out.println("Der Server hat innerhalb 3 sec. nicht geantwortet.");
+            throw e;
         }
         catch (IOException e)
         {
             System.out.println("Fehler beim Empfangen eines Pakets.");
-            e.printStackTrace();
-        }
-
-        //die Nachricht aus dem Paket holen
-        strMessage = new String(inPacket.getData(), inPacket.getOffset(), inPacket.getLength());
-
-        //ErgebnisNr und Ergebnis der Nachricht entnehmen
-        //intErgebnisNr = Integer.parseInt(strMessage.substring(0, strMessage.indexOf(":")));
-        strErgebnis = strMessage;//.substring(strMessage.indexOf(":") + 1);
-
-
-        try
-        {
-            System.out.println("Ergebnis: "+a+" : "+b+" = "+Integer.parseInt(strErgebnis));
-        }
-        catch (NumberFormatException e)
-        {
-            System.out.println("Ergebnis: "+a+" : "+b+" = UNDEFINIERT");
-
+            throw e;
         }
     }
 }

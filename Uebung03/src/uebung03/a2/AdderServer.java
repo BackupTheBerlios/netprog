@@ -24,7 +24,7 @@ extends ServerSocket
 
     /**
      * Listens to the given port.
-     * Any connecting client is passed to an AdderService in a single Thread -
+     * Any connecting client is passed to an AdderHandler in a single Thread -
      * allowing multiple connections.
      */
     public void start()
@@ -43,7 +43,7 @@ extends ServerSocket
                     {
                         try
                         {
-                            new AdderService(client);
+                            new AdderHandler(client);
                         }
                         catch (IOException e)
                         {

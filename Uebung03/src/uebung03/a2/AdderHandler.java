@@ -6,9 +6,9 @@ import java.net.*;
 /**
  * Handles the actual adding work
  */
-public class AdderService
+public class AdderHandler
 {
-    public AdderService(Socket clientSocket)
+    public AdderHandler(Socket clientSocket)
     throws IOException
     {
         if (clientSocket == null) return;

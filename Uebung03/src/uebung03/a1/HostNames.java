@@ -3,9 +3,13 @@ package uebung03.a1;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
+/**
+ * (1 Punkt) Schreiben Sie ein Programm, das für ein Subnetz aa.bb.cc testet,
+ * welche Internet-Geräte darin einen Namen haben. aa.bb.cc soll die Kommandozeilenparameter sein;
+ * Sie sollen aa.bb.cc.0 bis aa.bb.cc.255 testen und entsprechende Ausgaben erzeugen.
+ */
 public class HostNames
 {
-
     public static void main(String[] args)
     {
         if (args.length <= 0)
@@ -14,66 +18,42 @@ public class HostNames
             return;
         }
 
-        byte[] ip = new byte[4];
-        int i = args[0].indexOf(".");
-        InetAddress addr;
-
-        if (i < 0)
-        {
-            System.out.println("Das Format der übergebenen IP ist ungültig !");
-            return;
-        }
+        // extract ip-adress parts:
+        short[] ipParts = new short[3];
 
         try
         {
-            ip[0] = Byte.parseByte(args[0].substring(0, i));
-        }
+            String[] parts = args[0].replace('.', ':').split(":");
 
-        catch (NumberFormatException e)
-        {
-            System.out.println("Das Format der übergebenen IP ist ungültig !");
-            return;
-        }
-
-        int i2;
-        i2 = args[0].indexOf(".", i + 1);
-
-        if (i2 < 0)
-        {
-            System.out.println("Das Format der übergebenen IP ist ungültig !");
-            return;
-        }
-        try
-        {
-            ip[1] = Byte.parseByte(args[0].substring(i + 1, i2));
-        }
-        catch (NumberFormatException e)
-        {
-            System.out.println("Das Format der übergebenen IP ist ungültig !");
-            return;
-        }
-
-        try
-        {
-            ip[2] = Byte.parseByte(args[0].substring(i2 + 1));
-        }
-        catch (Exception e)
-        {
-            System.out.println("Das Format der übergebenen IP ist ungültig !");
-            return;
-        }
-
-        for (i = 0; i < 256; i++)
-        {
-            ip[3] = (byte) i;
-            try
+            if (parts.length != 3)
             {
-                addr = InetAddress.getByAddress(ip);
-                System.out.println("IP " + ip[0] + "." + ip[1] + "." + ip[2] + "." + ip[3] + "  - " + addr.getCanonicalHostName());
+                System.out.println("Das Format der übergebenen IP ist ungültig !");
+                return;
+            }
+
+            for (int i = 0; i < 3; i++)
+                ipParts[i] = Short.parseShort(parts[i]);
+        }
+        catch (NumberFormatException e)
+        {
+            System.out.println("Das Format der übergebenen IP ist ungültig !");
+            return;
+        }
+
+        // start looking:
+        for (short i = 0; i < 256; i++)
+        {
+            String ip = ipParts[0] + "." + ipParts[1] + "." + ipParts[2] + "." + i;
+
+            try
+            {   InetAddress addr = InetAddress.getByName(ip);
+                String name = addr.getCanonicalHostName();
+
+                System.out.println("IP " + ip + " - " +  (!name.toString().equals(ip) ? "is called: " + name : "has no name"));
             }
             catch (UnknownHostException e)
             {
-                System.out.println("IP " + ip[0] + "." + ip[1] + "." + ip[2] + "." + ip[3] + " - ungültig!");
+                System.out.println("IP " + ip + " - not found");
             }
         }
     }
